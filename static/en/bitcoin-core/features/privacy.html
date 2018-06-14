@@ -1,0 +1,998 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+
+
+
+<!-- Mirrored from bitcoin.org/en/bitcoin-core/features/privacy by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Jun 2018 15:42:18 GMT -->
+<head>
+
+
+<link rel="stylesheet" href="https://segwitcoin.fun/css/jquery-ui.min.css">
+
+
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta property="og:image" content="https://segwitcoin.fun/img/icons/opengraph.png?1528484753" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>Privacy - Bitcoin Core Features</title>
+
+<link rel="stylesheet" href="https://segwitcoin.fun/css/font-awesome-4.4.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://segwitcoin.fun/css/main.css?1528484753">
+<!--[if lt IE 8]><link rel="stylesheet" href="/css/ie.css"><script type="text/javascript" src="/js/ie.js"></script><![endif]-->
+<!--[if IE 8]><link rel="stylesheet" href="/css/ie8.css"><![endif]-->
+
+
+<script type="text/javascript" src="https://segwitcoin.fun/js/base.js?1528484753"></script>
+<script type="text/javascript" src="https://segwitcoin.fun/js/main.js?1528484753"></script>
+<script src="https://segwitcoin.fun/js/jquery/jquery-1.11.2.min.js"></script>
+<script src="https://segwitcoin.fun/js/jquery/jquery.qrcode.min.js"></script>
+<link rel="shortcut icon" href="https://segwitcoin.fun/favicon.png?1528484753">
+<link rel="apple-touch-icon-precomposed" href="https://segwitcoin.fun/img/icons/logo_ios.png?1528484753"/>
+<script>
+    window.cookieconsent_options = {
+        theme: 'light-floating'
+    }
+</script>
+<script type="text/javascript" src="https://segwitcoin.fun/js/cookieconsent/cookieconsent.js?1528484753"></script>
+<script>
+if( navigator.doNotTrack != "yes" && navigator.doNotTrack != "1" && window.doNotTrack != "1" && navigator.msDoNotTrack != "1" ){
+	var script = document.createElement('script');
+	script.src = 'https://segwitcoin.fun/js/analytics.js'
+	document.getElementsByTagName("head")[0].appendChild(script);
+}
+</script>
+
+
+
+
+
+  <script src="https://segwitcoin.fun/js/jquery/jquery-1.11.2.min.js"></script>
+  <script src="https://segwitcoin.fun/js/jquery/jquery-ui.min.js"></script>
+
+
+</head>
+
+<body>
+
+
+<div id="detectmobile" class="detectmobile"></div>
+
+
+
+
+
+
+
+
+
+
+<div class="head"><div>
+  
+
+<a id="menumobile" class="menumobile" onclick="mobileMenuShow(event);" ontouchstart="mobileMenuShow(event);"></a>
+
+  
+    
+
+<a class="logo" href="../index.html"><img src="https://segwitcoin.fun/img/bitcoin-core/bitcoin-core.svg?1528484753" alt="Bitcoin"></a>
+
+    
+
+<ul id="menusimple" class="menusimple menucore" onclick="mobileMenuHover(event);" ontouchstart="mobileMenuHover(event);">
+  <li><a class="is-expand">Features</a>
+    <ul>
+      <li><a href="index.html">Overview</a></li>
+      <li><a href="validation.html">Validation</a></li>
+      <li class="active"><a href="privacy.html">Privacy</a></li>
+      <li><a href="requirements.html">Requirements</a></li>
+      <li><a href="user-interface.html">User Interface</a></li>
+      <li><a href="network-support.html">Network Support</a></li>
+    </ul>
+  </li>
+  <li><a href="../help.html">Get Help</a></li>
+  <li><a class="is-expand">Contribute</a>
+    <ul>
+      <li><a href="../contribute/issues.html">Bug reports</a></li>
+      <li><a href="../../development.html">Code</a></li>
+      <li><a href="../contribute/documentation.html">Documentation</a></li>
+      <li><a href="../contribute/translations.html">Translations</a></li>
+      <li><a href="../contribute/support.html">Tech Support</a></li>
+    </ul>
+  </li>
+  <li><a href="../../version-history.html">News</a></li>
+  <li><a href="../../download.html">Download</a></li>
+</ul>
+
+  
+    
+<ul class="lang is-expand">
+  <li><a>English</a>
+  <ul>
+    <li><ul>
+      
+      
+        
+          <li><a href="https://segwitcoin.fun/id/">Bahasa Indonesia</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/da/">Dansk</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/de/">Deutsch</a></li>
+        
+        
+          <li><a href="../../index.html" class="active">English</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/es/">Español</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/fr/">Français</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/it/">Italiano</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/hu/">Magyar</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/nl/">Nederlands</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/pl/">Polski</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/pt_BR/">Português Brasil</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/ro/">Română</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/sl/">Slovenščina</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/sv/">Svenska</a></li>
+        
+        </ul></li><li><ul>
+          <li><a href="https://segwitcoin.fun/tr/">Türkçe</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/el/">Ελληνικά</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/bg/">български</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/ru/">Русский</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/uk/">Українська</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/ar/">العربية</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/fa/">فارسی</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/hi/">हिन्दी</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/ko/">한국의</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/ja/">日本語</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/zh_CN/">简体中文</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/zh_TW/">繁體中文</a></li>
+        
+      </ul></li>
+    </ul>
+  </li>
+</ul>
+
+    
+<div id="langselect" class="langselect">
+    <label for="select-input" class="center-select">
+        <select id="select-input" class="center-select__input" onchange="window.location=this.value;">
+            
+            <option value="/id/" >Bahasa Indonesia</option>
+            
+            <option value="/da/" >Dansk</option>
+            
+            <option value="/de/" >Deutsch</option>
+            
+            <option value="/en/"  selected="selected">English</option>
+            
+            <option value="/es/" >Español</option>
+            
+            <option value="/fr/" >Français</option>
+            
+            <option value="/it/" >Italiano</option>
+            
+            <option value="/hu/" >Magyar</option>
+            
+            <option value="/nl/" >Nederlands</option>
+            
+            <option value="/pl/" >Polski</option>
+            
+            <option value="/pt_BR/" >Português Brasil</option>
+            
+            <option value="/ro/" >Română</option>
+            
+            <option value="/sl/" >Slovenščina</option>
+            
+            <option value="/sv/" >Svenska</option>
+            
+            <option value="/tr/" >Türkçe</option>
+            
+            <option value="/el/" >Ελληνικά</option>
+            
+            <option value="/bg/" >български</option>
+            
+            <option value="/ru/" >Русский</option>
+            
+            <option value="/uk/" >Українська</option>
+            
+            <option value="/ar/" >العربية</option>
+            
+            <option value="/fa/" >فارسی</option>
+            
+            <option value="/hi/" >हिन्दी</option>
+            
+            <option value="/ko/" >한국의</option>
+            
+            <option value="/ja/" >日本語</option>
+            
+            <option value="/zh_CN/" >简体中文</option>
+            
+            <option value="/zh_TW/" >繁體中文</option>
+            
+        </select>
+        <span class="center-select__text">Language: <span class="is-capital">en</span></span>
+    </label>
+</div>
+
+</div></div>
+
+<div class="body">
+  
+    
+
+<div class="breadcrumbs">
+  <div class="container">
+      
+    <a href="../../index.html">Bitcoin</a>
+     &gt;    
+    <a href="../index.html">Core</a>
+     &gt;    
+    <a href="index.html">Features</a>
+     &gt;    Privacy   
+  </div>
+</div>
+
+  
+  
+
+<div id="content" class="content">
+    <div class="hero">
+<div class="container hero-container">
+
+    <h1 id="bitcoin-cores-excellent-privacy">Bitcoin Core’s Excellent Privacy</h1>
+
+    <div class="row hero-social">
+  <a href="#" onclick="window.open('http://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(location.href))" class="hero-social-link" target="_blank">
+    <img src="https://segwitcoin.fun/img/icons/ico_facebook_bright.svg?1528484753" alt="facebook" />
+  </a>
+  <a href="#" onclick="window.open('https://twitter.com/share?url=' + encodeURIComponent(location.href))" class="hero-social-link" target="_blank">
+    <img src="https://segwitcoin.fun/img/icons/ico_twitter_bright.svg?1528484753" alt="twitter" />
+  </a>
+</div>
+  </div>
+</div>
+
+<div class="bitcore-content clearfix">
+<div class="container">
+
+    <p><img src="https://segwitcoin.fun/img/bitcoin-core/slider-privacy.svg?1528484753" alt="Excellent privacy" /></p>
+
+    <div class="callout">
+  <a class="callout-btn btn-bright" href="../../download.html">Download Bitcoin Core</a>
+  <div class="row callout-row">
+    <span class="btn-subtext">Bitcoin Core 0.16.0</span>
+    <div>
+      <img class="callout-img" src="https://segwitcoin.fun/img/os/windows.png?1528484753" alt="Windows" />
+      <img class="callout-img" src="https://segwitcoin.fun/img/os/mac.png?1528484753" alt="Mac" />
+      <img class="callout-img" src="https://segwitcoin.fun/img/os/linux.png?1528484753" alt="Linux" />
+    </div>
+  </div>
+  <hr class="separator btn-separator" />
+</div>
+
+    <blockquote>
+      <p>What if every time you spent or received cash, all the transaction
+details were published to your Twitter or Facebook feed for all your
+friends to see? You probably wouldn’t want to use cash any more.</p>
+    </blockquote>
+
+    <p>Every confirmed Bitcoin transaction is published to the block chain
+where anyone can see it. So <strong>why do people still use Bitcoin?</strong> And why
+do many of them believe that Bitcoin is a private way of sending money?</p>
+
+    <p>One reason is that Bitcoin Core and some other Bitcoin software tries to
+avoid associating your real-world identity with the transactions you
+make. The difference looks like this:</p>
+
+    <p><img src="https://segwitcoin.fun/img/bitcoin-core/privacy-difference.svg?1528484753" alt="Privacy difference: pseudonymous transactions" /></p>
+
+    <p>The second type of transaction (a pseudonymous transaction) only provides
+practical privacy if nobody can figure out that “5a35b” is really Alice.
+It’s up to your wallet to prevent anyone from making that connection.
+See below for how Bitcoin Core’s privacy compares to other wallets.</p>
+
+    <h2 id="no-sign-up-required">No Sign-Up Required</h2>
+
+    <p>Third-party Bitcoin services can both increase and decrease your
+privacy. They can increase it by mixing your transactions with those of
+other users; they can decrease it by tracking your activity and directly
+associating it with your real name or other identifying information.</p>
+
+    <div class="center service-choose">
+<p class="service-choose-title">Click an entry below to show it:</p>
+
+
+  
+
+  
+    <button class="js showcolumn" id="bitcoin_go">BitGo</button>
+  
+
+  
+    <button class="js showcolumn" id="greenaddress">GreenAddress</button>
+  
+
+</div>
+
+    <table class="privacy-comparison center">
+
+  <tr>
+    <th colspan="99">Who knows your information? <strong class="fggreen">Just you</strong> or also a <strong class="fgred">service provider?</strong></th>
+  </tr>
+  <tr>
+    <th></th>
+    
+      
+        <th class="bitcoin_core default-show">Bitcoin Core</th>
+      
+    
+      
+        <th class="bitcoin_go not-displayed">BitGo</th>
+      
+    
+      
+        <th class="greenaddress not-displayed">GreenAddress</th>
+      
+    
+  </tr>
+
+  <tr>
+    <td>Your real name</td>
+    
+      
+        <td class="bggreen bitcoin_core default-show"></td>
+      
+    
+      
+        <td class="bggreen bitcoin_go not-displayed"></td>
+      
+    
+      
+        <td class="bggreen greenaddress not-displayed"></td>
+      
+    
+  </tr>
+
+  <tr>
+    <td>Your bitcoin balance</td>
+    
+      
+        <td class="bggreen bitcoin_core default-show"></td>
+      
+    
+      
+        <td class="bgred bitcoin_go not-displayed"></td>
+      
+    
+      
+        <td class="bgred greenaddress not-displayed"></td>
+      
+    
+  </tr>
+  <tr>
+    <td>Who you pay, and/or who pays you (in some cases)</td>
+    
+      
+        <td class="bggreen bitcoin_core default-show"></td>
+      
+    
+      
+        <td class="bgred bitcoin_go not-displayed"></td>
+      
+    
+      
+        <td class="bgred greenaddress not-displayed"></td>
+      
+    
+  </tr>
+  <tr>
+    <td>How much you spend and/or receive</td>
+    
+      
+        <td class="bggreen bitcoin_core default-show"></td>
+      
+    
+      
+        <td class="bgred bitcoin_go not-displayed"></td>
+      
+    
+      
+        <td class="bgred greenaddress not-displayed"></td>
+      
+    
+  </tr>
+  <tr>
+    <td>The IP address your connection came from</td>
+    
+      
+        <td class="bggreen bitcoin_core default-show"></td>
+      
+    
+      
+        <td class="bgred bitcoin_go not-displayed"></td>
+      
+    
+      
+        <td class="bgred greenaddress not-displayed"></td>
+      
+    
+  </tr>
+
+  <tr class="empty"></tr>
+  <tr>
+    <th colspan="99">Who can guess your information? <strong class="fggreen">Just you</strong> or also <strong class="fgred">people
+    you trade with?</strong></th>
+  </tr>
+
+  <tr>
+    <th></th>
+    
+      
+        <th class="bitcoin_core default-show">Bitcoin Core</th>
+      
+    
+      
+        <th class="bitcoin_go not-displayed">BitGo</th>
+      
+    
+      
+        <th class="greenaddress not-displayed">GreenAddress</th>
+      
+    
+  </tr>
+
+  <tr>
+    <td>Other transactions you made or received</td>
+    
+      
+        <td class="bgred bitcoin_core default-show"></td>
+      
+    
+      
+        <td class="bgred bitcoin_go not-displayed"></td>
+      
+    
+      
+        <td class="bgred greenaddress not-displayed"></td>
+      
+    
+  </tr>
+
+</table>
+
+    <h2 id="perfect-privacy-for-received-transactions">Perfect Privacy for Received Transactions</h2>
+
+    <p>There are 230 million transactions on the Bitcoin block
+chain. How do you find which ones pay you?  Here are some common
+options:</p>
+
+    <table class="received_transactions center">
+  <tr>
+    <td class="center"><strong class="fgred">Ask bankers</strong><br />They’ll monitor your every transaction<br /><br /><button class="popup js" data-container="bitcoin_bank_receiving">Bitcoin banks</button></td>
+
+    <td class="center"><strong class="fgred">Ask random nodes</strong><br />Some of which sell your data<br /><br /><button class="popup js" data-container="bloom_filter_receiving">P2P lightweight wallets</button></td>
+  </tr>
+
+  <tr>
+    <td class="center"><strong class="fgred">Ask a free service</strong><br />(Actually, some do care about privacy)<br /><br /><button class="popup js" data-container="electrum_style_receiving">Client lightweight wallets</button></td>
+
+    <td class="center"><strong class="fggreen">Get all 230 million transactions</strong><br />For <strong>perfect</strong> receiving privacy<br /><br /><strong>Bitcoin Core</strong></td>
+  </tr>
+</table>
+
+    <p>Bitcoin Core downloads all 230 million transactions on the Bitcoin block
+chain and processes them to find which transactions pay you.</p>
+
+    <p>This currently takes about 4 hours the first time
+you start Bitcoin Core and about 5
+minutes a day to keep updated, but it gives you what scientists call
+<strong><button class="popup js" data-container="information_theoretic_privacy">information-theoretic (perfect) privacy</button></strong>
+against eavesdroppers for received transactions.</p>
+
+    <h2 id="strong-privacy-for-sent-transactions">Strong Privacy for Sent Transactions</h2>
+
+    <p>To put a transaction on the block chain, you must send it publicly—but
+how you send it can make a big difference.</p>
+
+    <p><img src="https://segwitcoin.fun/img/bitcoin-core/sending-privacy.svg?1528484753" alt="Sending privacy" /></p>
+
+    <p><strong>Can you guess who made which transactions?</strong> Nearly all peer-to-peer
+lightweight clients today make no attempt to obscure their sent
+transactions. They simply send them to some or all of their peers.</p>
+
+    <p>Bitcoin Core does much better. By default, it relays transactions for
+all of its peers—thousands of separate transactions a day under common
+conditions—which allows it both <a href="network-support.html">support the peer-to-peer network</a> and confuse anti-privacy organizations that try to
+track your transactions.</p>
+
+    <h2 id="tor-compatible">Tor Compatible</h2>
+
+    <p>The Tor anonymity network helps disassociate your online activity from
+your IP address (which is often closely associated with your real name).
+This significantly increases your ability to confound anti-privacy
+organizations.</p>
+
+    <p>Once you <a href="https://www.torproject.org/">setup Tor</a>, using it with Bitcoin Core is <a href="https://en.bitcoin.it/wiki/Tor">easy</a>. If you also <a href="https://en.bitcoin.it/wiki/Tor#Hidden_services">setup a Tor hidden service</a>, you will
+be able to <a href="user-interface.html#lightweight">connect mobile clients</a>
+to your Bitcoin Core full node for increased security and privacy
+wherever you go.</p>
+
+    <p class="center-hanger center"><a href="https://www.torproject.org/">Start using Tor today</a></p>
+
+    <h2 id="decentralized-peer-discovery">Decentralized Peer Discovery</h2>
+
+    <p>The first time any Bitcoin program connects to the peer-to-peer network,
+it has to ask a centralized authority for a list of recommended peers.</p>
+
+    <p>Once the program gets on the network, it can ask its peers for more
+recommendations in a fully decentralized way—but
+<button class="popup js" data-container="spv_decentralized_peer">most</button>
+lightweight wallets don’t bother.</p>
+
+    <table class="center_header">
+  <tr>
+    <th class="fgred">P2P Lightweight Wallets</th>
+    <th class="fggreen">Bitcoin Core</th>
+  </tr>
+
+  <tr>
+    <td>Asks the same centralized services every time program is
+    restarted. This can be faster.</td>
+
+    <td>Uses the peer-to-peer network to independently discover new
+    peers.  Uses found peers on restart.</td>
+  </tr>
+</table>
+
+    <p>This allows the centralized authority to connect lightweight wallets to
+dishonest peers that can <strong>completely destroy lightweight transaction
+privacy.</strong> Those dishonest peers can work with dishonest miners to
+<strong>weaken lightweight security too.</strong></p>
+
+    <p>Bitcoin Core prefers decentralized peer discovery, so after the first
+time it starts, it no longer has to trust the centralized authority.
+Isn’t that worth occasionally starting up a few seconds slower?</p>
+
+    <div class="prevnext">
+      <p><a href="validation.html">PREV</a>
+<a href="requirements.html">NEXT</a></p>
+    </div>
+
+    <div class="not-displayed">
+  <div id="bitcoin_bank_receiving" title="Bitcoin Bank Receiving Privacy">
+        <p><img src="https://segwitcoin.fun/img/bitcoin-core/bank-receiving-privacy.svg?1528484753" alt="Bitcoin Core receiving privacy features" /></p>
+
+        <p>When you receive bitcoins to a Bitcoin bank, the money is sent to one of
+  the bank’s addresses—not your own—which can give you excellent
+  privacy against random strangers.</p>
+
+        <p>However, the bank knows you received the transaction and they can likely
+  also see any information you associate with the transaction, such as the
+  sender’s name or another note you attach to the transaction.</p>
+
+        <p>The bank may also be required by law to disclose information about your
+  account. They can also sell your information or have a hacker steal your
+  information.</p>
+      </div>
+
+  <div id="bloom_filter_receiving" title="Bloom Filter Privacy">
+        <p><img src="https://segwitcoin.fun/img/bitcoin-core/receiving-privacy.svg?1528484753" alt="Receiving privacy" /></p>
+
+        <p>By only asking for payments related to your wallet, plus maybe a few
+  others as bloom filter camouflage, lightweight wallets may reveal who you
+  paid, who paid you, and what your current bitcoin balance is.</p>
+
+        <blockquote>
+          <p>A <a href="http://arxiv.org/abs/1410.6079">2014 study of lightweight clients</a>
+said, “Our results show that bloom filters incur serious privacy
+leakage in existing SPV client implementations […] such an
+information leakage might severely harm the privacy of users” <strong>Nearly
+all lightweight clients are still vulnerable today.</strong></p>
+        </blockquote>
+
+        <p><strong>Learn more:</strong> <a href="https://groups.google.com/forum/#!msg/bitcoinj/Ys13qkTwcNg/9qxnhwnkeoIJ">“Lying consistently is hard”</a></p>
+
+      </div>
+
+  <div id="electrum_style_receiving" title="Client Lightweight Wallet Receiving Privacy">
+        <p><img src="https://segwitcoin.fun/img/bitcoin-core/electrum-receiving-privacy.svg?1528484753" alt="Electrum-style receiving privacy" /></p>
+
+        <p>Some lightweight wallets don’t connect to the Bitcoin peer-to-peer (P2P)
+  network.  Instead, they make a (usually secure) connection to a single
+  server that provides block chain data.</p>
+
+        <p>The wallet tells the server all of its addresses, and the server replies
+  with all of the transactions that belong to the wallet.  This explicitly
+  reveals all of your addresses, which is bad for your privacy—but it
+  only gives that information to one server, as long as you don’t change
+  servers later.</p>
+
+        <p>The server can, of course, give away your information and further
+  reduce your privacy. However, as of
+  June 2017, most of these types of
+  servers are run by volunteers who likely want to help protect your
+  privacy, so this model can be more private than bank wallets or P2P
+  lightweight wallets.</p>
+
+      </div>
+
+  <div id="spv_decentralized_peer" title="P2P Decentralized Peer Discovery">
+        <p>The following P2P lightweight wallets use decentralized peer discovery
+  by default.</p>
+
+        <ul>
+          <li>BRD</li>
+        </ul>
+
+        <p>If you know of another compliant lightweight wallet, please <a href="https://github.com/bitcoin-dot-org/bitcoin.org/issues">tell us
+  about it</a>.</p>
+      </div>
+
+  <div id="information_theoretic_privacy" title="Information-Theoretic Privacy">
+        <p>Information-theoretic privacy means that the privacy can’t be broken even
+  if an attacker has unlimited computing resources.</p>
+
+        <p><strong>Learn more:</strong> <a href="https://en.wikipedia.org/wiki/Information_theoretic_security">Information theoretic security</a> (Wikipedia)</p>
+      </div>
+</div>
+
+  </div>
+</div>
+
+</div>
+
+  <div class="footer">
+    <div class="container">
+      
+
+<a class="logo-footer" href="../../index.html">
+  <img src="https://segwitcoin.fun/img/icons/logo-footer.svg?1528484753" alt="Bitcoin">
+</a>
+      
+
+<div class="row footer-row">
+  <div class="donate">
+    <div class="row donate-row">
+      <div>
+        <span class="footer-title">Support Bitcoin.org:</span>
+        <a href="bitcoin:3FkenCiXpSLqD8L79intRNXUgjRoH9sjXa" target="_blank" class="donate-btn btn-bright">Donate</a>
+        <p class="donate-text">Bitcoin.org is community supported.
+          <a class="donate-link" href="bitcoin:3FkenCiXpSLqD8L79intRNXUgjRoH9sjXa" target="_blank">3FkenCiXpSLqD8L79intRNXUgjRoH9sjXa</a>
+        </p>
+      </div>
+      <div class="donate-qrcode">
+        <img src="https://segwitcoin.fun/img/footer/qr.png?1528484753" alt="QR code">
+      </div>
+    </div>
+  </div>
+
+  <div class="row footermenu">
+    <div class="footermenu-item footermenu-introduction">
+      <p class="footer-title">Introduction:</p>
+      <ul class="footermenu-list">
+        <li>
+          <a href="../../bitcoin-for-individuals.html">Individuals</a>
+        </li>
+        <li>
+          <a href="../../bitcoin-for-businesses.html">Businesses</a>
+        </li>
+        <li>
+          <a href="../../bitcoin-for-developers.html">Developers</a>
+        </li>
+        <li>
+          <a href="../../getting-started.html">Getting started</a>
+        </li>
+        <li>
+          <a href="../../how-it-works.html">How it works</a>
+        </li>
+        <li>
+          <a href="../../you-need-to-know.html">You need to know</a>
+        </li>
+      </ul>
+    </div>
+    
+    <div class="footermenu-item footermenu-resources">
+      <p class="footer-title">Resources:</p>
+      <ul class="footermenu-list">
+        <li>
+          <a href="../../resources.html">Resources</a>
+          
+        <li>
+          <a href="../../exchanges.html">Exchanges</a>
+        </li>
+          
+        <li>
+          <a href="../../community.html">Community</a>
+        </li>
+        <li>
+          <a href="../../vocabulary.html">Vocabulary
+          </a>
+        </li>
+        <li>
+          <a href="../../events.html">Events</a>
+        </li>
+        
+        <li>
+          <a href="../index.html">Bitcoin Core</a>
+        </li>
+          
+      </ul>
+    </div>
+    
+    <div class="footermenu-item footermenu-participate">
+      <p class="footer-title">Participate:</p>
+      <ul class="footermenu-list">
+        <li>
+          <a href="../../support-bitcoin.html">Support Bitcoin</a>
+          
+        <li>
+          <a href="../../buy.html">Buy Bitcoin</a>
+        </li>
+           
+        <li>
+          <a href="../../full-node.html">Running a full node</a>
+        </li>
+          
+        <li>
+          <a href="../../development.html">Development</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="footermenu-item footermenu-other">
+      <p class="footer-title">Other:</p>
+      <a href="../../legal.html">Legal</a>
+      
+      <a href="../../privacy.html">Privacy Policy</a>
+      
+      <a href="../about-site.html">About</a>
+    </div>
+  </div>
+</div>
+
+    </div>
+    
+
+<div class="footer-bottom">
+  <div class="container">
+    <div class="row footer-bottom-row">
+      <div class="footerlicense">© Bitcoin Project 2009-2018 Released under the <a href="http://opensource.org/licenses/mit-license.php" target="_blank">MIT license</a>
+        <br> Bitcoin Core pages on Bitcoin.org are
+        <a href="../about-site.html">maintained separately</a> from the rest of the site.
+      </div>
+      <div class="row footer-social">
+        <a href="#" onclick="window.open('http://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(location.href))" class="footer-social-link" target="_blank">
+          <img src="https://segwitcoin.fun/img/icons/ico_facebook_dark.svg?1528484753" alt="facebook" class="footer-social-img">
+        </a>
+        <a href="#" onclick="window.open('https://twitter.com/share?url=' + encodeURIComponent(location.href))" class="footer-social-link" target="_blank">
+          <img src="https://segwitcoin.fun/img/icons/ico_twitter_dark.svg?1528484753" alt="twitter" class="footer-social-img">
+        </a>
+      </div>
+      <div class="row footer-status-block">
+        <a href="../../alerts.html" class="statusmenu">Network Status</a>
+        
+<ul class="lang is-expand">
+  <li><a>English</a>
+  <ul>
+    <li><ul>
+      
+      
+        
+          <li><a href="https://segwitcoin.fun/id/">Bahasa Indonesia</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/da/">Dansk</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/de/">Deutsch</a></li>
+        
+        
+          <li><a href="../../index.html" class="active">English</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/es/">Español</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/fr/">Français</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/it/">Italiano</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/hu/">Magyar</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/nl/">Nederlands</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/pl/">Polski</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/pt_BR/">Português Brasil</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/ro/">Română</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/sl/">Slovenščina</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/sv/">Svenska</a></li>
+        
+        </ul></li><li><ul>
+          <li><a href="https://segwitcoin.fun/tr/">Türkçe</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/el/">Ελληνικά</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/bg/">български</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/ru/">Русский</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/uk/">Українська</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/ar/">العربية</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/fa/">فارسی</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/hi/">हिन्दी</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/ko/">한국의</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/ja/">日本語</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/zh_CN/">简体中文</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/zh_TW/">繁體中文</a></li>
+        
+      </ul></li>
+    </ul>
+  </li>
+</ul>
+
+        <div id="footer-langselect" class="footer-langselect langselect">
+          <label for="select-input-footer" class="center-select">
+            <select class="center-select__input" onchange="window.location=this.value; ">
+              
+              <option value="/id/" >Bahasa Indonesia</option>
+              
+              <option value="/da/" >Dansk</option>
+              
+              <option value="/de/" >Deutsch</option>
+              
+              <option value="/en/"  selected="selected">English</option>
+              
+              <option value="/es/" >Español</option>
+              
+              <option value="/fr/" >Français</option>
+              
+              <option value="/it/" >Italiano</option>
+              
+              <option value="/hu/" >Magyar</option>
+              
+              <option value="/nl/" >Nederlands</option>
+              
+              <option value="/pl/" >Polski</option>
+              
+              <option value="/pt_BR/" >Português Brasil</option>
+              
+              <option value="/ro/" >Română</option>
+              
+              <option value="/sl/" >Slovenščina</option>
+              
+              <option value="/sv/" >Svenska</option>
+              
+              <option value="/tr/" >Türkçe</option>
+              
+              <option value="/el/" >Ελληνικά</option>
+              
+              <option value="/bg/" >български</option>
+              
+              <option value="/ru/" >Русский</option>
+              
+              <option value="/uk/" >Українська</option>
+              
+              <option value="/ar/" >العربية</option>
+              
+              <option value="/fa/" >فارسی</option>
+              
+              <option value="/hi/" >हिन्दी</option>
+              
+              <option value="/ko/" >한국의</option>
+              
+              <option value="/ja/" >日本語</option>
+              
+              <option value="/zh_CN/" >简体中文</option>
+              
+              <option value="/zh_TW/" >繁體中文</option>
+              
+            </select>
+            <span class="center-select__text">en</span>
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </div>
+</div>
+
+
+
+
+
+  <script src="https://segwitcoin.fun/js/bitcoin-core.js"></script>
+
+
+
+
+<script type="text/javascript">
+  fallbackSVG();
+  addAnchorLinks();
+  trackOutgoingLinks();
+</script>
+
+
+
+
+
+
+</body>
+
+
+<!-- Mirrored from bitcoin.org/en/bitcoin-core/features/privacy by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Jun 2018 15:42:18 GMT -->
+</html>

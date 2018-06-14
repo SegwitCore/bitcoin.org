@@ -1,0 +1,568 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bitcoin.org Site Blog</title>
+    <description>News about Bitcoin.org</description>
+    <link>//</link>
+    <atom:link href="//en/rss/blog.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Fri, 08 Jun 2018 19:05:53 +0000</pubDate>
+    <lastBuildDate>Fri, 08 Jun 2018 19:05:53 +0000</lastBuildDate>
+    <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Help Test Bitcoin.org&#39;s New Design Before Launch</title>
+        <description>&lt;h2 id=&quot;a-redesigned-bitcoinorg&quot;&gt;A Redesigned Bitcoin.org&lt;/h2&gt;
+
+&lt;p&gt;One of our goals in 2018 has been to modernize the look and feel of
+Bitcoin.org. Each day, tens of thousands of new users come to Bitcoin.org to
+learn how to get started using the currency and technology. The site has grown
+exponentially in popularity as Bitcoin adoption has increased. Last year alone,
+there were over 30 million visitors to Bitcoin.org. These visitors viewed the
+site’s pages over 200 million times. Many of these pages are often the first
+results on search engines for bitcoin-related phrases and terms.&lt;/p&gt;
+
+&lt;p&gt;As traffic and engagement has increased, however, the design has become very
+dated. In fact, the current look and feel of the site has pretty much remained
+the same for ~5 years, going all the way back to 2013. As a result, a large
+amount of effort and attention has gone into a recent redesign project, that’s
+getting closer to complete. After holding a &lt;a href=&quot;https://segwitcoin.fun/en/posts/vote-on-the-new-site-design&quot;&gt;community vote&lt;/a&gt;
+on various design options, the community selection has been extended into all of
+the different subpages.&lt;/p&gt;
+
+&lt;p&gt;We’ve reached one of the most critical phases of the project, now, which is
+getting feedback and lots of help testing from a bunch of different people,
+before it goes live.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://bitcoin.cryptopelago.com/&quot;&gt;Help test the new design.&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;If you visited the link above and experienced any issues or have feedback, please
+&lt;a href=&quot;&amp;#109;&amp;#097;&amp;#105;&amp;#108;&amp;#116;&amp;#111;:&amp;#119;&amp;#105;&amp;#108;&amp;#108;&amp;#064;&amp;#098;&amp;#105;&amp;#116;&amp;#099;&amp;#111;&amp;#105;&amp;#110;&amp;#046;&amp;#111;&amp;#114;&amp;#103;&amp;#063;&amp;#115;&amp;#117;&amp;#098;&amp;#106;&amp;#101;&amp;#099;&amp;#116;&amp;#061;&amp;#082;&amp;#101;&amp;#100;&amp;#101;&amp;#115;&amp;#105;&amp;#103;&amp;#110;&amp;#037;&amp;#050;&amp;#048;&amp;#070;&amp;#101;&amp;#101;&amp;#100;&amp;#098;&amp;#097;&amp;#099;&amp;#107;&amp;#034;&quot;&gt;send us an email&lt;/a&gt; or
+&lt;a href=&quot;https://github.com/bitcoin-dot-org/bitcoin.org/issues/new?title=Redesign%20Feedback&quot;&gt;open an issue&lt;/a&gt;
+on Bitcoin.org’s GitHub repository. Please also make sure to note your device,
+operating system and browser version(s), when applicable, to give us additional
+context and clarity - it is super-helpful.&lt;/p&gt;
+
+&lt;p&gt;Even the most minor bits of feedback, nits or issues are welcome. The community
+we are all part of is very diverse, and we want to strive to make Bitcoin.org
+the best site it can be for as many people as possible.&lt;/p&gt;
+
+&lt;h2 id=&quot;acknowledgments&quot;&gt;Acknowledgments&lt;/h2&gt;
+
+&lt;p&gt;Bitcoin.org is funded exclusively by donations from the community, and a huge
+debt of gratitude is owed. Without community donations, the current redesign
+work would not have been possible. More enhancements and special projects are
+on the horizon, so stay tuned. The support from donations that allow
+Bitcoin.org to compete with sites that aren’t community supported, are greatly
+appreciated.&lt;/p&gt;
+
+&lt;p&gt;A big thanks is also due specifically to Natalia, Marek and Oleksandr at
+&lt;a href=&quot;https://ethworks.io&quot;&gt;ETHworks&lt;/a&gt; who have spear-headed the redesign efforts,
+worked tirelessly, and have delivered great results from the very beginning,
+every step of the way. They are amazingly talented people in the cryptocurrency
+space.&lt;/p&gt;
+
+&lt;h2 id=&quot;about-bitcoinorg&quot;&gt;About Bitcoin.org&lt;/h2&gt;
+
+&lt;p&gt;Bitcoin.org was originally registered and owned by Satoshi Nakamoto and Martti
+Malmi. When Satoshi left the project, he gave ownership of the domain to
+additional people, separate from the Bitcoin developers, to spread
+responsibility and prevent any one person or group from easily gaining control
+over the Bitcoin project. Since then, the site has been developed and
+maintained by different members of the Bitcoin community.&lt;/p&gt;
+
+&lt;p&gt;There have been over 3,200 commits from 180 contributors from all over the
+world. In addition to this, over 950 translators have helped to make the site
+display natively to visitors by default in their own languages —now 25
+different languages and growing.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 01 May 2018 00:00:00 +0000</pubDate>
+        <link>//en/posts/test-the-new-site-design</link>
+        <guid isPermaLink="true">//en/posts/test-the-new-site-design</guid>
+        
+        
+        <category>blog</category>
+        
+      </item>
+    
+      <item>
+        <title>Vote and Help Choose Bitcoin.org&#39;s New Design</title>
+        <description>&lt;div class=&quot;post-content&quot;&gt;
+  &lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/img/blog/free/redesigning-homepage.png?1528484753&quot; alt=&quot;Redesigning Bitcoin.org&quot; /&gt;&lt;/p&gt;
+
+  &lt;p&gt;As one of the most-visited websites in the Bitcoin ecosystem, Bitcoin.org helps
+millions of people each month, learn more about Bitcoin. One of our goals in
+2018 is to modernize the design of the site in an effort to continue to
+provide rich content and information to users in an efficient way, as Bitcoin
+technology continues to evolve.&lt;/p&gt;
+
+  &lt;p&gt;Below are three new homepage designs we’d like to vote on. Each version
+shows what the homepage would look like on a desktop, handheld or tablet
+device. The version that receives the most votes will then be further extended
+into the subpages of the site:&lt;/p&gt;
+
+  &lt;ul&gt;
+    &lt;li&gt;Version 1 (&lt;a href=&quot;https://invis.io/W6F8UUDPX#/272286353_1-8-18_Bitcoin-org_Ver1_Desktop_1200px&quot;&gt;Desktop&lt;/a&gt; / &lt;a href=&quot;https://invis.io/BJF8UVJYA#/272475274_1-8-18_Bitcoin-org_Ver1__Mobile_320px&quot;&gt;Handheld&lt;/a&gt; / &lt;a href=&quot;https://invis.io/MSF8UUNYZ#/272470844_1-8-18_Bitcoin-org_Ver1_Tablet_768px&quot;&gt;Tablet&lt;/a&gt;)&lt;/li&gt;
+    &lt;li&gt;Version 2 (&lt;a href=&quot;https://invis.io/VGFB69IYR#/273185825_12-01-18_Bitcoin-org_Ver2_Desktop_1200px__1&quot;&gt;Desktop&lt;/a&gt; / &lt;a href=&quot;https://invis.io/TJFC8U3WVK3#/273522832_12-01-18_Bitcoin-org_Ver2__Mobile_320px&quot;&gt;Handheld&lt;/a&gt; / &lt;a href=&quot;https://invis.io/PXFC8P6MK9W#/273522833_12-01-18_Bitcoin-org_Ver2_Tablet_768px&quot;&gt;Tablet&lt;/a&gt;)&lt;/li&gt;
+    &lt;li&gt;Version 3 (&lt;a href=&quot;https://invis.io/6VFF8CB9CJA#/274446152_19-01-18_Bitcoin-org_Ver3_Desktop_1200px&quot;&gt;Desktop&lt;/a&gt; / &lt;a href=&quot;https://invis.io/SVFG91LJAZ9#/274784637_22-01-18_Bitcoin-org_Ver3__Mobile_320px&quot;&gt;Handheld&lt;/a&gt; / &lt;a href=&quot;https://invis.io/C6FG9114QGM#/274784638_22-01-18_Bitcoin-org_Ver3_Tablet_768px&quot;&gt;Tablet&lt;/a&gt;)&lt;/li&gt;
+  &lt;/ul&gt;
+
+  &lt;p&gt;Please help spread the word and choose your favorite design.&lt;/p&gt;
+
+  &lt;s&gt;Voting will be open until 0:00 UTC on Sunday, February 4th.&lt;/s&gt;
+
+  &lt;p&gt;&lt;em&gt;Voting has ended&lt;/em&gt; - &lt;strong&gt;the winner is Version 3!&lt;/strong&gt;&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;https://dcdt.typeform.com/report/rv9C1j/rZcaOMYTVMaEiLi1&quot;&gt;View the results&lt;/a&gt;.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;div class=&quot;toccontent-block boxexpand expanded&quot;&gt;
+
+  &lt;h2 id=&quot;about-bitcoinorg&quot;&gt;About Bitcoin.org&lt;/h2&gt;
+
+  &lt;p&gt;Bitcoin.org was originally registered and owned by Satoshi Nakamoto and Martti
+Malmi. When Satoshi left the project, he gave ownership of the domain to
+additional people, separate from the Bitcoin developers, to spread
+responsibility and prevent any one person or group from easily gaining control
+over the Bitcoin project. Since then, the site has been developed and
+maintained by different members of the Bitcoin community.&lt;/p&gt;
+
+  &lt;p&gt;There have been over 3,200 commits from 180 contributors from all over the
+world. In addition to this, over 950 translators have helped to make the site
+display natively to visitors by default in their own languages —now 25
+different languages and growing.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;toccontent-block boxexpand expanded&quot;&gt;
+
+  &lt;h2 id=&quot;interested-in-getting-involved&quot;&gt;Interested in getting involved?&lt;/h2&gt;
+
+  &lt;p&gt;&lt;a href=&quot;https://github.com/bitcoin-dot-org/bitcoin.org#how-to-participate&quot;&gt;Learn how you can participate&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Sun, 28 Jan 2018 00:00:00 +0000</pubDate>
+        <link>//en/posts/vote-on-the-new-site-design</link>
+        <guid isPermaLink="true">//en/posts/vote-on-the-new-site-design</guid>
+        
+        
+        <category>blog</category>
+        
+      </item>
+    
+      <item>
+        <title>Bitcoin.org to denounce &quot;Segwit2x&quot;</title>
+        <description>&lt;p&gt;On 2017-10-11 at noon (UTC), Bitcoin.org is planning to publish a banner on every page of the site warning users about the risks of using services that will default to the so-called Segwit2x&lt;sup&gt;&lt;b&gt;1&lt;/b&gt;&lt;/sup&gt; (S2X) contentious hard fork. S2X companies will be called out by name. To ensure that we only warn users against companies that will actually put user deposits at risk, we urge all companies to publicly clarify their stance before the above date, either by a highly-visible public statement or by commenting on Bitcoin.org issue #&lt;a href=&quot;https://github.com/bitcoin-dot-org/bitcoin.org/issues/1835&quot;&gt;1835&lt;/a&gt; (or by doing both).&lt;/p&gt;
+
+&lt;p&gt;In particular, we need to know that:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;The company will not under any circumstances list “Segwit2x” as “BTC” and/or “Bitcoin”. Note that &lt;a href=&quot;https://en.bitcoin.it/wiki/Bitcoin_is_not_ruled_by_miners&quot;&gt;Bitcoin is not ruled by miners&lt;/a&gt;, and miner actions cannot be used as a justification to redefine Bitcoin.&lt;/li&gt;
+  &lt;li&gt;The company will not by default do anything that would deprive users of their bitcoins (by eg. using S2X software without addressing replay attacks&lt;sup&gt;&lt;b&gt;2&lt;/b&gt;&lt;/sup&gt;, selling user bitcoins automatically, crediting BTC deposits only as S2X deposits, etc.). Providing access to S2X-coins is acceptable, however.&lt;/li&gt;
+  &lt;li&gt;The company will continue to provide normal service to Bitcoin (ie. non-S2X) users.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Although bitcoin.org &lt;a href=&quot;/en/posts/hard-fork-policy&quot;&gt;condemns&lt;/a&gt; contentious hard fork attempts such as S2X, we consider it &lt;em&gt;tolerable&lt;/em&gt; for companies to support S2X in ways that do not contradict the above three points, such as by supporting both Bitcoin and S2X simultaneously as separate cryptocurrencies.&lt;/p&gt;
+
+&lt;p&gt;By default, we will be using the following list of companies known to support S2X in our warning:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;1Hash (China)&lt;/li&gt;
+  &lt;li&gt;Abra (United States)&lt;/li&gt;
+  &lt;li&gt;ANX (Hong Kong)&lt;/li&gt;
+  &lt;li&gt;Bitangel.com /Chandler Guo (China)&lt;/li&gt;
+  &lt;li&gt;BitClub Network (Hong Kong)&lt;/li&gt;
+  &lt;li&gt;Bitcoin.com (St. Kitts &amp;amp; Nevis)&lt;/li&gt;
+  &lt;li&gt;Bitex (Argentina)&lt;/li&gt;
+  &lt;li&gt;bitFlyer (Japan)&lt;/li&gt;
+  &lt;li&gt;Bitfury (United States)&lt;/li&gt;
+  &lt;li&gt;Bitmain (China)&lt;/li&gt;
+  &lt;li&gt;BitPay (United States)&lt;/li&gt;
+  &lt;li&gt;BitPesa (Kenya)&lt;/li&gt;
+  &lt;li&gt;BitOasis (United Arab Emirates)&lt;/li&gt;
+  &lt;li&gt;Bixin.com (China)&lt;/li&gt;
+  &lt;li&gt;Blockchain (UK)&lt;/li&gt;
+  &lt;li&gt;Bloq (United States)&lt;/li&gt;
+  &lt;li&gt;BTC.com (China)&lt;/li&gt;
+  &lt;li&gt;BTCC (China)&lt;/li&gt;
+  &lt;li&gt;BTC.TOP (China)&lt;/li&gt;
+  &lt;li&gt;BTER.com (China)&lt;/li&gt;
+  &lt;li&gt;Circle (United States)&lt;/li&gt;
+  &lt;li&gt;Civic (United States)&lt;/li&gt;
+  &lt;li&gt;Coinbase (United States)&lt;/li&gt;
+  &lt;li&gt;Coins.ph (Phillipines)&lt;/li&gt;
+  &lt;li&gt;CryptoFacilities (UK)&lt;/li&gt;
+  &lt;li&gt;Decentral (Canada)&lt;/li&gt;
+  &lt;li&gt;Digital Currency Group (United States)&lt;/li&gt;
+  &lt;li&gt;Filament (United States)&lt;/li&gt;
+  &lt;li&gt;Genesis Global Trading (United States)&lt;/li&gt;
+  &lt;li&gt;Genesis Mining (Hong Kong)&lt;/li&gt;
+  &lt;li&gt;GoCoin (Isle of Man)&lt;/li&gt;
+  &lt;li&gt;Grayscale Investments (United States)&lt;/li&gt;
+  &lt;li&gt;Jaxx (Canada)&lt;/li&gt;
+  &lt;li&gt;Korbit (South Korea)&lt;/li&gt;
+  &lt;li&gt;Luno (Singapore)&lt;/li&gt;
+  &lt;li&gt;MONI (Finland)&lt;/li&gt;
+  &lt;li&gt;Netki (United States)&lt;/li&gt;
+  &lt;li&gt;OB1 (United States)&lt;/li&gt;
+  &lt;li&gt;Purse (United States)&lt;/li&gt;
+  &lt;li&gt;Ripio (Argentina)&lt;/li&gt;
+  &lt;li&gt;Safello (Sweden)&lt;/li&gt;
+  &lt;li&gt;SFOX (United States)&lt;/li&gt;
+  &lt;li&gt;ShapeShift (Switzerland)&lt;/li&gt;
+  &lt;li&gt;SurBTC (Chile)&lt;/li&gt;
+  &lt;li&gt;Unocoin (India)&lt;/li&gt;
+  &lt;li&gt;Veem (United States)&lt;/li&gt;
+  &lt;li&gt;ViaBTC (China)&lt;/li&gt;
+  &lt;li&gt;Xapo (United States)&lt;/li&gt;
+  &lt;li&gt;Yours (United States)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;notes&quot;&gt;Notes&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;“SegWit2x” has nothing to do with SegWit. SegWit is already activated, and was supported by an entirely different set of people.&lt;/li&gt;
+  &lt;li&gt;S2X claims to have replay protection, but their version requires extra manual steps in order to prevent loss of BTC. If you use S2X software without careful engineering, you are likely to lose any associated BTC.&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        <pubDate>Thu, 05 Oct 2017 00:00:00 +0000</pubDate>
+        <link>//en/posts/denounce-segwit2x</link>
+        <guid isPermaLink="true">//en/posts/denounce-segwit2x</guid>
+        
+        
+        <category>blog</category>
+        
+      </item>
+    
+      <item>
+        <title>Bitcoin Core Version 0.14.2 Released</title>
+        <description>&lt;div class=&quot;post-content&quot;&gt;
+  &lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/img/blog/free/bitcoin-core-0142.png?1528484753&quot; alt=&quot;Bitcoin Core Version 0.14.2&quot; /&gt;&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;https://segwitcoin.fun/en/download&quot;&gt;Bitcoin Core version 0.14.2 is now available&lt;/a&gt;.&lt;/p&gt;
+
+  &lt;p&gt;This is a new minor version release, including various bugfixes and
+performance improvements, as well as updated translations.&lt;/p&gt;
+
+  &lt;p&gt;Please report bugs using the &lt;a href=&quot;https://github.com/bitcoin/bitcoin/issues&quot;&gt;issue tracker on GitHub&lt;/a&gt;.&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;https://bitcoincore.org/en/list/announcements/join/&quot;&gt;Subscribe here&lt;/a&gt; to receive
+security and update notifications.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;toccontent-block boxexpand expanded&quot;&gt;
+
+  &lt;h2 id=&quot;compatibility&quot;&gt;Compatibility&lt;/h2&gt;
+
+  &lt;p&gt;Bitcoin Core is extensively tested on multiple operating systems using
+the Linux kernel, macOS 10.8+, and Windows Vista and later.&lt;/p&gt;
+
+  &lt;p&gt;Microsoft ended support for Windows XP on &lt;a href=&quot;https://www.microsoft.com/en-us/WindowsForBusiness/end-of-xp-support&quot;&gt;April 8th,
+2014&lt;/a&gt;,
+No attempt is made to prevent installing or running the software on Windows XP,
+you can still do so at your own risk but be aware that there are known
+instabilities and issues. Please do not report issues about Windows XP to the
+&lt;a href=&quot;https://github.com/bitcoin/bitcoin/issues&quot;&gt;issue tracker&lt;/a&gt;.&lt;/p&gt;
+
+  &lt;p&gt;Bitcoin Core should also work on most other Unix-like systems but is not
+frequently tested on them.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;toccontent-block boxexpand expanded&quot;&gt;
+
+  &lt;h2 id=&quot;notable-changes&quot;&gt;Notable changes&lt;/h2&gt;
+
+  &lt;h3 id=&quot;miniupnp-cve-2017-8798&quot;&gt;miniupnp CVE-2017-8798&lt;/h3&gt;
+
+  &lt;p&gt;Bundled miniupnpc was updated to 2.0.20170509. This fixes an integer signedness error
+(present in MiniUPnPc v1.4.20101221 through v2.0) that allows remote attackers
+(within the LAN) to cause a denial of service or possibly have unspecified
+other impact.&lt;/p&gt;
+
+  &lt;p&gt;This only affects users that have explicitly enabled UPnP through the GUI
+setting or through the &lt;code class=&quot;highlighter-rouge&quot;&gt;-upnp&lt;/code&gt; option, as since the last UPnP vulnerability
+(in Bitcoin Core 0.10.3) it has been disabled by default.&lt;/p&gt;
+
+  &lt;p&gt;If you use this option, it is recommended to upgrade to this version as soon as
+possible.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;toccontent-block boxexpand expanded&quot;&gt;
+
+  &lt;h2 id=&quot;known-bugs&quot;&gt;Known Bugs&lt;/h2&gt;
+
+  &lt;p&gt;Since 0.14.0 the approximate transaction fee shown in Bitcoin-Qt when using coin
+control and smart fee estimation does not reflect any change in target from the
+smart fee slider. It will only present an approximate fee calculated using the
+default target. The fee calculated using the correct target is still applied to
+the transaction and shown in the final send confirmation dialog.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;toccontent-block boxexpand expanded&quot;&gt;
+
+  &lt;h2 id=&quot;change-log&quot;&gt;0.14.2 Change log&lt;/h2&gt;
+
+  &lt;p&gt;Detailed release notes follow. This overview includes changes that affect
+behavior, not code moves, refactors and string updates. For convenience in locating
+the code changes and accompanying discussion, both the pull request and
+git merge commit are mentioned.&lt;/p&gt;
+
+  &lt;h3 id=&quot;rpc-and-other-apis&quot;&gt;RPC and other APIs&lt;/h3&gt;
+
+  &lt;ul&gt;
+    &lt;li&gt;#10410 &lt;code class=&quot;highlighter-rouge&quot;&gt;321419b&lt;/code&gt; Fix importwallet edge case rescan bug (ryanofsky)&lt;/li&gt;
+  &lt;/ul&gt;
+
+  &lt;h3 id=&quot;p2p-protocol-and-network-code&quot;&gt;P2P protocol and network code&lt;/h3&gt;
+
+  &lt;ul&gt;
+    &lt;li&gt;#10424 &lt;code class=&quot;highlighter-rouge&quot;&gt;37a8fc5&lt;/code&gt; Populate services in GetLocalAddress (morcos)&lt;/li&gt;
+    &lt;li&gt;#10441 &lt;code class=&quot;highlighter-rouge&quot;&gt;9e3ad50&lt;/code&gt; Only enforce expected services for half of outgoing connections (theuni)&lt;/li&gt;
+  &lt;/ul&gt;
+
+  &lt;h3 id=&quot;build-system&quot;&gt;Build system&lt;/h3&gt;
+
+  &lt;ul&gt;
+    &lt;li&gt;#10414 &lt;code class=&quot;highlighter-rouge&quot;&gt;ffb0c4b&lt;/code&gt; miniupnpc 2.0.20170509 (fanquake)&lt;/li&gt;
+    &lt;li&gt;#10228 &lt;code class=&quot;highlighter-rouge&quot;&gt;ae479bc&lt;/code&gt; Regenerate bitcoin-config.h as necessary (theuni)&lt;/li&gt;
+  &lt;/ul&gt;
+
+  &lt;h3 id=&quot;miscellaneous&quot;&gt;Miscellaneous&lt;/h3&gt;
+
+  &lt;ul&gt;
+    &lt;li&gt;#10245 &lt;code class=&quot;highlighter-rouge&quot;&gt;44a17f2&lt;/code&gt; Minor fix in build documentation for FreeBSD 11 (shigeya)&lt;/li&gt;
+    &lt;li&gt;#10215 &lt;code class=&quot;highlighter-rouge&quot;&gt;0aee4a1&lt;/code&gt; Check interruptNet during dnsseed lookups (TheBlueMatt)&lt;/li&gt;
+  &lt;/ul&gt;
+
+  &lt;h3 id=&quot;gui&quot;&gt;GUI&lt;/h3&gt;
+
+  &lt;ul&gt;
+    &lt;li&gt;#10231 &lt;code class=&quot;highlighter-rouge&quot;&gt;1e936d7&lt;/code&gt; Reduce a significant cs_main lock freeze (jonasschnelli)&lt;/li&gt;
+  &lt;/ul&gt;
+
+  &lt;h3 id=&quot;wallet&quot;&gt;Wallet&lt;/h3&gt;
+
+  &lt;ul&gt;
+    &lt;li&gt;#10294 &lt;code class=&quot;highlighter-rouge&quot;&gt;1847642&lt;/code&gt; Unset change position when there is no change (instagibbs)&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;toccontent-block boxexpand expanded&quot;&gt;
+
+  &lt;h2 id=&quot;credits&quot;&gt;Credits&lt;/h2&gt;
+
+  &lt;p&gt;Thanks to everyone who directly contributed to this release:&lt;/p&gt;
+
+  &lt;ul&gt;
+    &lt;li&gt;Alex Morcos&lt;/li&gt;
+    &lt;li&gt;Cory Fields&lt;/li&gt;
+    &lt;li&gt;fanquake&lt;/li&gt;
+    &lt;li&gt;Gregory Sanders&lt;/li&gt;
+    &lt;li&gt;Jonas Schnelli&lt;/li&gt;
+    &lt;li&gt;Matt Corallo&lt;/li&gt;
+    &lt;li&gt;Russell Yanofsky&lt;/li&gt;
+    &lt;li&gt;Shigeya Suzuki&lt;/li&gt;
+    &lt;li&gt;Wladimir J. van der Laan&lt;/li&gt;
+  &lt;/ul&gt;
+
+  &lt;p&gt;As well as everyone that helped translating on
+&lt;a href=&quot;https://www.transifex.com/projects/p/bitcoin/&quot;&gt;Transifex&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Sat, 17 Jun 2017 00:00:00 +0000</pubDate>
+        <link>//en/posts/bitcoin-core-version-0-14-2-released</link>
+        <guid isPermaLink="true">//en/posts/bitcoin-core-version-0-14-2-released</guid>
+        
+        
+        <category>blog</category>
+        
+      </item>
+    
+      <item>
+        <title>Bitcoin Core Version 0.14.1 Released</title>
+        <description>&lt;div class=&quot;post-content&quot;&gt;
+  &lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/img/blog/free/bitcoin-core-0141.png?1528484753&quot; alt=&quot;Bitcoin Core Version 0.14.1&quot; /&gt;&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;https://segwitcoin.fun/en/download&quot;&gt;Bitcoin Core version 0.14.1 is now available&lt;/a&gt;.&lt;/p&gt;
+
+  &lt;p&gt;This is a new minor version release, including various bugfixes and performance improvements, as well as updated translations.&lt;/p&gt;
+
+  &lt;p&gt;Please report bugs using the &lt;a href=&quot;https://github.com/bitcoin/bitcoin/issues&quot;&gt;issue tracker on GitHub&lt;/a&gt;.&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;https://bitcoincore.org/en/list/announcements/join/&quot;&gt;Subscribe here&lt;/a&gt; to receive
+security and update notifications.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;toccontent-block boxexpand expanded&quot;&gt;
+
+  &lt;h2 id=&quot;compatibility&quot;&gt;Compatibility&lt;/h2&gt;
+
+  &lt;p&gt;Bitcoin Core is extensively tested on multiple operating systems using
+the Linux kernel, macOS 10.8+, and Windows Vista and later.&lt;/p&gt;
+
+  &lt;p&gt;Microsoft ended support for Windows XP on &lt;a href=&quot;https://www.microsoft.com/en-us/WindowsForBusiness/end-of-xp-support&quot;&gt;April 8th,
+2014&lt;/a&gt;,
+No attempt is made to prevent installing or running the software on Windows XP,
+you can still do so at your own risk but be aware that there are known
+instabilities and issues. Please do not report issues about Windows XP to the
+&lt;a href=&quot;https://github.com/bitcoin/bitcoin/issues&quot;&gt;issue tracker&lt;/a&gt;.&lt;/p&gt;
+
+  &lt;p&gt;Bitcoin Core should also work on most other Unix-like systems but is not
+frequently tested on them.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;toccontent-block boxexpand expanded&quot;&gt;
+
+  &lt;h2 id=&quot;notable-changes&quot;&gt;Notable changes&lt;/h2&gt;
+
+  &lt;h3 id=&quot;rpc-changes&quot;&gt;RPC changes&lt;/h3&gt;
+
+  &lt;ul&gt;
+    &lt;li&gt;The first positional argument of &lt;code class=&quot;highlighter-rouge&quot;&gt;createrawtransaction&lt;/code&gt; was renamed from
+&lt;code class=&quot;highlighter-rouge&quot;&gt;transactions&lt;/code&gt; to &lt;code class=&quot;highlighter-rouge&quot;&gt;inputs&lt;/code&gt;.&lt;/li&gt;
+    &lt;li&gt;The argument of &lt;code class=&quot;highlighter-rouge&quot;&gt;disconnectnode&lt;/code&gt; was renamed from &lt;code class=&quot;highlighter-rouge&quot;&gt;node&lt;/code&gt; to &lt;code class=&quot;highlighter-rouge&quot;&gt;address&lt;/code&gt;.&lt;/li&gt;
+  &lt;/ul&gt;
+
+  &lt;p&gt;These interface changes break compatibility with 0.14.0, when the named
+arguments functionality, introduced in 0.14.0, is used. Client software
+using these calls with named arguments needs to be updated.&lt;/p&gt;
+
+  &lt;h3 id=&quot;mining&quot;&gt;Mining&lt;/h3&gt;
+
+  &lt;p&gt;In previous versions, getblocktemplate required segwit support from downstream
+clients/miners once the feature activated on the network. In this version, it
+now supports non-segwit clients even after activation, by removing all segwit
+transactions from the returned block template. This allows non-segwit miners to
+continue functioning correctly even after segwit has activated.&lt;/p&gt;
+
+  &lt;p&gt;Due to the limitations in previous versions, getblocktemplate also recommended
+non-segwit clients to not signal for the segwit version-bit. Since this is no
+longer an issue, getblocktemplate now always recommends signalling segwit for
+all miners. This is safe because ability to enforce the rule is the only
+required criteria for safe activation, not actually producing segwit-enabled
+blocks.&lt;/p&gt;
+
+  &lt;h3 id=&quot;utxo-memory-accounting&quot;&gt;UTXO memory accounting&lt;/h3&gt;
+
+  &lt;p&gt;Memory usage for the UTXO cache is being calculated more accurately, so that
+the configured limit (&lt;code class=&quot;highlighter-rouge&quot;&gt;-dbcache&lt;/code&gt;) will be respected when memory usage peaks
+during cache flushes.  The memory accounting in prior releases is estimated to
+only account for half the actual peak utilization.&lt;/p&gt;
+
+  &lt;p&gt;The default &lt;code class=&quot;highlighter-rouge&quot;&gt;-dbcache&lt;/code&gt; has also been changed in this release to 450MiB.  Users
+who currently set &lt;code class=&quot;highlighter-rouge&quot;&gt;-dbcache&lt;/code&gt; to a high value (e.g. to keep the UTXO more fully
+cached in memory) should consider increasing this setting in order to achieve
+the same cache performance as prior releases.  Users on low-memory systems
+(such as systems with 1GB or less) should consider specifying a lower value for
+this parameter.&lt;/p&gt;
+
+  &lt;p&gt;Additional information relating to running on low-memory systems can be found
+here:
+&lt;a href=&quot;https://gist.github.com/laanwj/efe29c7661ce9b6620a7&quot;&gt;reducing-bitcoind-memory-usage.md&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;toccontent-block boxexpand expanded&quot;&gt;
+
+  &lt;h2 id=&quot;change-log&quot;&gt;0.14.1 Change log&lt;/h2&gt;
+
+  &lt;p&gt;Detailed release notes follow. This overview includes changes that affect
+behavior, not code moves, refactors and string updates. For convenience in locating
+the code changes and accompanying discussion, both the pull request and
+git merge commit are mentioned.&lt;/p&gt;
+
+  &lt;h3 id=&quot;rpc-and-other-apis&quot;&gt;RPC and other APIs&lt;/h3&gt;
+
+  &lt;ul&gt;
+    &lt;li&gt;#10084 &lt;code class=&quot;highlighter-rouge&quot;&gt;142fbb2&lt;/code&gt; Rename first named arg of createrawtransaction (MarcoFalke)&lt;/li&gt;
+    &lt;li&gt;#10139 &lt;code class=&quot;highlighter-rouge&quot;&gt;f15268d&lt;/code&gt; Remove auth cookie on shutdown (practicalswift)&lt;/li&gt;
+    &lt;li&gt;#10146 &lt;code class=&quot;highlighter-rouge&quot;&gt;2fea10a&lt;/code&gt; Better error handling for submitblock (rawodb, gmaxwell)&lt;/li&gt;
+    &lt;li&gt;#10144 &lt;code class=&quot;highlighter-rouge&quot;&gt;d947afc&lt;/code&gt; Prioritisetransaction wasn’t always updating ancestor fee (sdaftuar)&lt;/li&gt;
+    &lt;li&gt;#10204 &lt;code class=&quot;highlighter-rouge&quot;&gt;3c79602&lt;/code&gt; Rename disconnectnode argument (jnewbery)&lt;/li&gt;
+  &lt;/ul&gt;
+
+  &lt;h3 id=&quot;block-and-transaction-handling&quot;&gt;Block and transaction handling&lt;/h3&gt;
+
+  &lt;ul&gt;
+    &lt;li&gt;#10126 &lt;code class=&quot;highlighter-rouge&quot;&gt;0b5e162&lt;/code&gt; Compensate for memory peak at flush time (sipa)&lt;/li&gt;
+    &lt;li&gt;#9912 &lt;code class=&quot;highlighter-rouge&quot;&gt;fc3d7db&lt;/code&gt; Optimize GetWitnessHash() for non-segwit transactions (sdaftuar)&lt;/li&gt;
+    &lt;li&gt;#10133 &lt;code class=&quot;highlighter-rouge&quot;&gt;ab864d3&lt;/code&gt; Clean up calculations of pcoinsTip memory usage (morcos)&lt;/li&gt;
+  &lt;/ul&gt;
+
+  &lt;h3 id=&quot;p2p-protocol-and-network-code&quot;&gt;P2P protocol and network code&lt;/h3&gt;
+
+  &lt;ul&gt;
+    &lt;li&gt;#9953/#10013 &lt;code class=&quot;highlighter-rouge&quot;&gt;d2548a4&lt;/code&gt; Fix shutdown hang with &amp;gt;= 8 -addnodes set (TheBlueMatt)&lt;/li&gt;
+    &lt;li&gt;#10176 &lt;code class=&quot;highlighter-rouge&quot;&gt;30fa231&lt;/code&gt; net: gracefully handle NodeId wrapping (theuni)&lt;/li&gt;
+  &lt;/ul&gt;
+
+  &lt;h3 id=&quot;build-system&quot;&gt;Build system&lt;/h3&gt;
+
+  &lt;ul&gt;
+    &lt;li&gt;#9973 &lt;code class=&quot;highlighter-rouge&quot;&gt;e9611d1&lt;/code&gt; depends: fix zlib build on osx (theuni)&lt;/li&gt;
+  &lt;/ul&gt;
+
+  &lt;h3 id=&quot;gui&quot;&gt;GUI&lt;/h3&gt;
+
+  &lt;ul&gt;
+    &lt;li&gt;#10060 &lt;code class=&quot;highlighter-rouge&quot;&gt;ddc2dd1&lt;/code&gt; Ensure an item exists on the rpcconsole stack before adding (achow101)&lt;/li&gt;
+  &lt;/ul&gt;
+
+  &lt;h3 id=&quot;mining-1&quot;&gt;Mining&lt;/h3&gt;
+
+  &lt;ul&gt;
+    &lt;li&gt;#9955/#10006 &lt;code class=&quot;highlighter-rouge&quot;&gt;569596c&lt;/code&gt; Don’t require segwit in getblocktemplate for segwit signalling or mining (sdaftuar)&lt;/li&gt;
+    &lt;li&gt;#9959/#10127 &lt;code class=&quot;highlighter-rouge&quot;&gt;b5c3440&lt;/code&gt; Prevent slowdown in CreateNewBlock on large mempools (sdaftuar)&lt;/li&gt;
+  &lt;/ul&gt;
+
+  &lt;h3 id=&quot;tests-and-qa&quot;&gt;Tests and QA&lt;/h3&gt;
+
+  &lt;ul&gt;
+    &lt;li&gt;#10157 &lt;code class=&quot;highlighter-rouge&quot;&gt;55f641c&lt;/code&gt; Fix the &lt;code class=&quot;highlighter-rouge&quot;&gt;mempool_packages.py&lt;/code&gt; test (sdaftuar)&lt;/li&gt;
+  &lt;/ul&gt;
+
+  &lt;h3 id=&quot;miscellaneous&quot;&gt;Miscellaneous&lt;/h3&gt;
+
+  &lt;ul&gt;
+    &lt;li&gt;#10037 &lt;code class=&quot;highlighter-rouge&quot;&gt;4d8e660&lt;/code&gt; Trivial: Fix typo in help getrawtransaction RPC (keystrike)&lt;/li&gt;
+    &lt;li&gt;#10120 &lt;code class=&quot;highlighter-rouge&quot;&gt;e4c9a90&lt;/code&gt; util: Work around (virtual) memory exhaustion on 32-bit w/ glibc (laanwj)&lt;/li&gt;
+    &lt;li&gt;#10130 &lt;code class=&quot;highlighter-rouge&quot;&gt;ecc5232&lt;/code&gt; bitcoin-tx input verification (awemany, jnewbery)&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;toccontent-block boxexpand expanded&quot;&gt;
+
+  &lt;h2 id=&quot;credits&quot;&gt;Credits&lt;/h2&gt;
+
+  &lt;p&gt;Thanks to everyone who directly contributed to this release:&lt;/p&gt;
+
+  &lt;ul&gt;
+    &lt;li&gt;Alex Morcos&lt;/li&gt;
+    &lt;li&gt;Andrew Chow&lt;/li&gt;
+    &lt;li&gt;Awemany&lt;/li&gt;
+    &lt;li&gt;Cory Fields&lt;/li&gt;
+    &lt;li&gt;Gregory Maxwell&lt;/li&gt;
+    &lt;li&gt;James Evans&lt;/li&gt;
+    &lt;li&gt;John Newbery&lt;/li&gt;
+    &lt;li&gt;MarcoFalke&lt;/li&gt;
+    &lt;li&gt;Matt Corallo&lt;/li&gt;
+    &lt;li&gt;Pieter Wuille&lt;/li&gt;
+    &lt;li&gt;practicalswift&lt;/li&gt;
+    &lt;li&gt;rawodb&lt;/li&gt;
+    &lt;li&gt;Suhas Daftuar&lt;/li&gt;
+    &lt;li&gt;Wladimir J. van der Laan&lt;/li&gt;
+  &lt;/ul&gt;
+
+  &lt;p&gt;As well as everyone that helped translating on
+&lt;a href=&quot;https://www.transifex.com/projects/p/bitcoin/&quot;&gt;Transifex&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Sat, 22 Apr 2017 00:00:00 +0000</pubDate>
+        <link>//en/posts/bitcoin-core-version-0-14-1-released</link>
+        <guid isPermaLink="true">//en/posts/bitcoin-core-version-0-14-1-released</guid>
+        
+        
+        <category>blog</category>
+        
+      </item>
+    
+  </channel>
+</rss>

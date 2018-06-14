@@ -1,0 +1,3251 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+
+<!-- Mirrored from bitcoin.org/en/wallets/web/bitgo/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Jun 2018 15:42:25 GMT -->
+<head>
+
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta property="og:image" content="https://segwitcoin.fun/img/icons/opengraph.png?1528484753" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>BitGo - Web - Choose your wallet - Bitcoin</title>
+
+<link rel="stylesheet" href="https://segwitcoin.fun/css/font-awesome-4.4.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://segwitcoin.fun/css/main.css?1528484753">
+<!--[if lt IE 8]><link rel="stylesheet" href="/css/ie.css"><script type="text/javascript" src="/js/ie.js"></script><![endif]-->
+<!--[if IE 8]><link rel="stylesheet" href="/css/ie8.css"><![endif]-->
+
+
+<script type="text/javascript" src="https://segwitcoin.fun/js/base.js?1528484753"></script>
+<script type="text/javascript" src="https://segwitcoin.fun/js/main.js?1528484753"></script>
+<script src="https://segwitcoin.fun/js/jquery/jquery-1.11.2.min.js"></script>
+<script src="https://segwitcoin.fun/js/jquery/jquery.qrcode.min.js"></script>
+<link rel="shortcut icon" href="https://segwitcoin.fun/favicon.png?1528484753">
+<link rel="apple-touch-icon-precomposed" href="https://segwitcoin.fun/img/icons/logo_ios.png?1528484753"/>
+<script>
+    window.cookieconsent_options = {
+        theme: 'light-floating'
+    }
+</script>
+<script type="text/javascript" src="https://segwitcoin.fun/js/cookieconsent/cookieconsent.js?1528484753"></script>
+<script>
+if( navigator.doNotTrack != "yes" && navigator.doNotTrack != "1" && window.doNotTrack != "1" && navigator.msDoNotTrack != "1" ){
+	var script = document.createElement('script');
+	script.src = 'https://segwitcoin.fun/js/analytics.js'
+	document.getElementsByTagName("head")[0].appendChild(script);
+}
+</script>
+
+</head>
+
+<body>
+
+
+
+
+
+<div id="donation-modal" style="display: none" class="donation-modal hidden">
+  <div class="modal-dialog">
+    <div class="modal-header">
+      <div class="modal-close-btn" onclick="closeDonationModal()">×</div>
+      <p class="modal-header-text section-title">Donate to Bitcoin.org</p>
+    </div>
+    <p class="modal-subheader">Use this QR code or address below</p>
+    <div style="text-align: center;">
+      <div id="donation-qr-code" data-address="3FkenCiXpSLqD8L79intRNXUgjRoH9sjXa"></div>
+    </div>
+    <div>
+      <a
+        class="donation-btc-address"
+        href="bitcoin:3FkenCiXpSLqD8L79intRNXUgjRoH9sjXa"
+        target="_blank">
+        3FkenCiXpSLqD8L79intRNXUgjRoH9sjXa
+      </a>
+    </div>
+    <div class="modal-body bg-white" style="overflow-y:hidden;text-align: center;">
+      <div>
+        
+        <button type="button" class="donation-amount-btn" data-amount-usd="5">
+          $5.00
+          <div class="donation-amount-usd-in-btc">(... BTC)</div>
+        </button>
+        
+        <button type="button" class="donation-amount-btn" data-amount-usd="25">
+          $25.00
+          <div class="donation-amount-usd-in-btc">(... BTC)</div>
+        </button>
+        
+        <button type="button" class="donation-amount-btn" data-amount-usd="50">
+          $50.00
+          <div class="donation-amount-usd-in-btc">(... BTC)</div>
+        </button>
+        
+      </div>
+
+      <div>
+        <input
+          style="margin-right: 15px"
+          type="text"
+          placeholder="Or custom amount? (BTC)"
+          id="donation-input-amount-btc" class="donation-amount-input">
+        <input
+          type="text"
+          placeholder="Or custom amount? (USD)"
+          id="donation-input-amount-usd" class="donation-amount-input">
+      </div>
+
+      <div>
+        <textarea
+          class="donation-amount-input"
+          id="donation-input-message"
+          placeholder="Optional description (for your wallet)"></textarea>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div id="detectmobile" class="detectmobile"></div>
+
+
+
+
+
+
+
+<div class="head"><div>
+  
+
+<a class="logo" href="../../../index.html"><img src="https://segwitcoin.fun/img/icons/logotop.png?1528484753" alt="Bitcoin"></a>
+
+  
+
+<ul id="menusimple" class="menusimple menumain" onclick="mobileMenuHover(event);" ontouchstart="mobileMenuHover(event);">
+  <li><a class="is-expand">Introduction</a>
+    <ul>
+      <li><a href="../../../bitcoin-for-individuals.html">Individuals</a></li>
+      <li><a href="../../../bitcoin-for-businesses.html">Businesses</a></li>
+      <li><a href="../../../bitcoin-for-developers.html">Developers</a></li>
+      <li><a href="../../../getting-started.html">Getting started</a></li>
+      <li><a href="../../../how-it-works.html">How it works</a></li>
+      <li><a href="../../../you-need-to-know.html">You need to know</a></li>
+    </ul>
+  </li>
+  <li><a class="is-expand">Resources</a>
+    <ul>
+      <li><a href="../../../resources.html">Resources</a>
+      <li><a href="../../../exchanges.html">Exchanges</a></li>
+      <li><a href="../../../community.html">Community</a></li>
+      
+      
+      <li><a href="../../../developer-documentation.html">Documentation</a></li>
+      
+      <li><a href="../../../vocabulary.html">Vocabulary</a></li>
+      <li><a href="../../../events.html">Events</a></li>
+      
+        <li><a href="../../../bitcoin-core/index.html">Bitcoin Core</a></li>
+      
+    </ul>
+  </li>
+  <li><a href="../../../innovation.html">Innovation</a></li>
+  <li><a class="is-expand">Participate</a>
+    <ul>
+      <li><a href="../../../support-bitcoin.html">Support Bitcoin</a>
+      <li><a href="../../../buy.html">Buy Bitcoin</a></li>
+      <li><a href="../../../full-node.html">Running a full node</a></li>
+      <li><a href="../../../development.html">Development</a></li>
+    </ul>
+  </li>
+  <li><a href="../../../faq.html">FAQ</a></li>
+</ul>
+
+  
+
+<a id="menumobile" class="menumobile" onclick="mobileMenuShow(event);" ontouchstart="mobileMenuShow(event);"></a>
+
+  
+<ul class="lang is-expand">
+  <li><a>English</a>
+  <ul>
+    <li><ul>
+      
+      
+        
+          <li><a href="https://segwitcoin.fun/id/">Bahasa Indonesia</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/da/">Dansk</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/de/">Deutsch</a></li>
+        
+        
+          <li><a href="../../../index.html" class="active">English</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/es/">Español</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/fr/">Français</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/it/">Italiano</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/hu/">Magyar</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/nl/">Nederlands</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/pl/">Polski</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/pt_BR/">Português Brasil</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/ro/">Română</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/sl/">Slovenščina</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/sv/">Svenska</a></li>
+        
+        </ul></li><li><ul>
+          <li><a href="https://segwitcoin.fun/tr/">Türkçe</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/el/">Ελληνικά</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/bg/">български</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/ru/">Русский</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/uk/">Українська</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/ar/">العربية</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/fa/">فارسی</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/hi/">हिन्दी</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/ko/">한국의</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/ja/">日本語</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/zh_CN/">简体中文</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/zh_TW/">繁體中文</a></li>
+        
+      </ul></li>
+    </ul>
+  </li>
+</ul>
+
+  
+<div id="langselect" class="langselect">
+    <label for="select-input" class="center-select">
+        <select id="select-input" class="center-select__input" onchange="window.location=this.value;">
+            
+            <option value="/id/" >Bahasa Indonesia</option>
+            
+            <option value="/da/" >Dansk</option>
+            
+            <option value="/de/" >Deutsch</option>
+            
+            <option value="/en/"  selected="selected">English</option>
+            
+            <option value="/es/" >Español</option>
+            
+            <option value="/fr/" >Français</option>
+            
+            <option value="/it/" >Italiano</option>
+            
+            <option value="/hu/" >Magyar</option>
+            
+            <option value="/nl/" >Nederlands</option>
+            
+            <option value="/pl/" >Polski</option>
+            
+            <option value="/pt_BR/" >Português Brasil</option>
+            
+            <option value="/ro/" >Română</option>
+            
+            <option value="/sl/" >Slovenščina</option>
+            
+            <option value="/sv/" >Svenska</option>
+            
+            <option value="/tr/" >Türkçe</option>
+            
+            <option value="/el/" >Ελληνικά</option>
+            
+            <option value="/bg/" >български</option>
+            
+            <option value="/ru/" >Русский</option>
+            
+            <option value="/uk/" >Українська</option>
+            
+            <option value="/ar/" >العربية</option>
+            
+            <option value="/fa/" >فارسی</option>
+            
+            <option value="/hi/" >हिन्दी</option>
+            
+            <option value="/ko/" >한국의</option>
+            
+            <option value="/ja/" >日本語</option>
+            
+            <option value="/zh_CN/" >简体中文</option>
+            
+            <option value="/zh_TW/" >繁體中文</option>
+            
+        </select>
+        <span class="center-select__text">Language: <span class="is-capital">en</span></span>
+    </label>
+</div>
+
+</div></div>
+
+<div class="body">
+  
+
+<div class="breadcrumbs">
+  <div class="container">
+    
+  </div>
+</div>
+
+  
+
+<div id="content" class="content">
+  <div class="wallet">
+  <div class="wallet-wrapper">
+    <div class="wallet-filter">
+    </div>
+    <div class="hero">
+      <div class="container wallet-logo-container hero-container">
+        <img class="wallet-logo" src="https://segwitcoin.fun/img/wallet/bitgo.png?1528484753" alt="BitGo" />
+        <h1 class="wallet-title">
+          BitGo
+        </h1>
+        <p class="wallet-description">
+          BitGo is a high-security multi-sig wallet, which protects your bitcoin from theft and loss. You maintain full custody; BitGo cannot spend or freeze funds. BitGo wallets are easy to use and offer advanced security features such as spending limits and multi-user access.
+        </p>
+        
+
+<div class="row hero-social">
+  <a href="#" onclick="window.open('http://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(location.href))" class="hero-social-link" target="_blank">
+    <img src="https://segwitcoin.fun/img/icons/ico_facebook_bright.svg?1528484753" alt="facebook">
+  </a>
+  <a href="#" onclick="window.open('https://twitter.com/share?url=' + encodeURIComponent(location.href))" class="hero-social-link" target="_blank">
+    <img src="https://segwitcoin.fun/img/icons/ico_twitter_bright.svg?1528484753" alt="twitter">
+  </a>
+</div>
+      </div>
+    </div>
+    <div class="wallet-navigation-wrapper">
+      <div class="wallet-navigation">
+        
+
+<div class="walletmenu-mobile" hidden>
+  
+  <div class="accordion accordion-platform">
+    
+    <div class="accordion-tab accordion-tab-1 js-tab ">
+      <p class="accordion-label">Select Wallet Type</p>
+      <p class="selected-item selected-platform"></p>
+    </div>
+    <div class="accordion-content platform-accordion-content">
+      
+
+        
+        
+      
+        
+        
+        
+        <div class="accordion-item wallet-desktop">
+          
+            <a class="accordion-link js-platform wallet-platform-link desktop-link" data-platform-name="desktop">Desktop</a>
+          
+        </div>
+      
+
+        
+        
+      
+        
+        
+        
+        <div class="accordion-item wallet-hardware">
+           
+            <a class="accordion-link hardware-link" href="../../hardware/index.html">Hardware</a>
+            
+        </div>
+      
+
+        
+        
+      
+        
+        
+        
+        <div class="accordion-item wallet-mobile">
+          
+            <a class="accordion-link js-platform wallet-platform-link mobile-link" data-platform-name="mobile">Mobile</a>
+          
+        </div>
+      
+
+        
+        
+      
+        
+        
+        
+        <div class="accordion-item wallet-web active">
+           
+            <a class="accordion-link web-link" href="../index.html">Web</a>
+            
+        </div>
+      
+    </div>
+  </div>
+    
+
+      
+      
+
+      
+        <div class="accordion accordion-os accordion-desktop" data-os="desktop" hidden>
+          <div class="accordion-tab accordion-tab-2 js-tab">
+            <p class="accordion-label">Select Operating System</p>
+            <p class="selected-item selected-os"></p>
+          </div>
+          <div class="accordion-content">
+
+            
+              
+              
+              <div class="accordion-item wallet-linux">
+                <a class="accordion-link link-wallet-linux" href="../../desktop/linux/index.html">
+                  Linux
+                </a>
+              </div>
+            
+              
+              
+              <div class="accordion-item wallet-mac">
+                <a class="accordion-link link-wallet-mac" href="../../desktop/mac/index.html">
+                  Mac
+                </a>
+              </div>
+            
+              
+              
+              <div class="accordion-item wallet-windows">
+                <a class="accordion-link link-wallet-windows" href="../../desktop/windows/index.html">
+                  Windows
+                </a>
+              </div>
+            
+          </div>
+        </div>
+      
+      
+    
+
+      
+      
+
+      
+      
+    
+
+      
+      
+
+      
+        <div class="accordion accordion-os accordion-mobile" data-os="mobile" hidden>
+          <div class="accordion-tab accordion-tab-2 js-tab">
+            <p class="accordion-label">Select Operating System</p>
+            <p class="selected-item selected-os"></p>
+          </div>
+          <div class="accordion-content">
+
+            
+              
+              
+              <div class="accordion-item wallet-android">
+                <a class="accordion-link link-wallet-android" href="../../mobile/android/index.html">
+                  Android
+                </a>
+              </div>
+            
+              
+              
+              <div class="accordion-item wallet-ios">
+                <a class="accordion-link link-wallet-ios" href="../../mobile/ios/index.html">
+                  iOS
+                </a>
+              </div>
+            
+              
+              
+              <div class="accordion-item wallet-windowsphone">
+                <a class="accordion-link link-wallet-windowsphone" href="../../mobile/windowsphone/index.html">
+                  Windows Phone
+                </a>
+              </div>
+            
+          </div>
+        </div>
+      
+      
+    
+
+      
+      
+
+      
+      
+    
+</div>
+ 
+        
+
+
+<div class="accordion accordion-wallets is-visible">
+  
+  
+  <div class="accordion-tab accordion-tab-wallet accordion-tab-3 js-tab is-expanded">
+    <p class="accordion-label">Select Wallet</p>
+    <p class="selected-item selected-wallet">BitGo</p>
+  </div>
+  <div class="accordion-content accordion-content-wallets">
+    <div class="wallet-list" id="wallets">
+      
+
+        <!-- All wallets -->
+         
+         
+        
+        <div class="wallet-list-item allwallets-list-item is-hidden" data-platforms="mobile " data-category="all-wallets" data-walletlevel="3">
+          <div class="wallet-list-item-link">
+            <img src="https://segwitcoin.fun/img/wallet/airbitzwallet.png?1528484753" alt="Airbitz Bitcoin Wallet" /> Airbitz
+          </div>
+          <p class="wallet-hint">Select an Operating System</p>
+          <div class="wallet-list-os">
+              
+            <a class="wallet-list-os-link" href="../../mobile/android/airbitzwallet/index.html" data-link-platform="mobile">
+              <span class="wallet-os-ico android-ico"></span>
+              <span class="wallet-os-ico-dark android-ico-dark" hidden></span>
+              <span class="wallet-os-ico-bright android-ico-bright" hidden></span>
+              <p class="wallet-ico-tooltip">android</p>
+            </a>
+              
+            <a class="wallet-list-os-link" href="../../mobile/ios/airbitzwallet/index.html" data-link-platform="mobile">
+              <span class="wallet-os-ico ios-ico"></span>
+              <span class="wallet-os-ico-dark ios-ico-dark" hidden></span>
+              <span class="wallet-os-ico-bright ios-ico-bright" hidden></span>
+              <p class="wallet-ico-tooltip">ios</p>
+            </a>
+              
+          </div>
+        </div>
+         
+         
+        
+        <div class="wallet-list-item allwallets-list-item is-hidden" data-platforms="desktop mobile " data-category="all-wallets" data-walletlevel="3">
+          <div class="wallet-list-item-link">
+            <img src="https://segwitcoin.fun/img/wallet/arcbit.png?1528484753" alt="ArcBit" /> ArcBit
+          </div>
+          <p class="wallet-hint">Select an Operating System</p>
+          <div class="wallet-list-os">
+              
+            <a class="wallet-list-os-link" href="../../desktop/windows/arcbit/index.html" data-link-platform="desktop">
+              <span class="wallet-os-ico windows-ico"></span>
+              <span class="wallet-os-ico-dark windows-ico-dark" hidden></span>
+              <span class="wallet-os-ico-bright windows-ico-bright" hidden></span>
+              <p class="wallet-ico-tooltip">windows</p>
+            </a>
+              
+            <a class="wallet-list-os-link" href="../../desktop/mac/arcbit/index.html" data-link-platform="desktop">
+              <span class="wallet-os-ico mac-ico"></span>
+              <span class="wallet-os-ico-dark mac-ico-dark" hidden></span>
+              <span class="wallet-os-ico-bright mac-ico-bright" hidden></span>
+              <p class="wallet-ico-tooltip">mac</p>
+            </a>
+              
+            <a class="wallet-list-os-link" href="../../desktop/linux/arcbit/index.html" data-link-platform="desktop">
+              <span class="wallet-os-ico linux-ico"></span>
+              <span class="wallet-os-ico-dark linux-ico-dark" hidden></span>
+              <span class="wallet-os-ico-bright linux-ico-bright" hidden></span>
+              <p class="wallet-ico-tooltip">linux</p>
+            </a>
+                
+            <a class="wallet-list-os-link" href="../../mobile/ios/arcbit/index.html" data-link-platform="mobile">
+              <span class="wallet-os-ico ios-ico"></span>
+              <span class="wallet-os-ico-dark ios-ico-dark" hidden></span>
+              <span class="wallet-os-ico-bright ios-ico-bright" hidden></span>
+              <p class="wallet-ico-tooltip">ios</p>
+            </a>
+              
+            <a class="wallet-list-os-link" href="../../mobile/android/arcbit/index.html" data-link-platform="mobile">
+              <span class="wallet-os-ico android-ico"></span>
+              <span class="wallet-os-ico-dark android-ico-dark" hidden></span>
+              <span class="wallet-os-ico-bright android-ico-bright" hidden></span>
+              <p class="wallet-ico-tooltip">android</p>
+            </a>
+              
+          </div>
+        </div>
+         
+         
+        
+        <div class="wallet-list-item allwallets-list-item is-hidden" data-platforms="desktop " data-category="all-wallets" data-walletlevel="2">
+          <div class="wallet-list-item-link">
+            <img src="https://segwitcoin.fun/img/wallet/armory.png?1528484753" alt="Armory" /> Armory
+          </div>
+          <p class="wallet-hint">Select an Operating System</p>
+          <div class="wallet-list-os">
+              
+            <a class="wallet-list-os-link" href="../../desktop/windows/armory/index.html" data-link-platform="desktop">
+              <span class="wallet-os-ico windows-ico"></span>
+              <span class="wallet-os-ico-dark windows-ico-dark" hidden></span>
+              <span class="wallet-os-ico-bright windows-ico-bright" hidden></span>
+              <p class="wallet-ico-tooltip">windows</p>
+            </a>
+              
+            <a class="wallet-list-os-link" href="../../desktop/mac/armory/index.html" data-link-platform="desktop">
+              <span class="wallet-os-ico mac-ico"></span>
+              <span class="wallet-os-ico-dark mac-ico-dark" hidden></span>
+              <span class="wallet-os-ico-bright mac-ico-bright" hidden></span>
+              <p class="wallet-ico-tooltip">mac</p>
+            </a>
+              
+            <a class="wallet-list-os-link" href="../../desktop/linux/armory/index.html" data-link-platform="desktop">
+              <span class="wallet-os-ico linux-ico"></span>
+              <span class="wallet-os-ico-dark linux-ico-dark" hidden></span>
+              <span class="wallet-os-ico-bright linux-ico-bright" hidden></span>
+              <p class="wallet-ico-tooltip">linux</p>
+            </a>
+              
+          </div>
+        </div>
+         
+         
+        
+        <div class="wallet-list-item allwallets-list-item is-hidden" data-platforms="desktop " data-category="all-wallets" data-walletlevel="1">
+          <div class="wallet-list-item-link">
+            <img src="https://segwitcoin.fun/img/wallet/bitcoincore.png?1528484753" alt="Bitcoin Core" /> Bitcoin Core
+          </div>
+          <p class="wallet-hint">Select an Operating System</p>
+          <div class="wallet-list-os">
+              
+            <a class="wallet-list-os-link" href="../../desktop/windows/bitcoincore/index.html" data-link-platform="desktop">
+              <span class="wallet-os-ico windows-ico"></span>
+              <span class="wallet-os-ico-dark windows-ico-dark" hidden></span>
+              <span class="wallet-os-ico-bright windows-ico-bright" hidden></span>
+              <p class="wallet-ico-tooltip">windows</p>
+            </a>
+              
+            <a class="wallet-list-os-link" href="../../desktop/mac/bitcoincore/index.html" data-link-platform="desktop">
+              <span class="wallet-os-ico mac-ico"></span>
+              <span class="wallet-os-ico-dark mac-ico-dark" hidden></span>
+              <span class="wallet-os-ico-bright mac-ico-bright" hidden></span>
+              <p class="wallet-ico-tooltip">mac</p>
+            </a>
+              
+            <a class="wallet-list-os-link" href="../../desktop/linux/bitcoincore/index.html" data-link-platform="desktop">
+              <span class="wallet-os-ico linux-ico"></span>
+              <span class="wallet-os-ico-dark linux-ico-dark" hidden></span>
+              <span class="wallet-os-ico-bright linux-ico-bright" hidden></span>
+              <p class="wallet-ico-tooltip">linux</p>
+            </a>
+              
+          </div>
+        </div>
+         
+         
+        
+        <div class="wallet-list-item allwallets-list-item is-hidden" data-platforms="desktop " data-category="all-wallets" data-walletlevel="1">
+          <div class="wallet-list-item-link">
+            <img src="https://segwitcoin.fun/img/wallet/bitcoinknots.png?1528484753" alt="Bitcoin Knots" /> Bitcoin Knots
+          </div>
+          <p class="wallet-hint">Select an Operating System</p>
+          <div class="wallet-list-os">
+              
+            <a class="wallet-list-os-link" href="../../desktop/windows/bitcoinknots/index.html" data-link-platform="desktop">
+              <span class="wallet-os-ico windows-ico"></span>
+              <span class="wallet-os-ico-dark windows-ico-dark" hidden></span>
+              <span class="wallet-os-ico-bright windows-ico-bright" hidden></span>
+              <p class="wallet-ico-tooltip">windows</p>
+            </a>
+              
+            <a class="wallet-list-os-link" href="../../desktop/mac/bitcoinknots/index.html" data-link-platform="desktop">
+              <span class="wallet-os-ico mac-ico"></span>
+              <span class="wallet-os-ico-dark mac-ico-dark" hidden></span>
+              <span class="wallet-os-ico-bright mac-ico-bright" hidden></span>
+              <p class="wallet-ico-tooltip">mac</p>
+            </a>
+              
+            <a class="wallet-list-os-link" href="../../desktop/linux/bitcoinknots/index.html" data-link-platform="desktop">
+              <span class="wallet-os-ico linux-ico"></span>
+              <span class="wallet-os-ico-dark linux-ico-dark" hidden></span>
+              <span class="wallet-os-ico-bright linux-ico-bright" hidden></span>
+              <p class="wallet-ico-tooltip">linux</p>
+            </a>
+              
+          </div>
+        </div>
+         
+         
+        
+        <div class="wallet-list-item allwallets-list-item is-hidden" data-platforms="mobile " data-category="all-wallets" data-walletlevel="2">
+          <div class="wallet-list-item-link">
+            <img src="https://segwitcoin.fun/img/wallet/bitcoinwallet.png?1528484753" alt="Bitcoin Wallet" /> Bitcoin Wallet
+          </div>
+          <p class="wallet-hint">Select an Operating System</p>
+          <div class="wallet-list-os">
+              
+            <a class="wallet-list-os-link" href="../../mobile/android/bitcoinwallet/index.html" data-link-platform="mobile">
+              <span class="wallet-os-ico android-ico"></span>
+              <span class="wallet-os-ico-dark android-ico-dark" hidden></span>
+              <span class="wallet-os-ico-bright android-ico-bright" hidden></span>
+              <p class="wallet-ico-tooltip">android</p>
+            </a>
+              
+          </div>
+        </div>
+         
+         
+        
+        <div class="wallet-list-item allwallets-list-item is-hidden" data-platforms="web " data-category="all-wallets" data-walletlevel="3">
+          <div class="wallet-list-item-link">
+            <img src="https://segwitcoin.fun/img/wallet/bitgo.png?1528484753" alt="BitGo" /> BitGo
+          </div>
+          <p class="wallet-hint">Select an Operating System</p>
+          <div class="wallet-list-os">
+              
+            <a class="wallet-list-os-link" href="index.html" data-link-platform="web">
+              <span class="wallet-os-ico web-ico"></span>
+              <span class="wallet-os-ico-dark web-ico-dark" hidden></span>
+              <span class="wallet-os-ico-bright web-ico-bright" hidden></span>
+              <p class="wallet-ico-tooltip">web</p>
+            </a>
+              
+          </div>
+        </div>
+         
+         
+        
+        <div class="wallet-list-item allwallets-list-item is-hidden" data-platforms="mobile desktop " data-category="all-wallets" data-walletlevel="2">
+          <div class="wallet-list-item-link">
+            <img src="https://segwitcoin.fun/img/wallet/bither.png?1528484753" alt="Bither" /> Bither
+          </div>
+          <p class="wallet-hint">Select an Operating System</p>
+          <div class="wallet-list-os">
+              
+            <a class="wallet-list-os-link" href="../../mobile/ios/bither/index.html" data-link-platform="mobile">
+              <span class="wallet-os-ico ios-ico"></span>
+              <span class="wallet-os-ico-dark ios-ico-dark" hidden></span>
+              <span class="wallet-os-ico-bright ios-ico-bright" hidden></span>
+              <p class="wallet-ico-tooltip">ios</p>
+            </a>
+              
+            <a class="wallet-list-os-link" href="../../mobile/android/bither/index.html" data-link-platform="mobile">
+              <span class="wallet-os-ico android-ico"></span>
+              <span class="wallet-os-ico-dark android-ico-dark" hidden></span>
+              <span class="wallet-os-ico-bright android-ico-bright" hidden></span>
+              <p class="wallet-ico-tooltip">android</p>
+            </a>
+                
+            <a class="wallet-list-os-link" href="../../desktop/windows/bither/index.html" data-link-platform="desktop">
+              <span class="wallet-os-ico windows-ico"></span>
+              <span class="wallet-os-ico-dark windows-ico-dark" hidden></span>
+              <span class="wallet-os-ico-bright windows-ico-bright" hidden></span>
+              <p class="wallet-ico-tooltip">windows</p>
+            </a>
+              
+            <a class="wallet-list-os-link" href="../../desktop/mac/bither/index.html" data-link-platform="desktop">
+              <span class="wallet-os-ico mac-ico"></span>
+              <span class="wallet-os-ico-dark mac-ico-dark" hidden></span>
+              <span class="wallet-os-ico-bright mac-ico-bright" hidden></span>
+              <p class="wallet-ico-tooltip">mac</p>
+            </a>
+              
+            <a class="wallet-list-os-link" href="../../desktop/linux/bither/index.html" data-link-platform="desktop">
+              <span class="wallet-os-ico linux-ico"></span>
+              <span class="wallet-os-ico-dark linux-ico-dark" hidden></span>
+              <span class="wallet-os-ico-bright linux-ico-bright" hidden></span>
+              <p class="wallet-ico-tooltip">linux</p>
+            </a>
+              
+          </div>
+        </div>
+         
+         
+        
+        <div class="wallet-list-item allwallets-list-item is-hidden" data-platforms="mobile " data-category="all-wallets" data-walletlevel="2">
+          <div class="wallet-list-item-link">
+            <img src="https://segwitcoin.fun/img/wallet/brd.png?1528484753" alt="BRD" /> BRD
+          </div>
+          <p class="wallet-hint">Select an Operating System</p>
+          <div class="wallet-list-os">
+              
+            <a class="wallet-list-os-link" href="../../mobile/ios/brd/index.html" data-link-platform="mobile">
+              <span class="wallet-os-ico ios-ico"></span>
+              <span class="wallet-os-ico-dark ios-ico-dark" hidden></span>
+              <span class="wallet-os-ico-bright ios-ico-bright" hidden></span>
+              <p class="wallet-ico-tooltip">ios</p>
+            </a>
+              
+            <a class="wallet-list-os-link" href="../../mobile/android/brd/index.html" data-link-platform="mobile">
+              <span class="wallet-os-ico android-ico"></span>
+              <span class="wallet-os-ico-dark android-ico-dark" hidden></span>
+              <span class="wallet-os-ico-bright android-ico-bright" hidden></span>
+              <p class="wallet-ico-tooltip">android</p>
+            </a>
+              
+          </div>
+        </div>
+         
+         
+        
+        <div class="wallet-list-item allwallets-list-item is-hidden" data-platforms="mobile web " data-category="all-wallets" data-walletlevel="3">
+          <div class="wallet-list-item-link">
+            <img src="https://segwitcoin.fun/img/wallet/coinspace.png?1528484753" alt="Coin.Space" /> Coin.Space
+          </div>
+          <p class="wallet-hint">Select an Operating System</p>
+          <div class="wallet-list-os">
+              
+            <a class="wallet-list-os-link" href="../../mobile/android/coinspace/index.html" data-link-platform="mobile">
+              <span class="wallet-os-ico android-ico"></span>
+              <span class="wallet-os-ico-dark android-ico-dark" hidden></span>
+              <span class="wallet-os-ico-bright android-ico-bright" hidden></span>
+              <p class="wallet-ico-tooltip">android</p>
+            </a>
+              
+            <a class="wallet-list-os-link" href="../../mobile/ios/coinspace/index.html" data-link-platform="mobile">
+              <span class="wallet-os-ico ios-ico"></span>
+              <span class="wallet-os-ico-dark ios-ico-dark" hidden></span>
+              <span class="wallet-os-ico-bright ios-ico-bright" hidden></span>
+              <p class="wallet-ico-tooltip">ios</p>
+            </a>
+              
+            <a class="wallet-list-os-link" href="../../mobile/windowsphone/coinspace/index.html" data-link-platform="mobile">
+              <span class="wallet-os-ico windowsphone-ico"></span>
+              <span class="wallet-os-ico-dark windowsphone-ico-dark" hidden></span>
+              <span class="wallet-os-ico-bright windowsphone-ico-bright" hidden></span>
+              <p class="wallet-ico-tooltip">windowsphone</p>
+            </a>
+                
+            <a class="wallet-list-os-link" href="../coinspace/index.html" data-link-platform="web">
+              <span class="wallet-os-ico web-ico"></span>
+              <span class="wallet-os-ico-dark web-ico-dark" hidden></span>
+              <span class="wallet-os-ico-bright web-ico-bright" hidden></span>
+              <p class="wallet-ico-tooltip">web</p>
+            </a>
+              
+          </div>
+        </div>
+         
+         
+        
+        <div class="wallet-list-item allwallets-list-item is-hidden" data-platforms="hardware " data-category="all-wallets" data-walletlevel="2">
+          <div class="wallet-list-item-link">
+            <img src="https://segwitcoin.fun/img/wallet/digitalbitbox.png?1528484753" alt="Digital Bitbox" /> Digital Bitbox
+          </div>
+          <p class="wallet-hint">Select an Operating System</p>
+          <div class="wallet-list-os">
+              
+            <a class="wallet-list-os-link" href="../../hardware/digitalbitbox/index.html" data-link-platform="hardware">
+              <span class="wallet-os-ico hardware-ico"></span>
+              <span class="wallet-os-ico-dark hardware-ico-dark" hidden></span>
+              <span class="wallet-os-ico-bright hardware-ico-bright" hidden></span>
+              <p class="wallet-ico-tooltip">hardware</p>
+            </a>
+              
+          </div>
+        </div>
+         
+         
+        
+        <div class="wallet-list-item allwallets-list-item is-hidden" data-platforms="desktop mobile " data-category="all-wallets" data-walletlevel="2">
+          <div class="wallet-list-item-link">
+            <img src="https://segwitcoin.fun/img/wallet/electrum.png?1528484753" alt="Electrum" /> Electrum
+          </div>
+          <p class="wallet-hint">Select an Operating System</p>
+          <div class="wallet-list-os">
+              
+            <a class="wallet-list-os-link" href="../../desktop/windows/electrum/index.html" data-link-platform="desktop">
+              <span class="wallet-os-ico windows-ico"></span>
+              <span class="wallet-os-ico-dark windows-ico-dark" hidden></span>
+              <span class="wallet-os-ico-bright windows-ico-bright" hidden></span>
+              <p class="wallet-ico-tooltip">windows</p>
+            </a>
+              
+            <a class="wallet-list-os-link" href="../../desktop/mac/electrum/index.html" data-link-platform="desktop">
+              <span class="wallet-os-ico mac-ico"></span>
+              <span class="wallet-os-ico-dark mac-ico-dark" hidden></span>
+              <span class="wallet-os-ico-bright mac-ico-bright" hidden></span>
+              <p class="wallet-ico-tooltip">mac</p>
+            </a>
+              
+            <a class="wallet-list-os-link" href="../../desktop/linux/electrum/index.html" data-link-platform="desktop">
+              <span class="wallet-os-ico linux-ico"></span>
+              <span class="wallet-os-ico-dark linux-ico-dark" hidden></span>
+              <span class="wallet-os-ico-bright linux-ico-bright" hidden></span>
+              <p class="wallet-ico-tooltip">linux</p>
+            </a>
+                
+            <a class="wallet-list-os-link" href="../../mobile/android/electrum/index.html" data-link-platform="mobile">
+              <span class="wallet-os-ico android-ico"></span>
+              <span class="wallet-os-ico-dark android-ico-dark" hidden></span>
+              <span class="wallet-os-ico-bright android-ico-bright" hidden></span>
+              <p class="wallet-ico-tooltip">android</p>
+            </a>
+              
+          </div>
+        </div>
+         
+         
+        
+        <div class="wallet-list-item allwallets-list-item is-hidden" data-platforms="mobile desktop web " data-category="all-wallets" data-walletlevel="3">
+          <div class="wallet-list-item-link">
+            <img src="https://segwitcoin.fun/img/wallet/greenaddress.png?1528484753" alt="GreenAddress" /> Green Address
+          </div>
+          <p class="wallet-hint">Select an Operating System</p>
+          <div class="wallet-list-os">
+              
+            <a class="wallet-list-os-link" href="../../mobile/ios/greenaddress/index.html" data-link-platform="mobile">
+              <span class="wallet-os-ico ios-ico"></span>
+              <span class="wallet-os-ico-dark ios-ico-dark" hidden></span>
+              <span class="wallet-os-ico-bright ios-ico-bright" hidden></span>
+              <p class="wallet-ico-tooltip">ios</p>
+            </a>
+              
+            <a class="wallet-list-os-link" href="../../mobile/android/greenaddress/index.html" data-link-platform="mobile">
+              <span class="wallet-os-ico android-ico"></span>
+              <span class="wallet-os-ico-dark android-ico-dark" hidden></span>
+              <span class="wallet-os-ico-bright android-ico-bright" hidden></span>
+              <p class="wallet-ico-tooltip">android</p>
+            </a>
+                
+            <a class="wallet-list-os-link" href="../../desktop/windows/greenaddress/index.html" data-link-platform="desktop">
+              <span class="wallet-os-ico windows-ico"></span>
+              <span class="wallet-os-ico-dark windows-ico-dark" hidden></span>
+              <span class="wallet-os-ico-bright windows-ico-bright" hidden></span>
+              <p class="wallet-ico-tooltip">windows</p>
+            </a>
+              
+            <a class="wallet-list-os-link" href="../../desktop/mac/greenaddress/index.html" data-link-platform="desktop">
+              <span class="wallet-os-ico mac-ico"></span>
+              <span class="wallet-os-ico-dark mac-ico-dark" hidden></span>
+              <span class="wallet-os-ico-bright mac-ico-bright" hidden></span>
+              <p class="wallet-ico-tooltip">mac</p>
+            </a>
+              
+            <a class="wallet-list-os-link" href="../../desktop/linux/greenaddress/index.html" data-link-platform="desktop">
+              <span class="wallet-os-ico linux-ico"></span>
+              <span class="wallet-os-ico-dark linux-ico-dark" hidden></span>
+              <span class="wallet-os-ico-bright linux-ico-bright" hidden></span>
+              <p class="wallet-ico-tooltip">linux</p>
+            </a>
+                
+            <a class="wallet-list-os-link" href="../greenaddress/index.html" data-link-platform="web">
+              <span class="wallet-os-ico web-ico"></span>
+              <span class="wallet-os-ico-dark web-ico-dark" hidden></span>
+              <span class="wallet-os-ico-bright web-ico-bright" hidden></span>
+              <p class="wallet-ico-tooltip">web</p>
+            </a>
+              
+          </div>
+        </div>
+         
+         
+        
+        <div class="wallet-list-item allwallets-list-item is-hidden" data-platforms="mobile " data-category="all-wallets" data-walletlevel="2">
+          <div class="wallet-list-item-link">
+            <img src="https://segwitcoin.fun/img/wallet/greenbits.png?1528484753" alt="GreenBits" /> GreenBits
+          </div>
+          <p class="wallet-hint">Select an Operating System</p>
+          <div class="wallet-list-os">
+              
+            <a class="wallet-list-os-link" href="../../mobile/android/greenbits/index.html" data-link-platform="mobile">
+              <span class="wallet-os-ico android-ico"></span>
+              <span class="wallet-os-ico-dark android-ico-dark" hidden></span>
+              <span class="wallet-os-ico-bright android-ico-bright" hidden></span>
+              <p class="wallet-ico-tooltip">android</p>
+            </a>
+              
+          </div>
+        </div>
+         
+         
+        
+        <div class="wallet-list-item allwallets-list-item is-hidden" data-platforms="hardware " data-category="all-wallets" data-walletlevel="2">
+          <div class="wallet-list-item-link">
+            <img src="https://segwitcoin.fun/img/wallet/keepkey.png?1528484753" alt="KeepKey" /> KeepKey
+          </div>
+          <p class="wallet-hint">Select an Operating System</p>
+          <div class="wallet-list-os">
+              
+            <a class="wallet-list-os-link" href="../../hardware/keepkey/index.html" data-link-platform="hardware">
+              <span class="wallet-os-ico hardware-ico"></span>
+              <span class="wallet-os-ico-dark hardware-ico-dark" hidden></span>
+              <span class="wallet-os-ico-bright hardware-ico-bright" hidden></span>
+              <p class="wallet-ico-tooltip">hardware</p>
+            </a>
+              
+          </div>
+        </div>
+         
+         
+        
+        <div class="wallet-list-item allwallets-list-item is-hidden" data-platforms="hardware " data-category="all-wallets" data-walletlevel="2">
+          <div class="wallet-list-item-link">
+            <img src="https://segwitcoin.fun/img/wallet/ledgernanos.png?1528484753" alt="Ledger Nano S" /> Ledger Nano S
+          </div>
+          <p class="wallet-hint">Select an Operating System</p>
+          <div class="wallet-list-os">
+              
+            <a class="wallet-list-os-link" href="../../hardware/ledgernanos/index.html" data-link-platform="hardware">
+              <span class="wallet-os-ico hardware-ico"></span>
+              <span class="wallet-os-ico-dark hardware-ico-dark" hidden></span>
+              <span class="wallet-os-ico-bright hardware-ico-bright" hidden></span>
+              <p class="wallet-ico-tooltip">hardware</p>
+            </a>
+              
+          </div>
+        </div>
+         
+         
+        
+        <div class="wallet-list-item allwallets-list-item is-hidden" data-platforms="desktop " data-category="all-wallets" data-walletlevel="2">
+          <div class="wallet-list-item-link">
+            <img src="https://segwitcoin.fun/img/wallet/msigna.png?1528484753" alt="mSIGNA" /> mSIGNA
+          </div>
+          <p class="wallet-hint">Select an Operating System</p>
+          <div class="wallet-list-os">
+              
+            <a class="wallet-list-os-link" href="../../desktop/windows/msigna/index.html" data-link-platform="desktop">
+              <span class="wallet-os-ico windows-ico"></span>
+              <span class="wallet-os-ico-dark windows-ico-dark" hidden></span>
+              <span class="wallet-os-ico-bright windows-ico-bright" hidden></span>
+              <p class="wallet-ico-tooltip">windows</p>
+            </a>
+              
+            <a class="wallet-list-os-link" href="../../desktop/mac/msigna/index.html" data-link-platform="desktop">
+              <span class="wallet-os-ico mac-ico"></span>
+              <span class="wallet-os-ico-dark mac-ico-dark" hidden></span>
+              <span class="wallet-os-ico-bright mac-ico-bright" hidden></span>
+              <p class="wallet-ico-tooltip">mac</p>
+            </a>
+              
+            <a class="wallet-list-os-link" href="../../desktop/linux/msigna/index.html" data-link-platform="desktop">
+              <span class="wallet-os-ico linux-ico"></span>
+              <span class="wallet-os-ico-dark linux-ico-dark" hidden></span>
+              <span class="wallet-os-ico-bright linux-ico-bright" hidden></span>
+              <p class="wallet-ico-tooltip">linux</p>
+            </a>
+              
+          </div>
+        </div>
+         
+         
+        
+        <div class="wallet-list-item allwallets-list-item is-hidden" data-platforms="mobile " data-category="all-wallets" data-walletlevel="3">
+          <div class="wallet-list-item-link">
+            <img src="https://segwitcoin.fun/img/wallet/mycelium.png?1528484753" alt="Mycelium" /> Mycelium
+          </div>
+          <p class="wallet-hint">Select an Operating System</p>
+          <div class="wallet-list-os">
+              
+            <a class="wallet-list-os-link" href="../../mobile/android/mycelium/index.html" data-link-platform="mobile">
+              <span class="wallet-os-ico android-ico"></span>
+              <span class="wallet-os-ico-dark android-ico-dark" hidden></span>
+              <span class="wallet-os-ico-bright android-ico-bright" hidden></span>
+              <p class="wallet-ico-tooltip">android</p>
+            </a>
+              
+          </div>
+        </div>
+         
+         
+        
+        <div class="wallet-list-item allwallets-list-item is-hidden" data-platforms="mobile " data-category="all-wallets" data-walletlevel="2">
+          <div class="wallet-list-item-link">
+            <img src="https://segwitcoin.fun/img/wallet/simplebitcoinwallet.png?1528484753" alt="Simple Bitcoin Wallet" /> Simple Bitcoin
+          </div>
+          <p class="wallet-hint">Select an Operating System</p>
+          <div class="wallet-list-os">
+              
+            <a class="wallet-list-os-link" href="../../mobile/android/simplebitcoinwallet/index.html" data-link-platform="mobile">
+              <span class="wallet-os-ico android-ico"></span>
+              <span class="wallet-os-ico-dark android-ico-dark" hidden></span>
+              <span class="wallet-os-ico-bright android-ico-bright" hidden></span>
+              <p class="wallet-ico-tooltip">android</p>
+            </a>
+              
+          </div>
+        </div>
+         
+         
+        
+        <div class="wallet-list-item allwallets-list-item is-hidden" data-platforms="hardware " data-category="all-wallets" data-walletlevel="2">
+          <div class="wallet-list-item-link">
+            <img src="https://segwitcoin.fun/img/wallet/trezor.png?1528484753" alt="Trezor" /> Trezor
+          </div>
+          <p class="wallet-hint">Select an Operating System</p>
+          <div class="wallet-list-os">
+              
+            <a class="wallet-list-os-link" href="../../hardware/trezor/index.html" data-link-platform="hardware">
+              <span class="wallet-os-ico hardware-ico"></span>
+              <span class="wallet-os-ico-dark hardware-ico-dark" hidden></span>
+              <span class="wallet-os-ico-bright hardware-ico-bright" hidden></span>
+              <p class="wallet-ico-tooltip">hardware</p>
+            </a>
+              
+          </div>
+        </div>
+        
+        
+        <!-- Particular Wallets -->
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+        
+        <div class="wallet-list-item" data-category="web" data-walletlevel="3">
+          
+          <a class="wallet-list-item-link" href="index.html">
+            
+              <img src="https://segwitcoin.fun/img/wallet/bitgo.png?1528484753" alt="BitGo" /> BitGo
+            </a>
+        </div>
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+        
+        <div class="wallet-list-item" data-category="web" data-walletlevel="3">
+          
+          <a class="wallet-list-item-link" href="../coinspace/index.html">
+            
+              <img src="https://segwitcoin.fun/img/wallet/coinspace.png?1528484753" alt="Coin.Space" /> Coin.Space
+            </a>
+        </div>
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+        
+        <div class="wallet-list-item" data-category="web" data-walletlevel="3">
+          
+          <a class="wallet-list-item-link" href="../greenaddress/index.html">
+            
+              <img src="https://segwitcoin.fun/img/wallet/greenaddress.png?1528484753" alt="GreenAddress" /> Green Address
+            </a>
+        </div>
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+          
+      
+      
+    </div>
+  </div>
+</div>
+<script type="text/javascript" charset="utf-8">
+  walletRotate();
+</script>
+      </div>
+    </div>
+  </div>
+
+    
+
+  <div class="wallet-platforms">
+    
+    <div class="container">
+       
+      <div class="wallet-os-list">
+        <div class="wallet-os-container clearfix" id="web">
+          <div class="wallet-os-btn-block">
+            <div class="wallet-os-download-buttons">
+              
+              <a class="wallet-os-download-link btn-bright" href="https://www.bitgo.com/">Visit website</a>
+               
+            </div>
+          </div>
+          <div class="wallet-os-screenshot">
+            <img src="https://segwitcoin.fun/img/screenshots/bitgo.png?1528322191" alt="screenshot">
+          </div>
+          <div class="wallet-os-overview">
+            <div class="wallet-os-checks">
+                
+              <div class="checkcontrol checkpass" onclick="walletScoreListener(event);" ontouchstart="walletScoreListener(event);">
+                <p class="wallet-os-check-title">
+                  Shared control over your money
+                </p>
+                <div class="wallet-os-check-details">
+                  <p>This wallet requires every transaction to be authorized both by you and this third party. Under normal circumstances, you can regain full control over your bitcoins using your initial backup or pre-signed transactions sent by email.</p>
+                  
+                </div>
+              </div>
+                
+              <div class="checkvalidation checkfail" onclick="walletScoreListener(event);" ontouchstart="walletScoreListener(event);">
+                <p class="wallet-os-check-title">
+                  Centralized validation
+                </p>
+                <div class="wallet-os-check-details">
+                  <p>This wallet relies on a centralized service by default. This means a third party must be trusted to not hide or simulate payments.</p>
+                  
+                </div>
+              </div>
+                
+              <div class="checktransparency checkfail" onclick="walletScoreListener(event);" ontouchstart="walletScoreListener(event);">
+                <p class="wallet-os-check-title">
+                  Remote app
+                </p>
+                <div class="wallet-os-check-details">
+                  <p>This wallet is loaded from a remote location. This means that whenever you use your wallet, you need to trust the developers not to steal or lose your bitcoins in an incident on their site. Using a browser extension or mobile app, if available, can reduce that risk.</p>
+                  
+                </div>
+              </div>
+                
+              <div class="checkenvironment checkpass" onclick="walletScoreListener(event);" ontouchstart="walletScoreListener(event);">
+                <p class="wallet-os-check-title">
+                  Two-factor authentication
+                </p>
+                <div class="wallet-os-check-details">
+                  <p>This wallet can be used from insecure environments. However, this service requires two-factor authentication. This means access to multiple devices or accounts is required to steal your bitcoins.</p>
+                  
+                </div>
+              </div>
+                
+              <div class="checkprivacy checkpass" onclick="walletScoreListener(event);" ontouchstart="walletScoreListener(event);">
+                <p class="wallet-os-check-title">
+                  Basic privacy
+                </p>
+                <div class="wallet-os-check-details">
+                  <p></p>
+                   
+                  <div class="checkprivacyaddressreuse checkpass">
+                    <p>Prevents spying on your payments</p>
+                    <p>This wallet makes it harder to spy on your balance and payments by rotating addresses. You should still take care to use a new Bitcoin address each time you request payment.</p>
+                  </div>
+                  
+                  <div class="checkprivacydisclosure checkfail">
+                    <p>Discloses information to a third party</p>
+                    <p>This service can associate your payments together, log your IP address and know your real identity if you provide personal information like your email, name or banking account.</p>
+                  </div>
+                  
+                  <div class="checkprivacynetwork checkpass">
+                    <p>Tor can be used</p>
+                    <p>This wallet lets you setup and use <a href="https://www.torproject.org/">Tor</a> as a proxy to prevent attackers or Internet service providers from associating your payments with your IP address.</p>
+                  </div>
+                   
+                </div>
+              </div>
+                
+              <div class="checkfees checkpass" onclick="walletScoreListener(event);" ontouchstart="walletScoreListener(event);">
+                <p class="wallet-os-check-title">
+                  Dynamic fee suggestions
+                </p>
+                <div class="wallet-os-check-details">
+                  <p>This wallet provides fee suggestions which are based on current network conditions.  This means that this wallet will help you choose the appropriate fee so that your transactions are confirmed in a timely manner without paying more than you have to.</p>
+                  
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="walletsdisclaimer">
+    <h2 id="educate-yourself">Take time to educate yourself</h2>
+    <p>
+      Bitcoin is different from what you know and use every day. Before you start using Bitcoin for any serious transaction, be sure to read <a href="../../../you-need-to-know.html"><b>what you need to know</b></a> and take appropriate steps to <a href="../../../secure-your-wallet.html"><b>secure your wallet</b></a>. Always remember that it is your responsibility to choose your wallet carefully and adopt good practices in order to protect your money.
+    </p>
+  </div>
+</div>
+
+
+
+
+
+<div class="walletmenu" id="walletmenu" style="margin-bottom: ">
+
+  <ul>
+    <li class="wallet-all js-acc-item">
+      <a data-selector="all-wallets">All Wallets</a>
+    </li>
+    
+
+    
+    
+
+    
+    
+    
+    
+    <li class="js-acc-item wallet-desktop" data-accordion="accordion">
+      <a data-platform-selector="desktop" data-selector="all-wallets">Desktop</a> 
+      
+      <div class="walletmenu-subaccordion">
+        <ul class="walletmenu-os-list ">
+          
+          
+          
+          <li class="js-acc-subitem wallet-linux">
+            <a data-selector="linux">Linux</a>
+          </li>
+          
+          
+          
+          <li class="js-acc-subitem wallet-mac">
+            <a data-selector="mac">Mac</a>
+          </li>
+          
+          
+          
+          <li class="js-acc-subitem wallet-windows">
+            <a data-selector="windows">Windows</a>
+          </li>
+          
+        </ul>
+      </div>
+      
+    
+    </li>
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    <li class="js-acc-item wallet-hardware">
+      <a data-selector="hardware">Hardware</a>
+    </li>
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    <li class="js-acc-item wallet-mobile" data-accordion="accordion">
+      <a data-platform-selector="mobile" data-selector="all-wallets">Mobile</a> 
+      
+      <div class="walletmenu-subaccordion">
+        <ul class="walletmenu-os-list ">
+          
+          
+          
+          <li class="js-acc-subitem wallet-android">
+            <a data-selector="android">Android</a>
+          </li>
+          
+          
+          
+          <li class="js-acc-subitem wallet-ios">
+            <a data-selector="ios">iOS</a>
+          </li>
+          
+          
+          
+          <li class="js-acc-subitem wallet-windowsphone">
+            <a data-selector="windowsphone">Windows Phone</a>
+          </li>
+          
+        </ul>
+      </div>
+      
+    
+    </li>
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    <li class="js-acc-item wallet-web active">
+      <a data-selector="web">Web</a>
+    </li>
+    
+    
+  </ul>
+</div>
+
+<div class="wallet-list wallet-filter-list">
+    <!-- All wallets -->
+    
+    
+    
+    <div class="wallet-list-item allwallets-list-item" data-platforms="mobile " data-category="all-wallets" data-walletlevel="3">
+        <div class="wallet-list-item-link">
+          <img src="https://segwitcoin.fun/img/wallet/airbitzwallet.png?1528484753" alt="Airbitz Bitcoin Wallet" /> Airbitz
+        </div>
+        <p class="wallet-hint">Select an Operating System</p>
+        <div class="wallet-list-os">
+          
+            
+              
+              <a class="wallet-list-os-link" href="../../mobile/android/airbitzwallet/index.html" data-link-platform="mobile">
+                <span class="wallet-os-ico android-ico"></span>
+                <span class="wallet-os-ico-dark android-ico-dark" hidden></span>
+                <span class="wallet-os-ico-bright android-ico-bright" hidden></span>
+                <p class="wallet-ico-tooltip">android</p>
+              </a>
+              
+            
+              
+              <a class="wallet-list-os-link" href="../../mobile/ios/airbitzwallet/index.html" data-link-platform="mobile">
+                <span class="wallet-os-ico ios-ico"></span>
+                <span class="wallet-os-ico-dark ios-ico-dark" hidden></span>
+                <span class="wallet-os-ico-bright ios-ico-bright" hidden></span>
+                <p class="wallet-ico-tooltip">ios</p>
+              </a>
+              
+            
+          
+        </div>
+      </div>
+    
+    
+    
+    <div class="wallet-list-item allwallets-list-item" data-platforms="desktop mobile " data-category="all-wallets" data-walletlevel="3">
+        <div class="wallet-list-item-link">
+          <img src="https://segwitcoin.fun/img/wallet/arcbit.png?1528484753" alt="ArcBit" /> ArcBit
+        </div>
+        <p class="wallet-hint">Select an Operating System</p>
+        <div class="wallet-list-os">
+          
+            
+              
+              <a class="wallet-list-os-link" href="../../desktop/windows/arcbit/index.html" data-link-platform="desktop">
+                <span class="wallet-os-ico windows-ico"></span>
+                <span class="wallet-os-ico-dark windows-ico-dark" hidden></span>
+                <span class="wallet-os-ico-bright windows-ico-bright" hidden></span>
+                <p class="wallet-ico-tooltip">windows</p>
+              </a>
+              
+            
+              
+              <a class="wallet-list-os-link" href="../../desktop/mac/arcbit/index.html" data-link-platform="desktop">
+                <span class="wallet-os-ico mac-ico"></span>
+                <span class="wallet-os-ico-dark mac-ico-dark" hidden></span>
+                <span class="wallet-os-ico-bright mac-ico-bright" hidden></span>
+                <p class="wallet-ico-tooltip">mac</p>
+              </a>
+              
+            
+              
+              <a class="wallet-list-os-link" href="../../desktop/linux/arcbit/index.html" data-link-platform="desktop">
+                <span class="wallet-os-ico linux-ico"></span>
+                <span class="wallet-os-ico-dark linux-ico-dark" hidden></span>
+                <span class="wallet-os-ico-bright linux-ico-bright" hidden></span>
+                <p class="wallet-ico-tooltip">linux</p>
+              </a>
+              
+            
+          
+            
+              
+              <a class="wallet-list-os-link" href="../../mobile/ios/arcbit/index.html" data-link-platform="mobile">
+                <span class="wallet-os-ico ios-ico"></span>
+                <span class="wallet-os-ico-dark ios-ico-dark" hidden></span>
+                <span class="wallet-os-ico-bright ios-ico-bright" hidden></span>
+                <p class="wallet-ico-tooltip">ios</p>
+              </a>
+              
+            
+              
+              <a class="wallet-list-os-link" href="../../mobile/android/arcbit/index.html" data-link-platform="mobile">
+                <span class="wallet-os-ico android-ico"></span>
+                <span class="wallet-os-ico-dark android-ico-dark" hidden></span>
+                <span class="wallet-os-ico-bright android-ico-bright" hidden></span>
+                <p class="wallet-ico-tooltip">android</p>
+              </a>
+              
+            
+          
+        </div>
+      </div>
+    
+    
+    
+    <div class="wallet-list-item allwallets-list-item" data-platforms="desktop " data-category="all-wallets" data-walletlevel="2">
+        <div class="wallet-list-item-link">
+          <img src="https://segwitcoin.fun/img/wallet/armory.png?1528484753" alt="Armory" /> Armory
+        </div>
+        <p class="wallet-hint">Select an Operating System</p>
+        <div class="wallet-list-os">
+          
+            
+              
+              <a class="wallet-list-os-link" href="../../desktop/windows/armory/index.html" data-link-platform="desktop">
+                <span class="wallet-os-ico windows-ico"></span>
+                <span class="wallet-os-ico-dark windows-ico-dark" hidden></span>
+                <span class="wallet-os-ico-bright windows-ico-bright" hidden></span>
+                <p class="wallet-ico-tooltip">windows</p>
+              </a>
+              
+            
+              
+              <a class="wallet-list-os-link" href="../../desktop/mac/armory/index.html" data-link-platform="desktop">
+                <span class="wallet-os-ico mac-ico"></span>
+                <span class="wallet-os-ico-dark mac-ico-dark" hidden></span>
+                <span class="wallet-os-ico-bright mac-ico-bright" hidden></span>
+                <p class="wallet-ico-tooltip">mac</p>
+              </a>
+              
+            
+              
+              <a class="wallet-list-os-link" href="../../desktop/linux/armory/index.html" data-link-platform="desktop">
+                <span class="wallet-os-ico linux-ico"></span>
+                <span class="wallet-os-ico-dark linux-ico-dark" hidden></span>
+                <span class="wallet-os-ico-bright linux-ico-bright" hidden></span>
+                <p class="wallet-ico-tooltip">linux</p>
+              </a>
+              
+            
+          
+        </div>
+      </div>
+    
+    
+    
+    <div class="wallet-list-item allwallets-list-item" data-platforms="desktop " data-category="all-wallets" data-walletlevel="1">
+        <div class="wallet-list-item-link">
+          <img src="https://segwitcoin.fun/img/wallet/bitcoincore.png?1528484753" alt="Bitcoin Core" /> Bitcoin Core
+        </div>
+        <p class="wallet-hint">Select an Operating System</p>
+        <div class="wallet-list-os">
+          
+            
+              
+              <a class="wallet-list-os-link" href="../../desktop/windows/bitcoincore/index.html" data-link-platform="desktop">
+                <span class="wallet-os-ico windows-ico"></span>
+                <span class="wallet-os-ico-dark windows-ico-dark" hidden></span>
+                <span class="wallet-os-ico-bright windows-ico-bright" hidden></span>
+                <p class="wallet-ico-tooltip">windows</p>
+              </a>
+              
+            
+              
+              <a class="wallet-list-os-link" href="../../desktop/mac/bitcoincore/index.html" data-link-platform="desktop">
+                <span class="wallet-os-ico mac-ico"></span>
+                <span class="wallet-os-ico-dark mac-ico-dark" hidden></span>
+                <span class="wallet-os-ico-bright mac-ico-bright" hidden></span>
+                <p class="wallet-ico-tooltip">mac</p>
+              </a>
+              
+            
+              
+              <a class="wallet-list-os-link" href="../../desktop/linux/bitcoincore/index.html" data-link-platform="desktop">
+                <span class="wallet-os-ico linux-ico"></span>
+                <span class="wallet-os-ico-dark linux-ico-dark" hidden></span>
+                <span class="wallet-os-ico-bright linux-ico-bright" hidden></span>
+                <p class="wallet-ico-tooltip">linux</p>
+              </a>
+              
+            
+          
+        </div>
+      </div>
+    
+    
+    
+    <div class="wallet-list-item allwallets-list-item" data-platforms="desktop " data-category="all-wallets" data-walletlevel="1">
+        <div class="wallet-list-item-link">
+          <img src="https://segwitcoin.fun/img/wallet/bitcoinknots.png?1528484753" alt="Bitcoin Knots" /> Bitcoin Knots
+        </div>
+        <p class="wallet-hint">Select an Operating System</p>
+        <div class="wallet-list-os">
+          
+            
+              
+              <a class="wallet-list-os-link" href="../../desktop/windows/bitcoinknots/index.html" data-link-platform="desktop">
+                <span class="wallet-os-ico windows-ico"></span>
+                <span class="wallet-os-ico-dark windows-ico-dark" hidden></span>
+                <span class="wallet-os-ico-bright windows-ico-bright" hidden></span>
+                <p class="wallet-ico-tooltip">windows</p>
+              </a>
+              
+            
+              
+              <a class="wallet-list-os-link" href="../../desktop/mac/bitcoinknots/index.html" data-link-platform="desktop">
+                <span class="wallet-os-ico mac-ico"></span>
+                <span class="wallet-os-ico-dark mac-ico-dark" hidden></span>
+                <span class="wallet-os-ico-bright mac-ico-bright" hidden></span>
+                <p class="wallet-ico-tooltip">mac</p>
+              </a>
+              
+            
+              
+              <a class="wallet-list-os-link" href="../../desktop/linux/bitcoinknots/index.html" data-link-platform="desktop">
+                <span class="wallet-os-ico linux-ico"></span>
+                <span class="wallet-os-ico-dark linux-ico-dark" hidden></span>
+                <span class="wallet-os-ico-bright linux-ico-bright" hidden></span>
+                <p class="wallet-ico-tooltip">linux</p>
+              </a>
+              
+            
+          
+        </div>
+      </div>
+    
+    
+    
+    <div class="wallet-list-item allwallets-list-item" data-platforms="mobile " data-category="all-wallets" data-walletlevel="2">
+        <div class="wallet-list-item-link">
+          <img src="https://segwitcoin.fun/img/wallet/bitcoinwallet.png?1528484753" alt="Bitcoin Wallet" /> Bitcoin Wallet
+        </div>
+        <p class="wallet-hint">Select an Operating System</p>
+        <div class="wallet-list-os">
+          
+            
+              
+              <a class="wallet-list-os-link" href="../../mobile/android/bitcoinwallet/index.html" data-link-platform="mobile">
+                <span class="wallet-os-ico android-ico"></span>
+                <span class="wallet-os-ico-dark android-ico-dark" hidden></span>
+                <span class="wallet-os-ico-bright android-ico-bright" hidden></span>
+                <p class="wallet-ico-tooltip">android</p>
+              </a>
+              
+            
+          
+        </div>
+      </div>
+    
+    
+    
+    <div class="wallet-list-item allwallets-list-item" data-platforms="web " data-category="all-wallets" data-walletlevel="3">
+        <div class="wallet-list-item-link">
+          <img src="https://segwitcoin.fun/img/wallet/bitgo.png?1528484753" alt="BitGo" /> BitGo
+        </div>
+        <p class="wallet-hint">Select an Operating System</p>
+        <div class="wallet-list-os">
+          
+            
+              
+              <a class="wallet-list-os-link" href="index.html" data-link-platform="web">
+                <span class="wallet-os-ico web-ico"></span>
+                <span class="wallet-os-ico-dark web-ico-dark" hidden></span>
+                <span class="wallet-os-ico-bright web-ico-bright" hidden></span>
+                <p class="wallet-ico-tooltip">web</p>
+              </a>
+              
+            
+          
+        </div>
+      </div>
+    
+    
+    
+    <div class="wallet-list-item allwallets-list-item" data-platforms="mobile desktop " data-category="all-wallets" data-walletlevel="2">
+        <div class="wallet-list-item-link">
+          <img src="https://segwitcoin.fun/img/wallet/bither.png?1528484753" alt="Bither" /> Bither
+        </div>
+        <p class="wallet-hint">Select an Operating System</p>
+        <div class="wallet-list-os">
+          
+            
+              
+              <a class="wallet-list-os-link" href="../../mobile/ios/bither/index.html" data-link-platform="mobile">
+                <span class="wallet-os-ico ios-ico"></span>
+                <span class="wallet-os-ico-dark ios-ico-dark" hidden></span>
+                <span class="wallet-os-ico-bright ios-ico-bright" hidden></span>
+                <p class="wallet-ico-tooltip">ios</p>
+              </a>
+              
+            
+              
+              <a class="wallet-list-os-link" href="../../mobile/android/bither/index.html" data-link-platform="mobile">
+                <span class="wallet-os-ico android-ico"></span>
+                <span class="wallet-os-ico-dark android-ico-dark" hidden></span>
+                <span class="wallet-os-ico-bright android-ico-bright" hidden></span>
+                <p class="wallet-ico-tooltip">android</p>
+              </a>
+              
+            
+          
+            
+              
+              <a class="wallet-list-os-link" href="../../desktop/windows/bither/index.html" data-link-platform="desktop">
+                <span class="wallet-os-ico windows-ico"></span>
+                <span class="wallet-os-ico-dark windows-ico-dark" hidden></span>
+                <span class="wallet-os-ico-bright windows-ico-bright" hidden></span>
+                <p class="wallet-ico-tooltip">windows</p>
+              </a>
+              
+            
+              
+              <a class="wallet-list-os-link" href="../../desktop/mac/bither/index.html" data-link-platform="desktop">
+                <span class="wallet-os-ico mac-ico"></span>
+                <span class="wallet-os-ico-dark mac-ico-dark" hidden></span>
+                <span class="wallet-os-ico-bright mac-ico-bright" hidden></span>
+                <p class="wallet-ico-tooltip">mac</p>
+              </a>
+              
+            
+              
+              <a class="wallet-list-os-link" href="../../desktop/linux/bither/index.html" data-link-platform="desktop">
+                <span class="wallet-os-ico linux-ico"></span>
+                <span class="wallet-os-ico-dark linux-ico-dark" hidden></span>
+                <span class="wallet-os-ico-bright linux-ico-bright" hidden></span>
+                <p class="wallet-ico-tooltip">linux</p>
+              </a>
+              
+            
+          
+        </div>
+      </div>
+    
+    
+    
+    <div class="wallet-list-item allwallets-list-item" data-platforms="mobile " data-category="all-wallets" data-walletlevel="2">
+        <div class="wallet-list-item-link">
+          <img src="https://segwitcoin.fun/img/wallet/brd.png?1528484753" alt="BRD" /> BRD
+        </div>
+        <p class="wallet-hint">Select an Operating System</p>
+        <div class="wallet-list-os">
+          
+            
+              
+              <a class="wallet-list-os-link" href="../../mobile/ios/brd/index.html" data-link-platform="mobile">
+                <span class="wallet-os-ico ios-ico"></span>
+                <span class="wallet-os-ico-dark ios-ico-dark" hidden></span>
+                <span class="wallet-os-ico-bright ios-ico-bright" hidden></span>
+                <p class="wallet-ico-tooltip">ios</p>
+              </a>
+              
+            
+              
+              <a class="wallet-list-os-link" href="../../mobile/android/brd/index.html" data-link-platform="mobile">
+                <span class="wallet-os-ico android-ico"></span>
+                <span class="wallet-os-ico-dark android-ico-dark" hidden></span>
+                <span class="wallet-os-ico-bright android-ico-bright" hidden></span>
+                <p class="wallet-ico-tooltip">android</p>
+              </a>
+              
+            
+          
+        </div>
+      </div>
+    
+    
+    
+    <div class="wallet-list-item allwallets-list-item" data-platforms="mobile web " data-category="all-wallets" data-walletlevel="3">
+        <div class="wallet-list-item-link">
+          <img src="https://segwitcoin.fun/img/wallet/coinspace.png?1528484753" alt="Coin.Space" /> Coin.Space
+        </div>
+        <p class="wallet-hint">Select an Operating System</p>
+        <div class="wallet-list-os">
+          
+            
+              
+              <a class="wallet-list-os-link" href="../../mobile/android/coinspace/index.html" data-link-platform="mobile">
+                <span class="wallet-os-ico android-ico"></span>
+                <span class="wallet-os-ico-dark android-ico-dark" hidden></span>
+                <span class="wallet-os-ico-bright android-ico-bright" hidden></span>
+                <p class="wallet-ico-tooltip">android</p>
+              </a>
+              
+            
+              
+              <a class="wallet-list-os-link" href="../../mobile/ios/coinspace/index.html" data-link-platform="mobile">
+                <span class="wallet-os-ico ios-ico"></span>
+                <span class="wallet-os-ico-dark ios-ico-dark" hidden></span>
+                <span class="wallet-os-ico-bright ios-ico-bright" hidden></span>
+                <p class="wallet-ico-tooltip">ios</p>
+              </a>
+              
+            
+              
+              <a class="wallet-list-os-link" href="../../mobile/windowsphone/coinspace/index.html" data-link-platform="mobile">
+                <span class="wallet-os-ico windowsphone-ico"></span>
+                <span class="wallet-os-ico-dark windowsphone-ico-dark" hidden></span>
+                <span class="wallet-os-ico-bright windowsphone-ico-bright" hidden></span>
+                <p class="wallet-ico-tooltip">windowsphone</p>
+              </a>
+              
+            
+          
+            
+              
+              <a class="wallet-list-os-link" href="../coinspace/index.html" data-link-platform="web">
+                <span class="wallet-os-ico web-ico"></span>
+                <span class="wallet-os-ico-dark web-ico-dark" hidden></span>
+                <span class="wallet-os-ico-bright web-ico-bright" hidden></span>
+                <p class="wallet-ico-tooltip">web</p>
+              </a>
+              
+            
+          
+        </div>
+      </div>
+    
+    
+    
+    <div class="wallet-list-item allwallets-list-item" data-platforms="hardware " data-category="all-wallets" data-walletlevel="2">
+        <div class="wallet-list-item-link">
+          <img src="https://segwitcoin.fun/img/wallet/digitalbitbox.png?1528484753" alt="Digital Bitbox" /> Digital Bitbox
+        </div>
+        <p class="wallet-hint">Select an Operating System</p>
+        <div class="wallet-list-os">
+          
+            
+              
+              <a class="wallet-list-os-link" href="../../hardware/digitalbitbox/index.html" data-link-platform="hardware">
+                <span class="wallet-os-ico hardware-ico"></span>
+                <span class="wallet-os-ico-dark hardware-ico-dark" hidden></span>
+                <span class="wallet-os-ico-bright hardware-ico-bright" hidden></span>
+                <p class="wallet-ico-tooltip">hardware</p>
+              </a>
+              
+            
+          
+        </div>
+      </div>
+    
+    
+    
+    <div class="wallet-list-item allwallets-list-item" data-platforms="desktop mobile " data-category="all-wallets" data-walletlevel="2">
+        <div class="wallet-list-item-link">
+          <img src="https://segwitcoin.fun/img/wallet/electrum.png?1528484753" alt="Electrum" /> Electrum
+        </div>
+        <p class="wallet-hint">Select an Operating System</p>
+        <div class="wallet-list-os">
+          
+            
+              
+              <a class="wallet-list-os-link" href="../../desktop/windows/electrum/index.html" data-link-platform="desktop">
+                <span class="wallet-os-ico windows-ico"></span>
+                <span class="wallet-os-ico-dark windows-ico-dark" hidden></span>
+                <span class="wallet-os-ico-bright windows-ico-bright" hidden></span>
+                <p class="wallet-ico-tooltip">windows</p>
+              </a>
+              
+            
+              
+              <a class="wallet-list-os-link" href="../../desktop/mac/electrum/index.html" data-link-platform="desktop">
+                <span class="wallet-os-ico mac-ico"></span>
+                <span class="wallet-os-ico-dark mac-ico-dark" hidden></span>
+                <span class="wallet-os-ico-bright mac-ico-bright" hidden></span>
+                <p class="wallet-ico-tooltip">mac</p>
+              </a>
+              
+            
+              
+              <a class="wallet-list-os-link" href="../../desktop/linux/electrum/index.html" data-link-platform="desktop">
+                <span class="wallet-os-ico linux-ico"></span>
+                <span class="wallet-os-ico-dark linux-ico-dark" hidden></span>
+                <span class="wallet-os-ico-bright linux-ico-bright" hidden></span>
+                <p class="wallet-ico-tooltip">linux</p>
+              </a>
+              
+            
+          
+            
+              
+              <a class="wallet-list-os-link" href="../../mobile/android/electrum/index.html" data-link-platform="mobile">
+                <span class="wallet-os-ico android-ico"></span>
+                <span class="wallet-os-ico-dark android-ico-dark" hidden></span>
+                <span class="wallet-os-ico-bright android-ico-bright" hidden></span>
+                <p class="wallet-ico-tooltip">android</p>
+              </a>
+              
+            
+          
+        </div>
+      </div>
+    
+    
+    
+    <div class="wallet-list-item allwallets-list-item" data-platforms="mobile desktop web " data-category="all-wallets" data-walletlevel="3">
+        <div class="wallet-list-item-link">
+          <img src="https://segwitcoin.fun/img/wallet/greenaddress.png?1528484753" alt="GreenAddress" /> Green Address
+        </div>
+        <p class="wallet-hint">Select an Operating System</p>
+        <div class="wallet-list-os">
+          
+            
+              
+              <a class="wallet-list-os-link" href="../../mobile/ios/greenaddress/index.html" data-link-platform="mobile">
+                <span class="wallet-os-ico ios-ico"></span>
+                <span class="wallet-os-ico-dark ios-ico-dark" hidden></span>
+                <span class="wallet-os-ico-bright ios-ico-bright" hidden></span>
+                <p class="wallet-ico-tooltip">ios</p>
+              </a>
+              
+            
+              
+              <a class="wallet-list-os-link" href="../../mobile/android/greenaddress/index.html" data-link-platform="mobile">
+                <span class="wallet-os-ico android-ico"></span>
+                <span class="wallet-os-ico-dark android-ico-dark" hidden></span>
+                <span class="wallet-os-ico-bright android-ico-bright" hidden></span>
+                <p class="wallet-ico-tooltip">android</p>
+              </a>
+              
+            
+          
+            
+              
+              <a class="wallet-list-os-link" href="../../desktop/windows/greenaddress/index.html" data-link-platform="desktop">
+                <span class="wallet-os-ico windows-ico"></span>
+                <span class="wallet-os-ico-dark windows-ico-dark" hidden></span>
+                <span class="wallet-os-ico-bright windows-ico-bright" hidden></span>
+                <p class="wallet-ico-tooltip">windows</p>
+              </a>
+              
+            
+              
+              <a class="wallet-list-os-link" href="../../desktop/mac/greenaddress/index.html" data-link-platform="desktop">
+                <span class="wallet-os-ico mac-ico"></span>
+                <span class="wallet-os-ico-dark mac-ico-dark" hidden></span>
+                <span class="wallet-os-ico-bright mac-ico-bright" hidden></span>
+                <p class="wallet-ico-tooltip">mac</p>
+              </a>
+              
+            
+              
+              <a class="wallet-list-os-link" href="../../desktop/linux/greenaddress/index.html" data-link-platform="desktop">
+                <span class="wallet-os-ico linux-ico"></span>
+                <span class="wallet-os-ico-dark linux-ico-dark" hidden></span>
+                <span class="wallet-os-ico-bright linux-ico-bright" hidden></span>
+                <p class="wallet-ico-tooltip">linux</p>
+              </a>
+              
+            
+          
+            
+              
+              <a class="wallet-list-os-link" href="../greenaddress/index.html" data-link-platform="web">
+                <span class="wallet-os-ico web-ico"></span>
+                <span class="wallet-os-ico-dark web-ico-dark" hidden></span>
+                <span class="wallet-os-ico-bright web-ico-bright" hidden></span>
+                <p class="wallet-ico-tooltip">web</p>
+              </a>
+              
+            
+          
+        </div>
+      </div>
+    
+    
+    
+    <div class="wallet-list-item allwallets-list-item" data-platforms="mobile " data-category="all-wallets" data-walletlevel="2">
+        <div class="wallet-list-item-link">
+          <img src="https://segwitcoin.fun/img/wallet/greenbits.png?1528484753" alt="GreenBits" /> GreenBits
+        </div>
+        <p class="wallet-hint">Select an Operating System</p>
+        <div class="wallet-list-os">
+          
+            
+              
+              <a class="wallet-list-os-link" href="../../mobile/android/greenbits/index.html" data-link-platform="mobile">
+                <span class="wallet-os-ico android-ico"></span>
+                <span class="wallet-os-ico-dark android-ico-dark" hidden></span>
+                <span class="wallet-os-ico-bright android-ico-bright" hidden></span>
+                <p class="wallet-ico-tooltip">android</p>
+              </a>
+              
+            
+          
+        </div>
+      </div>
+    
+    
+    
+    <div class="wallet-list-item allwallets-list-item" data-platforms="hardware " data-category="all-wallets" data-walletlevel="2">
+        <div class="wallet-list-item-link">
+          <img src="https://segwitcoin.fun/img/wallet/keepkey.png?1528484753" alt="KeepKey" /> KeepKey
+        </div>
+        <p class="wallet-hint">Select an Operating System</p>
+        <div class="wallet-list-os">
+          
+            
+              
+              <a class="wallet-list-os-link" href="../../hardware/keepkey/index.html" data-link-platform="hardware">
+                <span class="wallet-os-ico hardware-ico"></span>
+                <span class="wallet-os-ico-dark hardware-ico-dark" hidden></span>
+                <span class="wallet-os-ico-bright hardware-ico-bright" hidden></span>
+                <p class="wallet-ico-tooltip">hardware</p>
+              </a>
+              
+            
+          
+        </div>
+      </div>
+    
+    
+    
+    <div class="wallet-list-item allwallets-list-item" data-platforms="hardware " data-category="all-wallets" data-walletlevel="2">
+        <div class="wallet-list-item-link">
+          <img src="https://segwitcoin.fun/img/wallet/ledgernanos.png?1528484753" alt="Ledger Nano S" /> Ledger Nano S
+        </div>
+        <p class="wallet-hint">Select an Operating System</p>
+        <div class="wallet-list-os">
+          
+            
+              
+              <a class="wallet-list-os-link" href="../../hardware/ledgernanos/index.html" data-link-platform="hardware">
+                <span class="wallet-os-ico hardware-ico"></span>
+                <span class="wallet-os-ico-dark hardware-ico-dark" hidden></span>
+                <span class="wallet-os-ico-bright hardware-ico-bright" hidden></span>
+                <p class="wallet-ico-tooltip">hardware</p>
+              </a>
+              
+            
+          
+        </div>
+      </div>
+    
+    
+    
+    <div class="wallet-list-item allwallets-list-item" data-platforms="desktop " data-category="all-wallets" data-walletlevel="2">
+        <div class="wallet-list-item-link">
+          <img src="https://segwitcoin.fun/img/wallet/msigna.png?1528484753" alt="mSIGNA" /> mSIGNA
+        </div>
+        <p class="wallet-hint">Select an Operating System</p>
+        <div class="wallet-list-os">
+          
+            
+              
+              <a class="wallet-list-os-link" href="../../desktop/windows/msigna/index.html" data-link-platform="desktop">
+                <span class="wallet-os-ico windows-ico"></span>
+                <span class="wallet-os-ico-dark windows-ico-dark" hidden></span>
+                <span class="wallet-os-ico-bright windows-ico-bright" hidden></span>
+                <p class="wallet-ico-tooltip">windows</p>
+              </a>
+              
+            
+              
+              <a class="wallet-list-os-link" href="../../desktop/mac/msigna/index.html" data-link-platform="desktop">
+                <span class="wallet-os-ico mac-ico"></span>
+                <span class="wallet-os-ico-dark mac-ico-dark" hidden></span>
+                <span class="wallet-os-ico-bright mac-ico-bright" hidden></span>
+                <p class="wallet-ico-tooltip">mac</p>
+              </a>
+              
+            
+              
+              <a class="wallet-list-os-link" href="../../desktop/linux/msigna/index.html" data-link-platform="desktop">
+                <span class="wallet-os-ico linux-ico"></span>
+                <span class="wallet-os-ico-dark linux-ico-dark" hidden></span>
+                <span class="wallet-os-ico-bright linux-ico-bright" hidden></span>
+                <p class="wallet-ico-tooltip">linux</p>
+              </a>
+              
+            
+          
+        </div>
+      </div>
+    
+    
+    
+    <div class="wallet-list-item allwallets-list-item" data-platforms="mobile " data-category="all-wallets" data-walletlevel="3">
+        <div class="wallet-list-item-link">
+          <img src="https://segwitcoin.fun/img/wallet/mycelium.png?1528484753" alt="Mycelium" /> Mycelium
+        </div>
+        <p class="wallet-hint">Select an Operating System</p>
+        <div class="wallet-list-os">
+          
+            
+              
+              <a class="wallet-list-os-link" href="../../mobile/android/mycelium/index.html" data-link-platform="mobile">
+                <span class="wallet-os-ico android-ico"></span>
+                <span class="wallet-os-ico-dark android-ico-dark" hidden></span>
+                <span class="wallet-os-ico-bright android-ico-bright" hidden></span>
+                <p class="wallet-ico-tooltip">android</p>
+              </a>
+              
+            
+          
+        </div>
+      </div>
+    
+    
+    
+    <div class="wallet-list-item allwallets-list-item" data-platforms="mobile " data-category="all-wallets" data-walletlevel="2">
+        <div class="wallet-list-item-link">
+          <img src="https://segwitcoin.fun/img/wallet/simplebitcoinwallet.png?1528484753" alt="Simple Bitcoin Wallet" /> Simple Bitcoin
+        </div>
+        <p class="wallet-hint">Select an Operating System</p>
+        <div class="wallet-list-os">
+          
+            
+              
+              <a class="wallet-list-os-link" href="../../mobile/android/simplebitcoinwallet/index.html" data-link-platform="mobile">
+                <span class="wallet-os-ico android-ico"></span>
+                <span class="wallet-os-ico-dark android-ico-dark" hidden></span>
+                <span class="wallet-os-ico-bright android-ico-bright" hidden></span>
+                <p class="wallet-ico-tooltip">android</p>
+              </a>
+              
+            
+          
+        </div>
+      </div>
+    
+    
+    
+    <div class="wallet-list-item allwallets-list-item" data-platforms="hardware " data-category="all-wallets" data-walletlevel="2">
+        <div class="wallet-list-item-link">
+          <img src="https://segwitcoin.fun/img/wallet/trezor.png?1528484753" alt="Trezor" /> Trezor
+        </div>
+        <p class="wallet-hint">Select an Operating System</p>
+        <div class="wallet-list-os">
+          
+            
+              
+              <a class="wallet-list-os-link" href="../../hardware/trezor/index.html" data-link-platform="hardware">
+                <span class="wallet-os-ico hardware-ico"></span>
+                <span class="wallet-os-ico-dark hardware-ico-dark" hidden></span>
+                <span class="wallet-os-ico-bright hardware-ico-bright" hidden></span>
+                <p class="wallet-ico-tooltip">hardware</p>
+              </a>
+              
+            
+          
+        </div>
+      </div>
+    
+
+    <!-- Particular wallets-->
+    
+        
+          
+          <div class="wallet-list-item" data-category="android" data-walletlevel="3">
+            
+            <a class="wallet-list-item-link" href="../../mobile/android/airbitzwallet/index.html">
+            
+            <img src="https://segwitcoin.fun/img/wallet/airbitzwallet.png?1528484753" alt="Airbitz Bitcoin Wallet" /> Airbitz
+            </a>
+          </div>
+          
+          <div class="wallet-list-item" data-category="ios" data-walletlevel="3">
+            
+            <a class="wallet-list-item-link" href="../../mobile/ios/airbitzwallet/index.html">
+            
+            <img src="https://segwitcoin.fun/img/wallet/airbitzwallet.png?1528484753" alt="Airbitz Bitcoin Wallet" /> Airbitz
+            </a>
+          </div>
+          
+        
+    
+        
+          
+          <div class="wallet-list-item" data-category="windows" data-walletlevel="3">
+            
+            <a class="wallet-list-item-link" href="../../desktop/windows/arcbit/index.html">
+            
+            <img src="https://segwitcoin.fun/img/wallet/arcbit.png?1528484753" alt="ArcBit" /> ArcBit
+            </a>
+          </div>
+          
+          <div class="wallet-list-item" data-category="mac" data-walletlevel="3">
+            
+            <a class="wallet-list-item-link" href="../../desktop/mac/arcbit/index.html">
+            
+            <img src="https://segwitcoin.fun/img/wallet/arcbit.png?1528484753" alt="ArcBit" /> ArcBit
+            </a>
+          </div>
+          
+          <div class="wallet-list-item" data-category="linux" data-walletlevel="3">
+            
+            <a class="wallet-list-item-link" href="../../desktop/linux/arcbit/index.html">
+            
+            <img src="https://segwitcoin.fun/img/wallet/arcbit.png?1528484753" alt="ArcBit" /> ArcBit
+            </a>
+          </div>
+          
+        
+          
+          <div class="wallet-list-item" data-category="ios" data-walletlevel="3">
+            
+            <a class="wallet-list-item-link" href="../../mobile/ios/arcbit/index.html">
+            
+            <img src="https://segwitcoin.fun/img/wallet/arcbit.png?1528484753" alt="ArcBit" /> ArcBit
+            </a>
+          </div>
+          
+          <div class="wallet-list-item" data-category="android" data-walletlevel="3">
+            
+            <a class="wallet-list-item-link" href="../../mobile/android/arcbit/index.html">
+            
+            <img src="https://segwitcoin.fun/img/wallet/arcbit.png?1528484753" alt="ArcBit" /> ArcBit
+            </a>
+          </div>
+          
+        
+    
+        
+          
+          <div class="wallet-list-item" data-category="windows" data-walletlevel="2">
+            
+            <a class="wallet-list-item-link" href="../../desktop/windows/armory/index.html">
+            
+            <img src="https://segwitcoin.fun/img/wallet/armory.png?1528484753" alt="Armory" /> Armory
+            </a>
+          </div>
+          
+          <div class="wallet-list-item" data-category="mac" data-walletlevel="2">
+            
+            <a class="wallet-list-item-link" href="../../desktop/mac/armory/index.html">
+            
+            <img src="https://segwitcoin.fun/img/wallet/armory.png?1528484753" alt="Armory" /> Armory
+            </a>
+          </div>
+          
+          <div class="wallet-list-item" data-category="linux" data-walletlevel="2">
+            
+            <a class="wallet-list-item-link" href="../../desktop/linux/armory/index.html">
+            
+            <img src="https://segwitcoin.fun/img/wallet/armory.png?1528484753" alt="Armory" /> Armory
+            </a>
+          </div>
+          
+        
+    
+        
+          
+          <div class="wallet-list-item" data-category="windows" data-walletlevel="1">
+            
+            <a class="wallet-list-item-link" href="../../desktop/windows/bitcoincore/index.html">
+            
+            <img src="https://segwitcoin.fun/img/wallet/bitcoincore.png?1528484753" alt="Bitcoin Core" /> Bitcoin Core
+            </a>
+          </div>
+          
+          <div class="wallet-list-item" data-category="mac" data-walletlevel="1">
+            
+            <a class="wallet-list-item-link" href="../../desktop/mac/bitcoincore/index.html">
+            
+            <img src="https://segwitcoin.fun/img/wallet/bitcoincore.png?1528484753" alt="Bitcoin Core" /> Bitcoin Core
+            </a>
+          </div>
+          
+          <div class="wallet-list-item" data-category="linux" data-walletlevel="1">
+            
+            <a class="wallet-list-item-link" href="../../desktop/linux/bitcoincore/index.html">
+            
+            <img src="https://segwitcoin.fun/img/wallet/bitcoincore.png?1528484753" alt="Bitcoin Core" /> Bitcoin Core
+            </a>
+          </div>
+          
+        
+    
+        
+          
+          <div class="wallet-list-item" data-category="windows" data-walletlevel="1">
+            
+            <a class="wallet-list-item-link" href="../../desktop/windows/bitcoinknots/index.html">
+            
+            <img src="https://segwitcoin.fun/img/wallet/bitcoinknots.png?1528484753" alt="Bitcoin Knots" /> Bitcoin Knots
+            </a>
+          </div>
+          
+          <div class="wallet-list-item" data-category="mac" data-walletlevel="1">
+            
+            <a class="wallet-list-item-link" href="../../desktop/mac/bitcoinknots/index.html">
+            
+            <img src="https://segwitcoin.fun/img/wallet/bitcoinknots.png?1528484753" alt="Bitcoin Knots" /> Bitcoin Knots
+            </a>
+          </div>
+          
+          <div class="wallet-list-item" data-category="linux" data-walletlevel="1">
+            
+            <a class="wallet-list-item-link" href="../../desktop/linux/bitcoinknots/index.html">
+            
+            <img src="https://segwitcoin.fun/img/wallet/bitcoinknots.png?1528484753" alt="Bitcoin Knots" /> Bitcoin Knots
+            </a>
+          </div>
+          
+        
+    
+        
+          
+          <div class="wallet-list-item" data-category="android" data-walletlevel="2">
+            
+            <a class="wallet-list-item-link" href="../../mobile/android/bitcoinwallet/index.html">
+            
+            <img src="https://segwitcoin.fun/img/wallet/bitcoinwallet.png?1528484753" alt="Bitcoin Wallet" /> Bitcoin Wallet
+            </a>
+          </div>
+          
+        
+    
+        
+          
+          <div class="wallet-list-item" data-category="web" data-walletlevel="3">
+            
+            <a class="wallet-list-item-link" href="index.html">
+            
+            <img src="https://segwitcoin.fun/img/wallet/bitgo.png?1528484753" alt="BitGo" /> BitGo
+            </a>
+          </div>
+          
+        
+    
+        
+          
+          <div class="wallet-list-item" data-category="ios" data-walletlevel="2">
+            
+            <a class="wallet-list-item-link" href="../../mobile/ios/bither/index.html">
+            
+            <img src="https://segwitcoin.fun/img/wallet/bither.png?1528484753" alt="Bither" /> Bither
+            </a>
+          </div>
+          
+          <div class="wallet-list-item" data-category="android" data-walletlevel="2">
+            
+            <a class="wallet-list-item-link" href="../../mobile/android/bither/index.html">
+            
+            <img src="https://segwitcoin.fun/img/wallet/bither.png?1528484753" alt="Bither" /> Bither
+            </a>
+          </div>
+          
+        
+          
+          <div class="wallet-list-item" data-category="windows" data-walletlevel="2">
+            
+            <a class="wallet-list-item-link" href="../../desktop/windows/bither/index.html">
+            
+            <img src="https://segwitcoin.fun/img/wallet/bither.png?1528484753" alt="Bither" /> Bither
+            </a>
+          </div>
+          
+          <div class="wallet-list-item" data-category="mac" data-walletlevel="2">
+            
+            <a class="wallet-list-item-link" href="../../desktop/mac/bither/index.html">
+            
+            <img src="https://segwitcoin.fun/img/wallet/bither.png?1528484753" alt="Bither" /> Bither
+            </a>
+          </div>
+          
+          <div class="wallet-list-item" data-category="linux" data-walletlevel="2">
+            
+            <a class="wallet-list-item-link" href="../../desktop/linux/bither/index.html">
+            
+            <img src="https://segwitcoin.fun/img/wallet/bither.png?1528484753" alt="Bither" /> Bither
+            </a>
+          </div>
+          
+        
+    
+        
+          
+          <div class="wallet-list-item" data-category="ios" data-walletlevel="2">
+            
+            <a class="wallet-list-item-link" href="../../mobile/ios/brd/index.html">
+            
+            <img src="https://segwitcoin.fun/img/wallet/brd.png?1528484753" alt="BRD" /> BRD
+            </a>
+          </div>
+          
+          <div class="wallet-list-item" data-category="android" data-walletlevel="2">
+            
+            <a class="wallet-list-item-link" href="../../mobile/android/brd/index.html">
+            
+            <img src="https://segwitcoin.fun/img/wallet/brd.png?1528484753" alt="BRD" /> BRD
+            </a>
+          </div>
+          
+        
+    
+        
+          
+          <div class="wallet-list-item" data-category="android" data-walletlevel="3">
+            
+            <a class="wallet-list-item-link" href="../../mobile/android/coinspace/index.html">
+            
+            <img src="https://segwitcoin.fun/img/wallet/coinspace.png?1528484753" alt="Coin.Space" /> Coin.Space
+            </a>
+          </div>
+          
+          <div class="wallet-list-item" data-category="ios" data-walletlevel="3">
+            
+            <a class="wallet-list-item-link" href="../../mobile/ios/coinspace/index.html">
+            
+            <img src="https://segwitcoin.fun/img/wallet/coinspace.png?1528484753" alt="Coin.Space" /> Coin.Space
+            </a>
+          </div>
+          
+          <div class="wallet-list-item" data-category="windowsphone" data-walletlevel="3">
+            
+            <a class="wallet-list-item-link" href="../../mobile/windowsphone/coinspace/index.html">
+            
+            <img src="https://segwitcoin.fun/img/wallet/coinspace.png?1528484753" alt="Coin.Space" /> Coin.Space
+            </a>
+          </div>
+          
+        
+          
+          <div class="wallet-list-item" data-category="web" data-walletlevel="3">
+            
+            <a class="wallet-list-item-link" href="../coinspace/index.html">
+            
+            <img src="https://segwitcoin.fun/img/wallet/coinspace.png?1528484753" alt="Coin.Space" /> Coin.Space
+            </a>
+          </div>
+          
+        
+    
+        
+          
+          <div class="wallet-list-item" data-category="hardware" data-walletlevel="2">
+            
+            <a class="wallet-list-item-link" href="../../hardware/digitalbitbox/index.html">
+            
+            <img src="https://segwitcoin.fun/img/wallet/digitalbitbox.png?1528484753" alt="Digital Bitbox" /> Digital Bitbox
+            </a>
+          </div>
+          
+        
+    
+        
+          
+          <div class="wallet-list-item" data-category="windows" data-walletlevel="2">
+            
+            <a class="wallet-list-item-link" href="../../desktop/windows/electrum/index.html">
+            
+            <img src="https://segwitcoin.fun/img/wallet/electrum.png?1528484753" alt="Electrum" /> Electrum
+            </a>
+          </div>
+          
+          <div class="wallet-list-item" data-category="mac" data-walletlevel="2">
+            
+            <a class="wallet-list-item-link" href="../../desktop/mac/electrum/index.html">
+            
+            <img src="https://segwitcoin.fun/img/wallet/electrum.png?1528484753" alt="Electrum" /> Electrum
+            </a>
+          </div>
+          
+          <div class="wallet-list-item" data-category="linux" data-walletlevel="2">
+            
+            <a class="wallet-list-item-link" href="../../desktop/linux/electrum/index.html">
+            
+            <img src="https://segwitcoin.fun/img/wallet/electrum.png?1528484753" alt="Electrum" /> Electrum
+            </a>
+          </div>
+          
+        
+          
+          <div class="wallet-list-item" data-category="android" data-walletlevel="2">
+            
+            <a class="wallet-list-item-link" href="../../mobile/android/electrum/index.html">
+            
+            <img src="https://segwitcoin.fun/img/wallet/electrum.png?1528484753" alt="Electrum" /> Electrum
+            </a>
+          </div>
+          
+        
+    
+        
+          
+          <div class="wallet-list-item" data-category="ios" data-walletlevel="3">
+            
+            <a class="wallet-list-item-link" href="../../mobile/ios/greenaddress/index.html">
+            
+            <img src="https://segwitcoin.fun/img/wallet/greenaddress.png?1528484753" alt="GreenAddress" /> Green Address
+            </a>
+          </div>
+          
+          <div class="wallet-list-item" data-category="android" data-walletlevel="3">
+            
+            <a class="wallet-list-item-link" href="../../mobile/android/greenaddress/index.html">
+            
+            <img src="https://segwitcoin.fun/img/wallet/greenaddress.png?1528484753" alt="GreenAddress" /> Green Address
+            </a>
+          </div>
+          
+        
+          
+          <div class="wallet-list-item" data-category="windows" data-walletlevel="3">
+            
+            <a class="wallet-list-item-link" href="../../desktop/windows/greenaddress/index.html">
+            
+            <img src="https://segwitcoin.fun/img/wallet/greenaddress.png?1528484753" alt="GreenAddress" /> Green Address
+            </a>
+          </div>
+          
+          <div class="wallet-list-item" data-category="mac" data-walletlevel="3">
+            
+            <a class="wallet-list-item-link" href="../../desktop/mac/greenaddress/index.html">
+            
+            <img src="https://segwitcoin.fun/img/wallet/greenaddress.png?1528484753" alt="GreenAddress" /> Green Address
+            </a>
+          </div>
+          
+          <div class="wallet-list-item" data-category="linux" data-walletlevel="3">
+            
+            <a class="wallet-list-item-link" href="../../desktop/linux/greenaddress/index.html">
+            
+            <img src="https://segwitcoin.fun/img/wallet/greenaddress.png?1528484753" alt="GreenAddress" /> Green Address
+            </a>
+          </div>
+          
+        
+          
+          <div class="wallet-list-item" data-category="web" data-walletlevel="3">
+            
+            <a class="wallet-list-item-link" href="../greenaddress/index.html">
+            
+            <img src="https://segwitcoin.fun/img/wallet/greenaddress.png?1528484753" alt="GreenAddress" /> Green Address
+            </a>
+          </div>
+          
+        
+    
+        
+          
+          <div class="wallet-list-item" data-category="android" data-walletlevel="2">
+            
+            <a class="wallet-list-item-link" href="../../mobile/android/greenbits/index.html">
+            
+            <img src="https://segwitcoin.fun/img/wallet/greenbits.png?1528484753" alt="GreenBits" /> GreenBits
+            </a>
+          </div>
+          
+        
+    
+        
+          
+          <div class="wallet-list-item" data-category="hardware" data-walletlevel="2">
+            
+            <a class="wallet-list-item-link" href="../../hardware/keepkey/index.html">
+            
+            <img src="https://segwitcoin.fun/img/wallet/keepkey.png?1528484753" alt="KeepKey" /> KeepKey
+            </a>
+          </div>
+          
+        
+    
+        
+          
+          <div class="wallet-list-item" data-category="hardware" data-walletlevel="2">
+            
+            <a class="wallet-list-item-link" href="../../hardware/ledgernanos/index.html">
+            
+            <img src="https://segwitcoin.fun/img/wallet/ledgernanos.png?1528484753" alt="Ledger Nano S" /> Ledger Nano S
+            </a>
+          </div>
+          
+        
+    
+        
+          
+          <div class="wallet-list-item" data-category="windows" data-walletlevel="2">
+            
+            <a class="wallet-list-item-link" href="../../desktop/windows/msigna/index.html">
+            
+            <img src="https://segwitcoin.fun/img/wallet/msigna.png?1528484753" alt="mSIGNA" /> mSIGNA
+            </a>
+          </div>
+          
+          <div class="wallet-list-item" data-category="mac" data-walletlevel="2">
+            
+            <a class="wallet-list-item-link" href="../../desktop/mac/msigna/index.html">
+            
+            <img src="https://segwitcoin.fun/img/wallet/msigna.png?1528484753" alt="mSIGNA" /> mSIGNA
+            </a>
+          </div>
+          
+          <div class="wallet-list-item" data-category="linux" data-walletlevel="2">
+            
+            <a class="wallet-list-item-link" href="../../desktop/linux/msigna/index.html">
+            
+            <img src="https://segwitcoin.fun/img/wallet/msigna.png?1528484753" alt="mSIGNA" /> mSIGNA
+            </a>
+          </div>
+          
+        
+    
+        
+          
+          <div class="wallet-list-item" data-category="android" data-walletlevel="3">
+            
+            <a class="wallet-list-item-link" href="../../mobile/android/mycelium/index.html">
+            
+            <img src="https://segwitcoin.fun/img/wallet/mycelium.png?1528484753" alt="Mycelium" /> Mycelium
+            </a>
+          </div>
+          
+        
+    
+        
+          
+          <div class="wallet-list-item" data-category="android" data-walletlevel="2">
+            
+            <a class="wallet-list-item-link" href="../../mobile/android/simplebitcoinwallet/index.html">
+            
+            <img src="https://segwitcoin.fun/img/wallet/simplebitcoinwallet.png?1528484753" alt="Simple Bitcoin Wallet" /> Simple Bitcoin
+            </a>
+          </div>
+          
+        
+    
+        
+          
+          <div class="wallet-list-item" data-category="hardware" data-walletlevel="2">
+            
+            <a class="wallet-list-item-link" href="../../hardware/trezor/index.html">
+            
+            <img src="https://segwitcoin.fun/img/wallet/trezor.png?1528484753" alt="Trezor" /> Trezor
+            </a>
+          </div>
+          
+        
+    
+</div>
+
+<script>
+  
+  // Add margin-bottom for walletmenu depending on the height of the second accordion          
+  function calculateHeight(element) {
+    var walletMenu = document.querySelector(".walletmenu");
+    walletMenu.style.marginBottom = element.offsetHeight + 'px'; 
+  }  
+  
+  function accordionDesktop() {
+    var walletMenu = document.querySelector(".walletmenu");
+    var acc = document.getElementsByClassName("js-acc-item");
+    var accSub = document.querySelectorAll(".js-acc-subitem");
+
+    for (var i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function(event) {
+        if (document.documentElement.clientWidth > 768) {
+          var activeItem = event.target.parentNode;
+
+          this.classList.add('active')
+          activeItem.classList.add("is-active");
+          
+          if (this.dataset.accordion) {
+            var activeOsAccordion = activeItem.querySelector(".walletmenu-subaccordion");
+            calculateHeight(activeOsAccordion);
+          } else {
+            walletMenu.style.marginBottom = '0px';
+          }          
+          
+          // Hide not selected list items
+          for (var index = 0; index < acc.length; index++) {
+            if (!(this == acc[index])) {              
+              acc[index].classList.remove("is-active");
+              acc[index].classList.remove("active");
+            }
+          }
+          
+        }
+      });
+    }
+
+    for (var ii = 0; ii < accSub.length; ii++) {
+      var subItem = accSub[ii];
+      subItem.addEventListener('click', function() {
+        
+        this.classList.add('active');
+        
+        for (var a = 0; a < accSub.length; a++) {
+          if (accSub[a] != this) {
+            accSub[a].classList.remove('active');
+          }
+        }
+        
+      });
+    }
+  }
+  accordionDesktop();
+
+  function showRelevantWallets() {
+    var allWallets = document.querySelectorAll("div[data-category]");    
+    var pageUrl = (window.location.pathname).split("https://segwitcoin.fun/").filter(Boolean);
+    var platform = pageUrl[2];
+    var os = pageUrl[3];
+    
+
+    if (platform === "hardware" || platform === "web") {
+      os = platform;
+    }
+
+    for (var i = 0; i < allWallets.length; i++) {
+      var wallet = allWallets[i];
+      var walletCategory = wallet.dataset.category;
+
+      if (os != walletCategory) {
+        wallet.classList.add('is-hidden');
+      }
+      
+    }    
+  }
+  showRelevantWallets();
+  
+  function makeWalletClickable() {
+    var walletsList = document.querySelectorAll('.allwallets-list-item');
+        
+    for (var i = 0; i < walletsList.length; i++) {
+      var wallet = walletsList[i];
+      
+      wallet.addEventListener("mouseenter", function () {
+        var walletOsList = this.querySelectorAll('.wallet-list-os-link:not(.is-hidden)');
+
+        if (walletOsList.length === 1) {
+          this.classList.add('mouseenter')
+        }
+      });
+
+      wallet.addEventListener("mouseleave", function () {
+        var walletOsList = this.querySelectorAll('.wallet-list-os-link:not(.is-hidden)');
+
+        if (walletOsList.length === 1) {
+          this.classList.remove('mouseenter')
+        }
+      });
+      
+    }
+
+     walletsList.forEach(function (wallet) {
+      return wallet.addEventListener("click", function () {
+        var walletOsList = this.querySelectorAll('.wallet-list-os-link:not(.is-hidden)');
+
+        if (walletOsList.length === 1) {
+          var walletHref = walletOsList[0].href;
+          window.location = walletHref;
+        }
+      });
+    });
+
+
+  }
+  makeWalletClickable();
+  
+  function hideNotRelevantWallets() {
+    var selectorsList = document.querySelectorAll("a[data-selector]");
+    var platformSelectorList = document.querySelectorAll("a[data-platform-selector]");
+    var allWallets = document.querySelectorAll("div[data-category]");
+    var osLinks = document.querySelectorAll("a[data-link-platform]");
+    var accSub = document.querySelectorAll(".js-acc-subitem");
+    
+    for (var i = 0; i < selectorsList.length; i++) {
+      var selector = selectorsList[i];
+      
+      selector.addEventListener('click', function (e) {
+        var selectedCategory = e.target.dataset.selector;
+
+        // Remove .is-hidden class from all wallets
+        allWallets.forEach(function(wallet) {
+          wallet.classList.remove('is-hidden');
+        })
+        // Remove .is-hidden class from all wallet links
+        osLinks.forEach(function(walletLink) {
+          walletLink.classList.remove('is-hidden');
+        })
+        // Remove .active class from all submenu links
+        accSub.forEach(function(subLink) {
+          subLink.classList.remove('active');
+        })
+
+        // Hide not relevant wallets
+        for (var ii = 0; ii < allWallets.length; ii++) {
+          var wallet = allWallets[ii];
+          var walletCategory = wallet.dataset.category;
+          
+          if (selectedCategory != walletCategory) {
+            wallet.classList.add('is-hidden');
+          } 
+        }
+
+      })
+    }
+    
+    // Show only desktop or mobile wallets
+    for (var a = 0; a < platformSelectorList.length; a++) {
+      var platform = platformSelectorList[a];
+
+      platform.addEventListener('click', function(e) {
+
+        var selectedPlatform = e.target.dataset.platformSelector;
+        var regexp = new RegExp(selectedPlatform, 'i');
+                
+        for (var aa = 0; aa < allWallets.length; aa++) {
+          var walletItem = allWallets[aa];
+          var walletPlatform = walletItem.dataset.platforms;
+          
+          if (!(regexp.test(walletPlatform))) {
+            walletItem.classList.add('is-hidden');
+          } else {
+            var walletOsLinks = walletItem.querySelectorAll("a[data-link-platform]");
+            
+            for (var n = 0; n < walletOsLinks.length; n++) {
+              var link = walletOsLinks[n];
+              
+              if (link.dataset.linkPlatform !== selectedPlatform) {
+                link.classList.add("is-hidden")
+              } 
+            }
+          }
+          
+        }
+      })
+    }
+  }
+  hideNotRelevantWallets();
+</script>
+ 
+
+
+
+<script>    
+    var pageUrl = (window.location.pathname).split("https://segwitcoin.fun/").filter(Boolean);
+    var platform = pageUrl[2];
+    var os = pageUrl[3];
+    var wallet = pageUrl[4];
+    var platformTab = document.querySelector('.accordion-tab-1');
+    
+    platformTab.classList.add('is-selected');
+    document.querySelector('.selected-platform').textContent = platform;
+
+    if (os) {
+      if (platform === "desktop" || platform === "mobile") {
+        var osAccordion = document.querySelectorAll('.accordion-os');
+        // Display relevant os accordion
+        for (var a = 0; a < osAccordion.length; a++) {
+          if (platform === osAccordion[a].dataset.os) {
+            var relevantOsAcc = osAccordion[a];
+            relevantOsAcc.classList.add('is-visible');
+
+            // Made relevant accordion tab selected
+            relevantOsAcc.querySelector('.accordion-tab-2').classList.add('is-selected');
+            if (os === 'windowsphone') {
+              os = 'windows phone';
+            }
+            relevantOsAcc.querySelector('.selected-os').textContent = os;
+          }
+        }
+      } else {
+        wallet = os;
+      }
+    }
+
+    if (wallet) {
+      var walletTab = document.querySelector('.accordion-tab-3');
+      walletTab.classList.add('is-selected');
+      walletTab.classList.remove('is-expanded');
+    }
+</script> 
+
+
+</div>
+
+  <div class="footer">
+    <div class="container">
+       
+
+<a class="logo-footer" href="../../../index.html">
+  <img src="https://segwitcoin.fun/img/icons/logo-footer.svg?1528484753" alt="Bitcoin">
+</a> 
+       
+
+<div class="row footer-row">
+  <div class="donate">
+    <div class="row donate-row">
+      <div>
+        <span class="footer-title">Support Bitcoin.org:</span>
+        <a onclick="openDonationModal()" class="donate-btn btn-bright">Donate</a>
+        <p class="donate-text">Bitcoin.org is community supported.
+          <a class="donate-link" href="bitcoin:3FkenCiXpSLqD8L79intRNXUgjRoH9sjXa" target="_blank">3FkenCiXpSLqD8L79intRNXUgjRoH9sjXa</a>
+        </p>
+      </div>
+      <div class="donate-qrcode">
+        <img src="https://segwitcoin.fun/img/footer/qr.png?1528484753" alt="QR code">
+      </div>
+    </div>
+  </div>
+  
+  <div class="row footermenu">
+    <div class="footermenu-item footermenu-introduction">
+      <p class="footer-title">Introduction:</p>
+      <ul class="footermenu-list">
+        <li>
+          <a href="../../../bitcoin-for-individuals.html">Individuals</a>
+        </li>
+        <li>
+          <a href="../../../bitcoin-for-businesses.html">Businesses</a>
+        </li>
+        <li>
+          <a href="../../../bitcoin-for-developers.html">Developers</a>
+        </li>
+        <li>
+          <a href="../../../getting-started.html">Getting started</a>
+        </li>
+        <li>
+          <a href="../../../how-it-works.html">How it works</a>
+        </li>
+        <li>
+          <a href="../../../you-need-to-know.html">You need to know</a>
+        </li>
+      </ul>
+    </div>
+    
+    <div class="footermenu-item footermenu-resources">
+      <p class="footer-title">Resources:</p>
+      <ul class="footermenu-list">
+        <li>
+          <a href="../../../resources.html">Resources</a>
+        
+        <li>
+          <a href="../../../exchanges.html">Exchanges</a>
+        </li>
+        
+        <li>
+          <a href="../../../community.html">Community</a>
+        </li>
+        <li>
+          <a href="../../../vocabulary.html">Vocabulary
+          </a>
+        </li>
+        <li>
+          <a href="../../../events.html">Events</a>
+        </li>
+        
+        <li>
+          <a href="../../../bitcoin-core/index.html">Bitcoin Core</a>
+        </li>
+        
+      </ul>
+    </div>
+    
+    <div class="footermenu-item footermenu-participate">
+      <p class="footer-title">Participate:</p>
+      <ul class="footermenu-list">
+        <li>
+          <a href="../../../support-bitcoin.html">Support Bitcoin</a>
+        
+        <li>
+          <a href="../../../buy.html">Buy Bitcoin</a>
+        </li>
+        
+        
+        <li>
+          <a href="../../../full-node.html">Running a full node</a>
+        </li>
+        
+        <li>
+          <a href="../../../development.html">Development</a>
+        </li>
+      </ul>
+    </div>
+    <div class="footermenu-item footermenu-other">
+      <p class="footer-title">Other:</p>
+      <a href="../../../legal.html">Legal</a>
+      
+      <a href="../../../privacy.html">Privacy Policy</a>
+      
+      <a href="../../../press.html">Press</a>
+      <a href="../../../about-us.html">About bitcoin.org</a>
+      <a href="../../../blog.html">Blog</a>
+    </div>
+  </div>
+</div> 
+       
+
+<div class="footersponsor">
+  <!--<div><span>A community website sponsored by</span> <a href="https://bitcoinfoundation.org/"><img src="/img/brand/bitcoinfoundation.png?1528484753" alt="Bitcoin Foundation"></a></div>-->
+</div>
+
+    </div>
+    
+
+<div class="footer-bottom">
+  <div class="container">
+    <div class="row footer-bottom-row">
+      <div class="footerlicense">© Bitcoin Project 2009-2018 Released under the <a href="http://opensource.org/licenses/mit-license.php" target="_blank">MIT license</a></div>
+      <div class="row footer-social">
+        <a href="#" onclick="window.open('http://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(location.href))" class="footer-social-link" target="_blank">
+          <img src="https://segwitcoin.fun/img/icons/ico_facebook_dark.svg?1528484753" alt="facebook" class="footer-social-img">
+        </a>
+        <a href="#" onclick="window.open('https://twitter.com/share?url=' + encodeURIComponent(location.href))" class="footer-social-link" target="_blank">
+          <img src="https://segwitcoin.fun/img/icons/ico_twitter_dark.svg?1528484753" alt="twitter" class="footer-social-img">
+        </a>
+      </div>
+      <div class="row footer-status-block">
+        <a href="../../../alerts.html" class="statusmenu">Network Status</a>
+        
+<ul class="lang is-expand">
+  <li><a>English</a>
+  <ul>
+    <li><ul>
+      
+      
+        
+          <li><a href="https://segwitcoin.fun/id/">Bahasa Indonesia</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/da/">Dansk</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/de/">Deutsch</a></li>
+        
+        
+          <li><a href="../../../index.html" class="active">English</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/es/">Español</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/fr/">Français</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/it/">Italiano</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/hu/">Magyar</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/nl/">Nederlands</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/pl/">Polski</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/pt_BR/">Português Brasil</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/ro/">Română</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/sl/">Slovenščina</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/sv/">Svenska</a></li>
+        
+        </ul></li><li><ul>
+          <li><a href="https://segwitcoin.fun/tr/">Türkçe</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/el/">Ελληνικά</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/bg/">български</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/ru/">Русский</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/uk/">Українська</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/ar/">العربية</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/fa/">فارسی</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/hi/">हिन्दी</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/ko/">한국의</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/ja/">日本語</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/zh_CN/">简体中文</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/zh_TW/">繁體中文</a></li>
+        
+      </ul></li>
+    </ul>
+  </li>
+</ul>
+ 
+        <div id="footer-langselect" class="footer-langselect langselect">
+          <label for="select-input-footer" class="center-select">
+            <select class="center-select__input" onchange="window.location=this.value; ">
+              
+              <option value="/id/" >Bahasa Indonesia</option>
+              
+              <option value="/da/" >Dansk</option>
+              
+              <option value="/de/" >Deutsch</option>
+              
+              <option value="/en/"  selected="selected">English</option>
+              
+              <option value="/es/" >Español</option>
+              
+              <option value="/fr/" >Français</option>
+              
+              <option value="/it/" >Italiano</option>
+              
+              <option value="/hu/" >Magyar</option>
+              
+              <option value="/nl/" >Nederlands</option>
+              
+              <option value="/pl/" >Polski</option>
+              
+              <option value="/pt_BR/" >Português Brasil</option>
+              
+              <option value="/ro/" >Română</option>
+              
+              <option value="/sl/" >Slovenščina</option>
+              
+              <option value="/sv/" >Svenska</option>
+              
+              <option value="/tr/" >Türkçe</option>
+              
+              <option value="/el/" >Ελληνικά</option>
+              
+              <option value="/bg/" >български</option>
+              
+              <option value="/ru/" >Русский</option>
+              
+              <option value="/uk/" >Українська</option>
+              
+              <option value="/ar/" >العربية</option>
+              
+              <option value="/fa/" >فارسی</option>
+              
+              <option value="/hi/" >हिन्दी</option>
+              
+              <option value="/ko/" >한국의</option>
+              
+              <option value="/ja/" >日本語</option>
+              
+              <option value="/zh_CN/" >简体中文</option>
+              
+              <option value="/zh_TW/" >繁體中文</option>
+              
+            </select>
+            <span class="center-select__text">en</span>
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </div>
+</div>
+
+
+
+<script type="text/javascript">
+  fallbackSVG();
+  addAnchorLinks();
+  trackOutgoingLinks();
+</script>
+
+
+
+  <script>walletMenuAccordion();</script>
+<script>showNextMobileAccordion();</script>
+
+
+
+
+
+</body>
+
+
+<!-- Mirrored from bitcoin.org/en/wallets/web/bitgo/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Jun 2018 15:42:25 GMT -->
+</html>

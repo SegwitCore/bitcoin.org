@@ -1,0 +1,1009 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+
+
+
+<!-- Mirrored from bitcoin.org/en/bitcoin-core/features/user-interface by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Jun 2018 15:42:18 GMT -->
+<head>
+
+
+<link rel="stylesheet" href="https://segwitcoin.fun/css/jquery-ui.min.css">
+
+
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta property="og:image" content="https://segwitcoin.fun/img/icons/opengraph.png?1528484753" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>User Interface - Bitcoin Core Features</title>
+
+<link rel="stylesheet" href="https://segwitcoin.fun/css/font-awesome-4.4.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://segwitcoin.fun/css/main.css?1528484753">
+<!--[if lt IE 8]><link rel="stylesheet" href="/css/ie.css"><script type="text/javascript" src="/js/ie.js"></script><![endif]-->
+<!--[if IE 8]><link rel="stylesheet" href="/css/ie8.css"><![endif]-->
+
+
+<script type="text/javascript" src="https://segwitcoin.fun/js/base.js?1528484753"></script>
+<script type="text/javascript" src="https://segwitcoin.fun/js/main.js?1528484753"></script>
+<script src="https://segwitcoin.fun/js/jquery/jquery-1.11.2.min.js"></script>
+<script src="https://segwitcoin.fun/js/jquery/jquery.qrcode.min.js"></script>
+<link rel="shortcut icon" href="https://segwitcoin.fun/favicon.png?1528484753">
+<link rel="apple-touch-icon-precomposed" href="https://segwitcoin.fun/img/icons/logo_ios.png?1528484753"/>
+<script>
+    window.cookieconsent_options = {
+        theme: 'light-floating'
+    }
+</script>
+<script type="text/javascript" src="https://segwitcoin.fun/js/cookieconsent/cookieconsent.js?1528484753"></script>
+<script>
+if( navigator.doNotTrack != "yes" && navigator.doNotTrack != "1" && window.doNotTrack != "1" && navigator.msDoNotTrack != "1" ){
+	var script = document.createElement('script');
+	script.src = 'https://segwitcoin.fun/js/analytics.js'
+	document.getElementsByTagName("head")[0].appendChild(script);
+}
+</script>
+
+
+
+
+
+  <script src="https://segwitcoin.fun/js/jquery/jquery-1.11.2.min.js"></script>
+  <script src="https://segwitcoin.fun/js/jquery/jquery-ui.min.js"></script>
+
+
+</head>
+
+<body>
+
+
+<div id="detectmobile" class="detectmobile"></div>
+
+
+
+
+
+
+
+
+
+
+<div class="head"><div>
+  
+
+<a id="menumobile" class="menumobile" onclick="mobileMenuShow(event);" ontouchstart="mobileMenuShow(event);"></a>
+
+  
+    
+
+<a class="logo" href="../index.html"><img src="https://segwitcoin.fun/img/bitcoin-core/bitcoin-core.svg?1528484753" alt="Bitcoin"></a>
+
+    
+
+<ul id="menusimple" class="menusimple menucore" onclick="mobileMenuHover(event);" ontouchstart="mobileMenuHover(event);">
+  <li><a class="is-expand">Features</a>
+    <ul>
+      <li><a href="index.html">Overview</a></li>
+      <li><a href="validation.html">Validation</a></li>
+      <li><a href="privacy.html">Privacy</a></li>
+      <li><a href="requirements.html">Requirements</a></li>
+      <li class="active"><a href="user-interface.html">User Interface</a></li>
+      <li><a href="network-support.html">Network Support</a></li>
+    </ul>
+  </li>
+  <li><a href="../help.html">Get Help</a></li>
+  <li><a class="is-expand">Contribute</a>
+    <ul>
+      <li><a href="../contribute/issues.html">Bug reports</a></li>
+      <li><a href="../../development.html">Code</a></li>
+      <li><a href="../contribute/documentation.html">Documentation</a></li>
+      <li><a href="../contribute/translations.html">Translations</a></li>
+      <li><a href="../contribute/support.html">Tech Support</a></li>
+    </ul>
+  </li>
+  <li><a href="../../version-history.html">News</a></li>
+  <li><a href="../../download.html">Download</a></li>
+</ul>
+
+  
+    
+<ul class="lang is-expand">
+  <li><a>English</a>
+  <ul>
+    <li><ul>
+      
+      
+        
+          <li><a href="https://segwitcoin.fun/id/">Bahasa Indonesia</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/da/">Dansk</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/de/">Deutsch</a></li>
+        
+        
+          <li><a href="../../index.html" class="active">English</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/es/">Español</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/fr/">Français</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/it/">Italiano</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/hu/">Magyar</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/nl/">Nederlands</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/pl/">Polski</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/pt_BR/">Português Brasil</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/ro/">Română</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/sl/">Slovenščina</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/sv/">Svenska</a></li>
+        
+        </ul></li><li><ul>
+          <li><a href="https://segwitcoin.fun/tr/">Türkçe</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/el/">Ελληνικά</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/bg/">български</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/ru/">Русский</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/uk/">Українська</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/ar/">العربية</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/fa/">فارسی</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/hi/">हिन्दी</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/ko/">한국의</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/ja/">日本語</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/zh_CN/">简体中文</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/zh_TW/">繁體中文</a></li>
+        
+      </ul></li>
+    </ul>
+  </li>
+</ul>
+
+    
+<div id="langselect" class="langselect">
+    <label for="select-input" class="center-select">
+        <select id="select-input" class="center-select__input" onchange="window.location=this.value;">
+            
+            <option value="/id/" >Bahasa Indonesia</option>
+            
+            <option value="/da/" >Dansk</option>
+            
+            <option value="/de/" >Deutsch</option>
+            
+            <option value="/en/"  selected="selected">English</option>
+            
+            <option value="/es/" >Español</option>
+            
+            <option value="/fr/" >Français</option>
+            
+            <option value="/it/" >Italiano</option>
+            
+            <option value="/hu/" >Magyar</option>
+            
+            <option value="/nl/" >Nederlands</option>
+            
+            <option value="/pl/" >Polski</option>
+            
+            <option value="/pt_BR/" >Português Brasil</option>
+            
+            <option value="/ro/" >Română</option>
+            
+            <option value="/sl/" >Slovenščina</option>
+            
+            <option value="/sv/" >Svenska</option>
+            
+            <option value="/tr/" >Türkçe</option>
+            
+            <option value="/el/" >Ελληνικά</option>
+            
+            <option value="/bg/" >български</option>
+            
+            <option value="/ru/" >Русский</option>
+            
+            <option value="/uk/" >Українська</option>
+            
+            <option value="/ar/" >العربية</option>
+            
+            <option value="/fa/" >فارسی</option>
+            
+            <option value="/hi/" >हिन्दी</option>
+            
+            <option value="/ko/" >한국의</option>
+            
+            <option value="/ja/" >日本語</option>
+            
+            <option value="/zh_CN/" >简体中文</option>
+            
+            <option value="/zh_TW/" >繁體中文</option>
+            
+        </select>
+        <span class="center-select__text">Language: <span class="is-capital">en</span></span>
+    </label>
+</div>
+
+</div></div>
+
+<div class="body">
+  
+    
+
+<div class="breadcrumbs">
+  <div class="container">
+      
+    <a href="../../index.html">Bitcoin</a>
+     &gt;    
+    <a href="../index.html">Core</a>
+     &gt;    
+    <a href="index.html">Features</a>
+     &gt;    Interface   
+  </div>
+</div>
+
+  
+  
+
+<div id="content" class="content">
+    <div class="hero">
+<div class="container hero-container">
+
+    <h1 id="bitcoin-cores-user-interface">Bitcoin Core’s User Interface</h1>
+
+    <div class="row hero-social">
+  <a href="#" onclick="window.open('http://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(location.href))" class="hero-social-link" target="_blank">
+    <img src="https://segwitcoin.fun/img/icons/ico_facebook_bright.svg?1528484753" alt="facebook" />
+  </a>
+  <a href="#" onclick="window.open('https://twitter.com/share?url=' + encodeURIComponent(location.href))" class="hero-social-link" target="_blank">
+    <img src="https://segwitcoin.fun/img/icons/ico_twitter_bright.svg?1528484753" alt="twitter" />
+  </a>
+</div>
+  </div>
+</div>
+
+<div class="bitcore-content">
+<div class="container">
+
+    <p><img src="https://segwitcoin.fun/img/bitcoin-core/slider-ui.svg?1528484753" alt="Bitcoin Core User Interface" /></p>
+
+    <div class="callout">
+  <a class="callout-btn btn-bright" href="../../download.html">Download Bitcoin Core</a>
+  <div class="row callout-row">
+    <span class="btn-subtext">Bitcoin Core 0.16.0</span>
+    <div>
+      <img class="callout-img" src="https://segwitcoin.fun/img/os/windows.png?1528484753" alt="Windows" />
+      <img class="callout-img" src="https://segwitcoin.fun/img/os/mac.png?1528484753" alt="Mac" />
+      <img class="callout-img" src="https://segwitcoin.fun/img/os/linux.png?1528484753" alt="Linux" />
+    </div>
+  </div>
+  <hr class="separator btn-separator" />
+</div>
+
+    <p>Bitcoin Core has a built in wallet with <a href="#graphical">graphical</a> and
+<a href="#cli">command line/API</a> modes. It can also simultaneously support multiple
+lightweight wallets with similar <a href="validation.html">security</a> and
+<a href="privacy.html">privacy</a> to its built-in wallet.</p>
+
+    <p><img src="https://segwitcoin.fun/img/bitcoin-core/multi-wallet-support.svg?1528484753" alt="Multiple wallet support" /></p>
+
+    <p><strong>Warning:</strong> you only get the security and privacy benefits in supported
+lightweight wallets if they make a secure and private connection to your
+Bitcoin Core <em>every</em> time you use them. This usually requires special
+configuration.</p>
+
+    <h2 id="graphical">Bitcoin Core Wallet GUI (Graphical)</h2>
+
+    <div class="row card-row">
+
+      <div class="card core-card">
+<img src="https://segwitcoin.fun/img/icons/ico_clear.svg?1528484753" alt="icon" />
+<h3 class="popup js" id="clear-overview" data-container="gui_overview">Clear overview</h3>
+<p>See your current balance and recent transactions</p>
+</div>
+
+      <div class="card core-card">
+<img src="https://segwitcoin.fun/img/icons/ico_fee_slider.svg?1528484753" alt="icon" />
+<h3 class="popup js" id="fee-slider" data-container="gui_fee_slider">Fee slider</h3>
+<p>Easily choose between low fees and fast confirmation</p>
+</div>
+
+      <div class="card core-card">
+<img src="https://segwitcoin.fun/img/icons/ico_coin_control.svg?1528484753" alt="icon" />
+<h3 class="popup js" id="coin-control" data-container="gui_coin_control">Coin control</h3>
+<p>Enhance privacy or save money by choosing your inputs</p>
+</div>
+
+      <div class="card core-card">
+<img src="https://segwitcoin.fun/img/icons/ico_qrcode.svg?1528484753" alt="icon" />
+<h3 class="popup js" id="qr-codes" data-container="gui_qr_codes">QR codes</h3>
+<p>Generate QR codes to receive payment</p>
+</div>
+
+      <div class="card core-card">
+<img src="https://segwitcoin.fun/img/icons/ico_invoices.svg?1528484753" alt="icon" />
+<h3 class="popup js" id="unique-invoices" data-container="gui_unique_invoices">Unique invoices</h3>
+<p>Easily track who paid you</p>
+</div>
+
+      <div class="card core-card">
+<img src="https://segwitcoin.fun/img/icons/ico_control.svg?1528484753" alt="icon" />
+<h3 class="popup js" id="proxy-configuration" data-container="gui_proxy_configuration">Proxy configuration</h3>
+<p>Use Tor or a proxy for privacy</p>
+</div>
+
+      <div class="card core-card">
+<img src="https://segwitcoin.fun/img/icons/ico_monitoring.svg?1528484753" alt="icon" />
+<h3 class="popup js" id="network-monitoring" data-container="gui_network_monitoring">Network monitoring</h3>
+<p>Track how much bandwidth you use</p>
+</div>
+
+      <div class="card core-card">
+<img src="https://segwitcoin.fun/img/icons/ico_watch-only.svg?1528484753" alt="icon" />
+<h3 class="popup js" id="support" data-container="gui_watch_only">Watch-only support</h3>
+<p>Track bitcoins stored safely offline</p>
+</div>
+
+    </div>
+
+    <h2 id="cli">Bitcoin Core Wallet RPC/REST (CLI)</h2>
+
+    <div class="row card-row">
+
+      <div class="card core-card">
+<img src="https://segwitcoin.fun/img/icons/get-new-address.svg?1528484753" alt="icon" />
+<h3 class="popup js" id="GetNewAddress" data-container="rpc_getnewaddress">GetNewAddress</h3>
+<p>Get a new address for receiving payment</p>
+</div>
+
+      <div class="card core-card">
+<img src="https://segwitcoin.fun/img/icons/get-balance.svg?1528484753" alt="icon" />
+<h3 class="popup js" id="GetBalance" data-container="rpc_getbalance">GetBalance</h3>
+<p>Instantly see your available Bitcoin balance</p>
+</div>
+
+      <div class="card core-card">
+<img src="https://segwitcoin.fun/img/icons/ico_send.svg?1528484753" alt="icon" />
+<h3 class="popup js" id="SendMany" data-container="rpc_sendmany">SendMany</h3>
+<p>Send a single payment to multiple addresses</p>
+</div>
+
+      <div class="card core-card">
+<img src="https://segwitcoin.fun/img/icons/ico_list.svg?1528484753" alt="icon" />
+<h3 class="popup js" id="ListUnspent" data-container="rpc_listunspent">ListUnspent</h3>
+<p>See what received transactions you can spend</p>
+</div>
+
+      <div class="card core-card">
+<img src="https://segwitcoin.fun/img/icons/create-sign-send.svg?1528484753" alt="icon" />
+<h3 class="popup js" id="create-sign-send" data-container="rpc_rawtx">Create/Sign/Send</h3>
+<p>Create and send raw transactions</p>
+</div>
+
+      <div class="card core-card">
+<img src="https://segwitcoin.fun/img/icons/ico_notification.svg?1528484753" alt="icon" />
+<h3 class="popup js" id="Notification" data-container="notification">Notification</h3>
+<p>Be notified of new blocks and transactions</p>
+</div>
+
+    </div>
+
+    <div class="alert ui-alert">
+      <p><strong>Learn more:</strong> documentation for the <a href="../../developer-reference.html#remote-procedure-calls-rpcs">RPC</a> and <a href="../../developer-reference.html#http-rest">REST</a> interfaces</p>
+    </div>
+
+    <h2 id="lightweight">Lightweight Wallets Using Bitcoin Core</h2>
+
+    <div class="row lightweight-wallets-row">
+
+      <div>
+        <p><img src="https://segwitcoin.fun/img/bitcoin-core/connection-types-p2p-spv.svg?1528484753" alt="Non-private connection" /></p>
+
+        <p>Lightweight wallets usually connect to several random full nodes (like
+Bitcoin Core) to send and receive all of their data. In the process they
+<a href="privacy.html#perfect-privacy-for-received-transactions">leak private data</a> and make themselves more
+<a href="validation.html#how-validation-protects-your-bitcoins">vulnerable to attacks</a>.</p>
+      </div>
+
+      <div>
+
+        <p><img src="https://segwitcoin.fun/img/bitcoin-core/connection-types-trusted-peer.svg?1528484753" alt="Secure and private connection" /></p>
+
+        <p>But it’s also possible to connect certain lightweight wallets solely to
+your own Bitcoin Core full node, called a trusted peer. If you do this
+with a secure and private connection every time you use that
+lightweight wallet, you’ll get most of the security and privacy
+benefits of a full node as well as <a href="validation.html#help-protect-decentralization">help protect decentralization</a>.</p>
+
+      </div>
+    </div>
+
+    <h3 id="trusted-peer">Trusted Peer Support</h3>
+
+    <p>The following wallets can securely connect to a trusted peer.</p>
+
+    <div class="wallet_accordion">
+
+      <h3 id="greenbits">GreenBits</h3>
+
+      <div>
+        <p><img src="https://segwitcoin.fun/img/screenshots/greenbits.png?1528484753" alt="GreenBits screenshot" /></p>
+
+        <p>GreenBits is a fast and easy to use wallet. Enjoy improved security with
+a minimal/zero trust approach, optional hardware wallets support,
+multisignature based 2FA and spending limits functionality.</p>
+
+        <p><strong>Requires you setup a <a href="https://en.bitcoin.it/wiki/Tor#Hidden_services">Tor .onion address</a>.</strong></p>
+
+        <ol>
+          <li>
+            <p>Open the GreenBits app</p>
+          </li>
+          <li>
+            <p>Go to the configuration screen</p>
+          </li>
+          <li>
+            <p>Choose to <em>Enable SPV</em> (default) and tap <em>Only connect to a
+trusted peer</em>.</p>
+          </li>
+          <li>
+            <p>Enter your .onion address in the <em>trusted peer</em> field.</p>
+          </li>
+          <li>
+            <p>Restart the app.</p>
+          </li>
+        </ol>
+
+        <p>Note that GreenAddress will still be able to see your payments; however,
+you’ll have enhanced security as well as privacy from random peers on
+the Bitcoin network.</p>
+
+        <p class="right-hanger"><a href="https://play.google.com/store/apps/details?id=com.greenaddress.greenbits_android_wallet">Get GreenBits</a></p>
+      </div>
+
+      <h3 id="msigna">mSigna</h3>
+
+      <div>
+        <p><img src="https://segwitcoin.fun/img/screenshots/msigna.png?1528484753" alt="mSigma screenshot" /></p>
+
+        <p>mSIGNA is an advanced yet easy-to-use wallet featuring speed and simplicity, enterprise-level scalability, and strong security. It supports BIP32, multisignature transactions, offline storage, multidevice synchronization, and encrypted electronic and paper backups.</p>
+
+        <p><strong>No configuration necessary:</strong> just install Bitcoin Core on the same
+computer you plan to use mSigna, wait for Bitcoin Core to sync the block
+chain, and then start mSigna—it will automatically connect to your
+Bitcoin Core full node.</p>
+
+        <p class="right-hanger"><a href="https://ciphrex.com/redirect/?referer=bitcoin.org">Get mSigna</a></p>
+      </div>
+
+    </div>
+
+    <div class="not-displayed">
+  <div id="gui_overview" title="Wallet Overview">
+        <p><img src="https://segwitcoin.fun/img/bitcoin-core/clear-overview.png?1528484753" alt="Clear overview" /></p>
+      </div>
+
+  <div id="gui_fee_slider" title="Fee Slider">
+        <p><img src="https://segwitcoin.fun/img/bitcoin-core/fee-slider.png?1528484753" alt="Fee slider" /></p>
+      </div>
+
+  <div id="gui_coin_control" title="Coin Control">
+        <p><img src="https://segwitcoin.fun/img/bitcoin-core/coin-control.png?1528484753" alt="Coin control" /></p>
+      </div>
+
+  <div id="gui_qr_codes" title="QR Codes">
+        <p><img src="https://segwitcoin.fun/img/bitcoin-core/qr-codes.png?1528484753" alt="QR codes" /></p>
+      </div>
+
+  <div id="gui_unique_invoices" title="Unique Invoices">
+        <p><img src="https://segwitcoin.fun/img/bitcoin-core/unique-invoice.png?1528484753" alt="Unique invoice" /></p>
+      </div>
+
+  <div id="gui_proxy_configuration" title="Proxy Configuration">
+        <p><img src="https://segwitcoin.fun/img/bitcoin-core/proxy-configuration.png?1528484753" alt="Proxy configuration" /></p>
+      </div>
+
+  <div id="gui_network_monitoring" title="Network monitoring">
+        <p><img src="https://segwitcoin.fun/img/bitcoin-core/network-monitoring.png?1528484753" alt="Network monitoring" /></p>
+      </div>
+
+  <div id="gui_watch_only" title="Watching-only Wallets">
+        <p><img src="https://segwitcoin.fun/img/bitcoin-core/watching-only.png?1528484753" alt="Fee slider" /></p>
+      </div>
+
+  <div id="rpc_getnewaddress" title="GetNewAddress">
+        <div class="multicode">
+
+          <figure class="highlight"><pre><code class="language-bash" data-lang="bash">  bitcoin-cli -testnet getnewaddress <span class="s2">"doc test"</span>
+  </code></pre></figure>
+
+          <figure class="highlight"><pre><code class="language-text" data-lang="text">  mft61jjkmiEJwJ7Zw3r1h344D6aL1xwhma
+  </code></pre></figure>
+
+        </div>
+      </div>
+
+  <div id="rpc_getbalance" title="GetBalance">
+        <div class="multicode">
+
+          <figure class="highlight"><pre><code class="language-bash" data-lang="bash">  bitcoin-cli -testnet getbalance
+  </code></pre></figure>
+
+          <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="w">  </span><span class="mf">1.99900000</span><span class="w">
+  </span></code></pre></figure>
+
+        </div>
+      </div>
+
+  <div id="rpc_sendmany" title="SendMany">
+        <div class="multicode">
+
+          <figure class="highlight"><pre><code class="language-bash" data-lang="bash">  bitcoin-cli -testnet sendmany <span class="se">\</span>
+    <span class="s2">"test1"</span> <span class="se">\</span>
+    <span class="s1">'''
+      {
+        "mjSk1Ny9spzU2fouzYgLqGUD8U41iR35QN": 0.1,
+        "mgnucj8nYqdrPFh2JfZSB1NmUThUGnmsqe": 0.2
+      } '''</span> <span class="se">\</span>
+    6       <span class="se">\</span>
+    <span class="s2">"Example Transaction"</span>
+  </code></pre></figure>
+
+          <figure class="highlight"><pre><code class="language-text" data-lang="text">  ec259ab74ddff199e61caa67a26e29b13b5688dc60f509ce0df4d044e8f4d63d
+  </code></pre></figure>
+
+        </div>
+      </div>
+
+  <div id="rpc_listunspent" title="ListUnspent">
+        <div class="multicode">
+
+          <figure class="highlight"><pre><code class="language-bash" data-lang="bash">  bitcoin-cli -testnet listunspent 6 99999999 <span class="s1">'''
+    [
+      "mgnucj8nYqdrPFh2JfZSB1NmUThUGnmsqe"
+    ]
+  '''</span>
+  </code></pre></figure>
+
+          <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="w">  </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+          </span><span class="nt">"txid"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"d54994ece1d11b19785c7248868696250ab195605b469632b7bd68130e880c9a"</span><span class="p">,</span><span class="w">
+          </span><span class="nt">"vout"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+          </span><span class="nt">"address"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"mgnucj8nYqdrPFh2JfZSB1NmUThUGnmsqe"</span><span class="p">,</span><span class="w">
+          </span><span class="nt">"account"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"test label"</span><span class="p">,</span><span class="w">
+          </span><span class="nt">"scriptPubKey"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"76a9140dfc8bafc8419853b34d5e072ad37d1a5159f58488ac"</span><span class="p">,</span><span class="w">
+          </span><span class="nt">"amount"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mf">0.00010000</span><span class="p">,</span><span class="w">
+          </span><span class="nt">"confirmations"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">6210</span><span class="p">,</span><span class="w">
+          </span><span class="nt">"spendable"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+  </span></code></pre></figure>
+
+        </div>
+      </div>
+
+  <div id="rpc_rawtx" title="Create/Sign/Spent Raw Transactions">
+        <p>Create a raw transaction:</p>
+
+        <div class="multicode">
+
+          <figure class="highlight"><pre><code class="language-bash" data-lang="bash">  bitcoin-cli -testnet createrawtransaction <span class="s1">'''
+    [
+      {
+        "txid": "1eb590cd06127f78bf38ab4140c4cdce56ad9eb8886999eb898ddf4d3b28a91d",
+        "vout" : 0
+      }
+    ]'''</span> <span class="s1">'{ "mgnucj8nYqdrPFh2JfZSB1NmUThUGnmsqe": 0.13 }'</span>
+  </code></pre></figure>
+
+          <figure class="highlight"><pre><code class="language-text" data-lang="text">  01000000011da9283b4ddf8d89eb996988b89ead56cecdc44041ab38bf787f1206cd90b51e0000000000ffffffff01405dc600000000001976a9140dfc8bafc8419853b34d5e072ad37d1a5159f58488ac00000000
+  </code></pre></figure>
+
+        </div>
+
+        <p>Sign the above raw transaction:</p>
+
+        <div class="multicode">
+
+          <figure class="highlight"><pre><code class="language-bash" data-lang="bash">  bitcoin-cli -testnet signrawtransaction 01000000011da9283b4ddf8d<span class="se">\</span>
+  89eb996988b89ead56cecdc44041ab38bf787f1206cd90b51e0000000000ffff<span class="se">\</span>
+  ffff01405dc600000000001976a9140dfc8bafc8419853b34d5e072ad37d1a51<span class="se">\</span>
+  59f58488ac00000000
+  </code></pre></figure>
+
+          <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="w">  </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"hex"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"01000000011da9283b4ddf8d89eb996988b89ead56cecdc44041ab38bf787f1206cd90b51e000000006a47304402200ebea9f630f3ee35fa467ffc234592c79538ecd6eb1c9199eb23c4a16a0485a20220172ecaf6975902584987d295b8dddf8f46ec32ca19122510e22405ba52d1f13201210256d16d76a49e6c8e2edc1c265d600ec1a64a45153d45c29a2fd0228c24c3a524ffffffff01405dc600000000001976a9140dfc8bafc8419853b34d5e072ad37d1a5159f58488ac00000000"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"complete"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+  </span></code></pre></figure>
+
+        </div>
+
+        <p>Send the above signed raw transaction:</p>
+
+        <div class="multicode">
+
+          <figure class="highlight"><pre><code class="language-bash" data-lang="bash">  bitcoin-cli -testnet sendrawtransaction 01000000011da9283b4ddf8d<span class="se">\</span>
+  89eb996988b89ead56cecdc44041ab38bf787f1206cd90b51e000000006a4730<span class="se">\</span>
+  4402200ebea9f630f3ee35fa467ffc234592c79538ecd6eb1c9199eb23c4a16a<span class="se">\</span>
+  0485a20220172ecaf6975902584987d295b8dddf8f46ec32ca19122510e22405<span class="se">\</span>
+  ba52d1f13201210256d16d76a49e6c8e2edc1c265d600ec1a64a45153d45c29a<span class="se">\</span>
+  2fd0228c24c3a524ffffffff01405dc600000000001976a9140dfc8bafc84198<span class="se">\</span>
+  53b34d5e072ad37d1a5159f58488ac00000000
+  </code></pre></figure>
+
+          <figure class="highlight"><pre><code class="language-text" data-lang="text">  f5a5ce5988cc72b9b90e8d1d6c910cda53c88d2175177357cc2f2cf0899fbaad
+  </code></pre></figure>
+
+        </div>
+
+        <p>The returned value is the transaction’s identifier (TXID).</p>
+      </div>
+
+  <div id="notification" title="Programmable Notification">
+        <div class="multicode">
+
+          <figure class="highlight"><pre><code class="language-bash" data-lang="bash">  bitcoind -daemon -walletnotify<span class="o">=</span>your_notification_command
+  </code></pre></figure>
+
+        </div>
+      </div>
+
+</div>
+
+    <div class="prevnext">
+      <p><a href="requirements.html">PREV</a>
+<a href="network-support.html">NEXT</a></p>
+    </div>
+    <p><br class="clear" /></p>
+
+  </div>
+</div>
+
+</div>
+
+  <div class="footer">
+    <div class="container">
+      
+
+<a class="logo-footer" href="../../index.html">
+  <img src="https://segwitcoin.fun/img/icons/logo-footer.svg?1528484753" alt="Bitcoin">
+</a>
+      
+
+<div class="row footer-row">
+  <div class="donate">
+    <div class="row donate-row">
+      <div>
+        <span class="footer-title">Support Bitcoin.org:</span>
+        <a href="bitcoin:3FkenCiXpSLqD8L79intRNXUgjRoH9sjXa" target="_blank" class="donate-btn btn-bright">Donate</a>
+        <p class="donate-text">Bitcoin.org is community supported.
+          <a class="donate-link" href="bitcoin:3FkenCiXpSLqD8L79intRNXUgjRoH9sjXa" target="_blank">3FkenCiXpSLqD8L79intRNXUgjRoH9sjXa</a>
+        </p>
+      </div>
+      <div class="donate-qrcode">
+        <img src="https://segwitcoin.fun/img/footer/qr.png?1528484753" alt="QR code">
+      </div>
+    </div>
+  </div>
+
+  <div class="row footermenu">
+    <div class="footermenu-item footermenu-introduction">
+      <p class="footer-title">Introduction:</p>
+      <ul class="footermenu-list">
+        <li>
+          <a href="../../bitcoin-for-individuals.html">Individuals</a>
+        </li>
+        <li>
+          <a href="../../bitcoin-for-businesses.html">Businesses</a>
+        </li>
+        <li>
+          <a href="../../bitcoin-for-developers.html">Developers</a>
+        </li>
+        <li>
+          <a href="../../getting-started.html">Getting started</a>
+        </li>
+        <li>
+          <a href="../../how-it-works.html">How it works</a>
+        </li>
+        <li>
+          <a href="../../you-need-to-know.html">You need to know</a>
+        </li>
+      </ul>
+    </div>
+    
+    <div class="footermenu-item footermenu-resources">
+      <p class="footer-title">Resources:</p>
+      <ul class="footermenu-list">
+        <li>
+          <a href="../../resources.html">Resources</a>
+          
+        <li>
+          <a href="../../exchanges.html">Exchanges</a>
+        </li>
+          
+        <li>
+          <a href="../../community.html">Community</a>
+        </li>
+        <li>
+          <a href="../../vocabulary.html">Vocabulary
+          </a>
+        </li>
+        <li>
+          <a href="../../events.html">Events</a>
+        </li>
+        
+        <li>
+          <a href="../index.html">Bitcoin Core</a>
+        </li>
+          
+      </ul>
+    </div>
+    
+    <div class="footermenu-item footermenu-participate">
+      <p class="footer-title">Participate:</p>
+      <ul class="footermenu-list">
+        <li>
+          <a href="../../support-bitcoin.html">Support Bitcoin</a>
+          
+        <li>
+          <a href="../../buy.html">Buy Bitcoin</a>
+        </li>
+           
+        <li>
+          <a href="../../full-node.html">Running a full node</a>
+        </li>
+          
+        <li>
+          <a href="../../development.html">Development</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="footermenu-item footermenu-other">
+      <p class="footer-title">Other:</p>
+      <a href="../../legal.html">Legal</a>
+      
+      <a href="../../privacy.html">Privacy Policy</a>
+      
+      <a href="../about-site.html">About</a>
+    </div>
+  </div>
+</div>
+
+    </div>
+    
+
+<div class="footer-bottom">
+  <div class="container">
+    <div class="row footer-bottom-row">
+      <div class="footerlicense">© Bitcoin Project 2009-2018 Released under the <a href="http://opensource.org/licenses/mit-license.php" target="_blank">MIT license</a>
+        <br> Bitcoin Core pages on Bitcoin.org are
+        <a href="../about-site.html">maintained separately</a> from the rest of the site.
+      </div>
+      <div class="row footer-social">
+        <a href="#" onclick="window.open('http://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(location.href))" class="footer-social-link" target="_blank">
+          <img src="https://segwitcoin.fun/img/icons/ico_facebook_dark.svg?1528484753" alt="facebook" class="footer-social-img">
+        </a>
+        <a href="#" onclick="window.open('https://twitter.com/share?url=' + encodeURIComponent(location.href))" class="footer-social-link" target="_blank">
+          <img src="https://segwitcoin.fun/img/icons/ico_twitter_dark.svg?1528484753" alt="twitter" class="footer-social-img">
+        </a>
+      </div>
+      <div class="row footer-status-block">
+        <a href="../../alerts.html" class="statusmenu">Network Status</a>
+        
+<ul class="lang is-expand">
+  <li><a>English</a>
+  <ul>
+    <li><ul>
+      
+      
+        
+          <li><a href="https://segwitcoin.fun/id/">Bahasa Indonesia</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/da/">Dansk</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/de/">Deutsch</a></li>
+        
+        
+          <li><a href="../../index.html" class="active">English</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/es/">Español</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/fr/">Français</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/it/">Italiano</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/hu/">Magyar</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/nl/">Nederlands</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/pl/">Polski</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/pt_BR/">Português Brasil</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/ro/">Română</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/sl/">Slovenščina</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/sv/">Svenska</a></li>
+        
+        </ul></li><li><ul>
+          <li><a href="https://segwitcoin.fun/tr/">Türkçe</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/el/">Ελληνικά</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/bg/">български</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/ru/">Русский</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/uk/">Українська</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/ar/">العربية</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/fa/">فارسی</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/hi/">हिन्दी</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/ko/">한국의</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/ja/">日本語</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/zh_CN/">简体中文</a></li>
+        
+        
+          <li><a href="https://segwitcoin.fun/zh_TW/">繁體中文</a></li>
+        
+      </ul></li>
+    </ul>
+  </li>
+</ul>
+
+        <div id="footer-langselect" class="footer-langselect langselect">
+          <label for="select-input-footer" class="center-select">
+            <select class="center-select__input" onchange="window.location=this.value; ">
+              
+              <option value="/id/" >Bahasa Indonesia</option>
+              
+              <option value="/da/" >Dansk</option>
+              
+              <option value="/de/" >Deutsch</option>
+              
+              <option value="/en/"  selected="selected">English</option>
+              
+              <option value="/es/" >Español</option>
+              
+              <option value="/fr/" >Français</option>
+              
+              <option value="/it/" >Italiano</option>
+              
+              <option value="/hu/" >Magyar</option>
+              
+              <option value="/nl/" >Nederlands</option>
+              
+              <option value="/pl/" >Polski</option>
+              
+              <option value="/pt_BR/" >Português Brasil</option>
+              
+              <option value="/ro/" >Română</option>
+              
+              <option value="/sl/" >Slovenščina</option>
+              
+              <option value="/sv/" >Svenska</option>
+              
+              <option value="/tr/" >Türkçe</option>
+              
+              <option value="/el/" >Ελληνικά</option>
+              
+              <option value="/bg/" >български</option>
+              
+              <option value="/ru/" >Русский</option>
+              
+              <option value="/uk/" >Українська</option>
+              
+              <option value="/ar/" >العربية</option>
+              
+              <option value="/fa/" >فارسی</option>
+              
+              <option value="/hi/" >हिन्दी</option>
+              
+              <option value="/ko/" >한국의</option>
+              
+              <option value="/ja/" >日本語</option>
+              
+              <option value="/zh_CN/" >简体中文</option>
+              
+              <option value="/zh_TW/" >繁體中文</option>
+              
+            </select>
+            <span class="center-select__text">en</span>
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </div>
+</div>
+
+
+
+
+
+  <script src="https://segwitcoin.fun/js/bitcoin-core.js"></script>
+
+
+
+
+<script type="text/javascript">
+  fallbackSVG();
+  addAnchorLinks();
+  trackOutgoingLinks();
+</script>
+
+
+
+
+
+
+</body>
+
+
+<!-- Mirrored from bitcoin.org/en/bitcoin-core/features/user-interface by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Jun 2018 15:42:18 GMT -->
+</html>

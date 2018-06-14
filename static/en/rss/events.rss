@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+<!-- Note: this file is built non-deterministically -->
+<channel>
+	<title>Bitcoin conferences and events</title>
+	<link>https://segwitcoin.fun/en/events</link>
+	<description>This RSS feed allows to follow Bitcoin events and conferences.</description>
+	<image>
+		<title>Bitcoin conferences and events</title>
+		<url>https://segwitcoin.fun/img/icons/logo_rss.png?1528322191</url>
+		<link>https://segwitcoin.fun/en/events</link>
+	</image>
+        
+	
+        <item>
+            <title>Crypto Coin Turkey, Istanbul - Turkey</title>
+            <link>https://cryptocointurkey.org/</link>
+            <guid>https://cryptocointurkey.org/</guid>
+            <pubDate>Wed, 06 Jun 2018 00:00:00 GMT</pubDate>
+        </item>
+	
+        <item>
+            <title>CryptoCompare &amp; MJAC London Blockchain Summit, London - United Kingdom</title>
+            <link>https://mjac.io/</link>
+            <guid>https://mjac.io/</guid>
+            <pubDate>Wed, 13 Jun 2018 00:00:00 GMT</pubDate>
+        </item>
+	
+        <item>
+            <title>Blockchain Economic Forum, San Francisco - United States</title>
+            <link>http://bef.latoken.com</link>
+            <guid>http://bef.latoken.com</guid>
+            <pubDate>Sat, 16 Jun 2018 00:00:00 GMT</pubDate>
+        </item>
+	
+        <item>
+            <title>2018 Crypto Valley Conference on Blockchain Technology, Zug - Switzerland</title>
+            <link>https://www.cryptovalleyconference.com/</link>
+            <guid>https://www.cryptovalleyconference.com/</guid>
+            <pubDate>Wed, 20 Jun 2018 00:00:00 GMT</pubDate>
+        </item>
+	
+        <item>
+            <title>Distribute 2018 Blockchain Konferenz, Hamburg - Germany</title>
+            <link>http://www.distribute-conference.com/</link>
+            <guid>http://www.distribute-conference.com/</guid>
+            <pubDate>Thu, 28 Jun 2018 00:00:00 GMT</pubDate>
+        </item>
+	
+        <item>
+            <title>Blockchain: Rethink Trust, Amsterdam - Netherlands</title>
+            <link>https://rethinktrust.org/</link>
+            <guid>https://rethinktrust.org/</guid>
+            <pubDate>Fri, 29 Jun 2018 00:00:00 GMT</pubDate>
+        </item>
+	
+        <item>
+            <title>Blockchain Super Conference, Kitchener - Waterloo - Canada</title>
+            <link>https://blockchainsuperconference.com/</link>
+            <guid>https://blockchainsuperconference.com/</guid>
+            <pubDate>Fri, 13 Jul 2018 00:00:00 GMT</pubDate>
+        </item>
+	
+        <item>
+            <title>Blockchain &amp; FutureTech Expo, Dallas - United States</title>
+            <link>https://www.bftexpo.com/</link>
+            <guid>https://www.bftexpo.com/</guid>
+            <pubDate>Fri, 14 Sep 2018 00:00:00 GMT</pubDate>
+        </item>
+	
+        <item>
+            <title>CryptoEconomics Security Conference 2018, Berkeley - United States</title>
+            <link>https://cesc.io</link>
+            <guid>https://cesc.io</guid>
+            <pubDate>Mon, 15 Oct 2018 00:00:00 GMT</pubDate>
+        </item>
+	
+        <item>
+            <title>World Crypto Con, Las Vegas - United States</title>
+            <link>http://www.worldcryptocon.com</link>
+            <guid>http://www.worldcryptocon.com</guid>
+            <pubDate>Wed, 31 Oct 2018 00:00:00 GMT</pubDate>
+        </item>
+	
+        <item>
+            <title>Malta Blockchain Summit, St Julian&apos;s - Malta</title>
+            <link>http://maltablockchainsummit.com/</link>
+            <guid>http://maltablockchainsummit.com/</guid>
+            <pubDate>Thu, 01 Nov 2018 00:00:00 GMT</pubDate>
+        </item>
+	
+        <item>
+            <title>Decrypted Forum, Palma de Mallorca - Spain</title>
+            <link>https://decryptedforum.com</link>
+            <guid>https://decryptedforum.com</guid>
+            <pubDate>Thu, 22 Nov 2018 00:00:00 GMT</pubDate>
+        </item>
+	
+</channel>
+</rss>
